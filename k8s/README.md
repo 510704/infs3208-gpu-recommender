@@ -9,7 +9,7 @@ k8s/
   base/                     shared by every environment
     serviceaccounts.yaml    serving / training (the frontend is static)
     serving.yaml            Deployment + Service + PDB + HPA (no volumes)
-    frontend.yaml           ConfigMap(nginx) + Deployment + Service (LoadBalancer locally, NodePort on GKE)
+    frontend.yaml           ConfigMap(nginx) + Deployment + LoadBalancer Service (public IP on GKE)
     spark.yaml              spark-master (headless Service) + spark-worker
     training-data.yaml      PVC shared by driver and executors
     app-config.yaml         bucket + object names shared by both overlays
@@ -101,15 +101,15 @@ HPA to min=max=1, so a busy demo cannot add a second node.
 | 30 GB `pd-standard` boot disk | A$2.33 |
 | 1 GiB `pd-balanced` PVC (training scratch) | A$0.20 |
 | Internet egress (~1 GB) | A$0.17 |
-| Node external IPv4 (ephemeral, attached) | A$0.00 |
+| Cloud Load Balancer (forwarding rule + external IP) | A$31.47 |
 | GKE zonal control plane | A$0 (first free zonal cluster) |
 | Artifact Registry + GCS | ≈ A$0.05 |
-| **Total** | **≈ A$102/mo** (~A$0.14/h) |
+| **Total** | **≈ A$134/mo** (~A$0.18/h) |
 
-The frontend is exposed on the **node's external IP** (`NodePort` 30080, opened by
-a firewall rule created by `scripts/deploy_gcp.sh`) instead of a Cloud Load
-Balancer, which is what keeps the total at ≈ A$102 rather than ≈ A$134 — the LB
-forwarding rule and its IP alone are ≈ A$31/month.
+The frontend Service is a `LoadBalancer`, so GKE provisions a Cloud Load Balancer
+and assigns the site a public IP on port 80 (`scripts/deploy_gcp.sh` waits for it
+and prints the URL). The LB forwarding rule and its IP are ≈ A$31/month; a
+NodePort on the node IP with a firewall rule instead would remove that line.
 
 `e2-medium` was tried first and is not usable here: shared-core sizing plus the
 GKE reservation leaves only **940m CPU** allocatable, so the Spark worker never
@@ -132,14 +132,13 @@ in this repository:
 1. **`containerPort`** - what the process inside the pod listens on (part of the
    Deployment; informational, it does not publish anything).
 2. **Service `port` / `targetPort`** - the stable ClusterIP that other pods dial.
-3. **`nodePort`** - the port opened on every node's IP so traffic from outside the
-   cluster can get in (NodePort only).
+3. **externally** - a `LoadBalancer` asks GKE for a Cloud Load Balancer with a
+   public IP; a `NodePort` would instead open a port on every node's IP.
 
 | port | definition file | kind | scope / who uses it |
 |---|---|---|---|
 | **80** nginx `listen 80` | `k8s/base/frontend.yaml` → ConfigMap `frontend-nginx` | container | the frontend pod serves the site here |
-| **80** frontend Service | `k8s/base/frontend.yaml` → Service `frontend` | Service `port: 80 → targetPort: 80` | in-cluster; becomes a `LoadBalancer` locally (MetalLB) |
-| **30080** nodePort | `k8s/overlays/gke/patch-frontend-nodeport.yaml` | `type: NodePort`, `nodePort: 30080` | **public**: `http://<node-external-ip>:30080` on GKE. The matching firewall rule `gke-<cluster>-nodeport` (tcp:30080, scoped to the node tag) is created by `scripts/deploy_gcp.sh` |
+| **80** frontend Service | `k8s/base/frontend.yaml` → Service `frontend` | `type: LoadBalancer`, `port: 80 → targetPort: 80` | **public** on GKE (Cloud Load Balancer, LB IP on port 80) and on a local kind cluster via MetalLB |
 | **8000** serving | `k8s/base/serving.yaml` → Deployment `containerPort: 8000` + Service `serving` | container + Service `port: 8000 → targetPort: 8000` | ClusterIP only; nginx proxies `/api/*` here. Never published |
 | **7077 / 8080** spark-master | `k8s/base/spark.yaml` → Deployment ports + **headless** Service (`clusterIP: None`) | container + Service | in-cluster RPC (7077) and master UI (8080); the notebooks/job dial `spark://spark-master:7077` |
 | **8081** spark-worker UI | not declared | - | the worker's UI exists but has no declared containerPort/Service; training only uses the master endpoint |
@@ -148,18 +147,17 @@ in this repository:
 | **53 / 443 / 8132** cluster services | GKE-managed | - | `kube-dns` 53, `metrics-server` 443, konnectivity 8132 |
 | **4443** fake-gcs-server | `k8s/overlays/local-kind/gcs.yaml` (StatefulSet + Service) | container + Service | **local-kind only**; `overlays/local-kind/kustomization.yaml` sets `STORAGE_EMULATOR_HOST=http://gcs:4443` |
 
-**Traffic path (GKE):** browser → `node:30080` → frontend pod `:80` → nginx
+**Traffic path (GKE):** browser → load-balancer IP :80 → frontend pod `:80` → nginx
 `location /api/` → `serving:8000` (ClusterIP) → GCS API on 443 via Workload
 Identity. **Locally** the last hop is the emulator at `gcs:4443`, and the frontend
 is reached at `http://localhost:30080` because `docker-compose.yml` publishes
-`30080:80` - the same port number as the GKE nodePort.
+`30080:80` (host port 80 is privileged); on GKE the LB serves the same site on
+port 80.
 
-**Changing a port:** the public port is a script variable - `NODE_PORT=30100 bash
-scripts/deploy_gcp.sh` recreates the firewall rule and prints the new URL. It must
-stay inside the cluster's node-port range (30000-32767, fixed by GKE; not
-configurable through `gcloud container clusters create|update`). The in-cluster
-ports (80, 8000, 7077, 8080) are edited in `k8s/base/*.yaml`; the local publish
-mapping is in `docker-compose.yml` (`<host>:<container>`).
+**Changing a port:** the LB listens on 80 (whatever `k8s/base/frontend.yaml`
+declares); the in-cluster ports (80, 8000, 7077, 8080) are edited in
+`k8s/base/*.yaml`; the local publish mapping is in `docker-compose.yml`
+(`<host>:<container>`).
 
 ## Local cluster (kind)
 
@@ -227,9 +225,9 @@ kubectl -n gpu-recsys rollout restart deploy/serving   # reload the new artifact
 
 ### Verified in a real GKE cluster
 
-- `frontend` reachable on the **node's external IP** (`http://<node-ip>:30080`);
-  site, `/api/healthz`, `/api/recommend`, `/api/fps` all served through it, with
-  the port opened by the `gke-<cluster>-nodeport` firewall rule.
+- `frontend` reachable on its **Cloud Load Balancer public IP** (`http://<lb-ip>`);
+  site, `/api/healthz`, `/api/recommend`, `/api/fps` and `/api/figures` all served
+  through it.
 - serving with **no volumes**: `gpus_loaded: 1381, catalog: classified,
   curve: loaded, emulator: null` — real Cloud Storage via
   Workload Identity, identical image to docker-compose.

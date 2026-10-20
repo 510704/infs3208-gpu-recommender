@@ -20,8 +20,18 @@ data:
         gzip_min_length 1024;
         gzip_types text/plain text/css application/javascript application/json;
 
+        # The proxy target is a variable + live DNS resolution, so nginx starts
+        # even when the serving Service is not resolvable yet (fresh node, CoreDNS
+        # still coming up) and a recreated serving pod (new IP) cannot strand a
+        # cached upstream address.
+        #
+        # The upstream must be the fully-qualified name: nginx's resolver does not
+        # apply the pod's search domains, so the bare name would NXDOMAIN.
         location /api/ {
-            proxy_pass http://serving:8000/;
+            resolver kube-dns.kube-system.svc.cluster.local valid=10s ipv6=off;
+            set $api_upstream http://serving.gpu-recsys.svc.cluster.local:8000;
+            rewrite ^/api/(.*)$ /$1 break;
+            proxy_pass $api_upstream;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_connect_timeout 5s;

@@ -161,27 +161,16 @@ kubectl -n "$NS" rollout status deploy/serving --timeout=300s
 kubectl -n "$NS" rollout status deploy/frontend --timeout=300s
 kubectl -n "$NS" rollout restart deploy/serving >/dev/null   # reload after IAM propagation
 
-# The frontend is a NodePort: reach it on the node's external IP, so open the
-# port with a firewall rule scoped to the GKE nodes' network tag.
-NODE_PORT="${NODE_PORT:-30080}"
-NODE="$(kubectl get nodes -o jsonpath='{.items[0].metadata.name}')"
-NODE_TAG="$(gcloud compute instances describe "$NODE" --zone "$ZONE" \
-  --format='value(tags.items)' | tr ',' '\n' | grep '^gke-' | head -1 || true)"
-RULE="gke-${CLUSTER}-nodeport"
-if ! gcloud compute firewall-rules describe "$RULE" >/dev/null 2>&1; then
-  if [[ -n "$NODE_TAG" ]]; then
-    gcloud compute firewall-rules create "$RULE" --allow "tcp:${NODE_PORT}" \
-      --target-tags "$NODE_TAG" --description "frontend NodePort for the GPU recommender"
-  else
-    gcloud compute firewall-rules create "$RULE" --allow "tcp:${NODE_PORT}" \
-      --description "frontend NodePort for the GPU recommender"
-  fi
-fi
-
-NODE_IP="$(gcloud compute instances describe "$NODE" --zone "$ZONE" \
-  --format='value(networkInterfaces[0].accessConfigs[0].natIP)' 2>/dev/null || true)"
+# The frontend Service is a LoadBalancer (k8s/base/frontend.yaml): GKE provisions
+# a Cloud Load Balancer and assigns it a public IP, which takes a minute or two.
+IP=""
+for _ in $(seq 1 60); do
+  IP="$(kubectl -n "$NS" get svc frontend -o jsonpath='{.status.loadBalancer.ingress[0].ip}' 2>/dev/null || true)"
+  [[ -n "$IP" ]] && break
+  sleep 5
+done
 echo
-echo "Site:  http://${NODE_IP:-<node-ip>}:${NODE_PORT}"
-echo "Check: curl http://${NODE_IP}:${NODE_PORT}/api/healthz"
-echo "       kubectl -n $NS port-forward svc/frontend 8080:80   # if the port is blocked"
+echo "Site:  http://${IP:-<pending - check: kubectl -n $NS get svc frontend>}"
+echo "Check: curl http://${IP}/api/healthz"
+echo "       kubectl -n $NS port-forward svc/frontend 8080:80   # without the LB"
 echo "Stop:  PROJECT=$PROJECT BUCKET=$BUCKET bash scripts/teardown_gcp.sh"

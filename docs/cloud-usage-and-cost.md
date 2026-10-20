@@ -11,7 +11,7 @@ assume 730 usage hours per month.
 
 | Layer | Technology | Cloud service | Role in the project |
 |---|---|---|---|
-| Frontend | HTML/CSS/JavaScript + nginx reverse proxy | GKE Deployment + NodePort on the node external IP | Static UI (Find a GPU / Estimate FPS / Insights) on `http://<node-ip>:30080`; `/api` proxied to serving |
+| Frontend | HTML/CSS/JavaScript + nginx reverse proxy | GKE Deployment + Cloud Load Balancer | Static UI (Find a GPU / Estimate FPS / Insights) on `http://<load-balancer-ip>`; `/api` proxied to serving |
 | Backend API | FastAPI + Uvicorn (Python 3.11) | GKE Deployment + ClusterIP Service | Lowest-spec GPU for a game/target FPS, and FPS for a game/GPU pair; reads artefacts from the bucket |
 | ML training | PySpark + MLlib (RandomForest, GBT, Ridge, MLP; KMeans/GMM; FPGrowth) | GKE CronJob (suspended) + in-cluster Spark master/worker | Required-G3D model, per-game FPS curves, demand clustering, association rules |
 | Object storage | Cloud Storage bucket | Cloud Storage | Catalogue, curves, metrics, Parquet features, figures and gallery index; single source of truth |
@@ -19,7 +19,7 @@ assume 730 usage hours per month.
 | Orchestration | Kubernetes + kustomize | GKE | Deployments, Services, HPA, PDB, CronJob, PVC; local-kind and GKE overlays |
 | Container registry | Docker images | Artifact Registry | Versioned serving/frontend/training images |
 | Identity | Workload Identity + IAM service accounts | GKE + IAM | Keyless pod access to the bucket (objectViewer / objectAdmin) |
-| Networking | NodePort 30080 + firewall rule | Compute Engine node external IPv4 | Public HTTP entry on the node IP; no Cloud Load Balancer |
+| Networking | Cloud Load Balancer + external IPv4 | Cloud Load Balancing | Public HTTP entry on port 80; `/api` proxied to the serving ClusterIP |
 | Persistent storage | ReadWriteOnce PVC | Compute Engine persistent disk | Scratch volume shared by the training driver and executors |
 | Local parity | Docker Compose + fake-gcs-server | Local GCS emulator | Same images and bucket API for development |
 | Ingestion | Python ingest job (Zenodo) | Local job + provenance record | Downloads `games.csv` / `gpus.csv` with checksums |
@@ -34,13 +34,14 @@ assume 730 usage hours per month.
 | Compute node | `e2-standard-2` (2 vCPU / 8 GiB) | A$0.1366/h | 99.74 |
 | Boot disk | 30 GB `pd-standard` | A$0.0776/GiB-month | 2.33 |
 | Training scratch volume | 1 GiB `pd-balanced` | A$0.1940/GiB-month | 0.20 |
-| Node external IPv4 | ephemeral, attached to the running node | A$0 | 0.00 |
+| Load balancer | forwarding rule + external IP | A$0.0431/h | 31.47 |
+| Load balancer processing | ~5 GB/month | A$0.0115/GB | 0.06 |
 | Artifact Registry | 0.25 GiB images | A$0.1437/GiB-month | 0.04 |
 | Cloud Storage | 6 MB Standard (Sydney) | A$0.0331/GiB-month | 0.01 |
 | Network egress | ~1 GB/month | A$0.1724/GB | 0.17 |
 | Cloud Logging / Monitoring | default GKE integration | free tier | 0.00 |
 | IAM / Workload Identity | 2 service accounts (serving, training) | free | 0.00 |
-| **Total** | | | **102.49** |
+| **Total** | | | **134.02** |
 
 The merged machine-readable table is in [`cloud_resources.csv`](cloud_resources.csv).
 
@@ -48,9 +49,9 @@ The merged machine-readable table is in [`cloud_resources.csv`](cloud_resources.
 
 - The node is the dominant cost. **Spot** pricing cuts it by ~49%, bringing the
   total to **≈ A$84.78/month** (eviction risk, acceptable for a demo).
-- The frontend is served by a **NodePort on the node's external IP**
-  (`http://<node-ip>:30080`), not a Cloud Load Balancer — that is the deployed
-  shape and it saves ≈ A$31/month.
+- The frontend is served by a **Cloud Load Balancer** with a public IP
+  (`http://<load-balancer-ip>`, port 80). Replacing it with a NodePort on the
+  node IP would save ≈ A$31/month (a firewall rule instead of the LB).
 - For demos the environment can instead be created and deleted per session: a
   measured ~45-minute stage + verify + teardown cycle cost **≈ A$0.22** and left
   nothing running.

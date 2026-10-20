@@ -10,6 +10,8 @@
 #   - real Cloud Storage (no STORAGE_EMULATOR_HOST) + Workload Identity
 #   - images pulled from Artifact Registry
 #   - one replica per tier and a single Spark worker to fit one small node
+#   - the frontend Service keeps the base LoadBalancer type, so GKE provisions a
+#     Cloud Load Balancer with a public IP for the site
 # Nothing in serving/app.py, frontend/ or the notebooks changes.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
@@ -38,4 +40,3 @@ patches:
   - path: patch-serviceaccounts.yaml
   - path: patch-app-config.yaml
   - path: patch-scale.yaml
-  - path: patch-frontend-nodeport.yaml

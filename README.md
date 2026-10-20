@@ -55,10 +55,10 @@ published to the Insights tab. See `k8s/README.md` for the cluster deployment an
 
 The deployed stack is GKE (serving, frontend, Spark + training CronJob),
 Cloud Storage for artefacts and Parquet, Artifact Registry for images,
-Workload Identity for access and a NodePort on the node's external IP for the UI.
+Workload Identity for access and a Cloud Load Balancer (public IP) for the UI.
 The monthly list-price estimate for the current shape (`e2-standard-2`, 30 GB
-disk, one replica per tier, NodePort access) is **≈ A$102/month**; a Spot node
-brings it to ≈ A$59/month.
+disk, one replica per tier, LoadBalancer access) is **≈ A$134/month**; a Spot node
+brings it to ≈ A$85/month.
 
 - [`docs/cloud-usage-and-cost.md`](docs/cloud-usage-and-cost.md) — technology
   and cost tables with assumptions
@@ -135,7 +135,7 @@ Areas the AI contributed to include:
   (converted to AUD).
 
 - **Cloud operations** - staged the stack on GKE twice (deploy, verify through
-  the node's external IP, teardown), looked up exact Sydney SKU prices via
+  the load balancer, teardown), looked up exact Sydney SKU prices via
   the Cloud Billing Catalog API, and produced the monthly cost estimate and the
   cost-reduction analysis.
 

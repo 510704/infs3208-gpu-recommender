@@ -28,7 +28,6 @@ REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
 gcloud config set project "$PROJECT"
 
 kubectl delete -k k8s/overlays/gke --ignore-not-found 2>/dev/null || true
-gcloud compute firewall-rules delete "gke-${CLUSTER}-nodeport" --quiet || true
 gcloud container clusters delete "$CLUSTER" --zone "$ZONE" --quiet || true
 gcloud artifacts repositories delete "$REPO" --location "$REGION" --quiet || true
 gcloud storage rm -r "gs://$BUCKET" --quiet || true
