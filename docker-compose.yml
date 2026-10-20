@@ -26,7 +26,7 @@
 #   copy .env.example .env
 #   docker compose up -d --build
 #   curl http://localhost:8000/healthz
-#   open http://localhost:3000      # web UI
+#   open http://localhost:30080     # web UI (same port as the GKE NodePort)
 #
 # Training (adds Spark + Jupyter, then run the notebooks in order):
 #   docker compose --profile training up -d
@@ -215,12 +215,13 @@ services:
   # offer game suggestions (games.csv) and GPU types (gpus.csv) without any
   # extra API endpoints.
   #
-  #   http://localhost:3000
+  #   http://localhost:30080
   frontend:
     build:
       context: ./frontend
     ports:
-      - "3000:80"
+      # 30080 on the host too, so the local URL matches the GKE NodePort.
+      - "30080:80"
     depends_on:
       - serving
     restart: unless-stopped

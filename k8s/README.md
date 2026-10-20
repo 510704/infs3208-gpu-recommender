@@ -123,6 +123,43 @@ read from the bucket — it is the only fps→g3d mechanism, so the two endpoint
 never disagree. The UI's suggestion lists come from `GET /games` and `GET /gpus`,
 which is why the frontend needs neither a volume nor an init container.
 
+## Ports: which file defines what
+
+Kubernetes splits "a port" into three things, and each lives in a different place
+in this repository:
+
+1. **`containerPort`** - what the process inside the pod listens on (part of the
+   Deployment; informational, it does not publish anything).
+2. **Service `port` / `targetPort`** - the stable ClusterIP that other pods dial.
+3. **`nodePort`** - the port opened on every node's IP so traffic from outside the
+   cluster can get in (NodePort only).
+
+| port | definition file | kind | scope / who uses it |
+|---|---|---|---|
+| **80** nginx `listen 80` | `k8s/base/frontend.yaml` → ConfigMap `frontend-nginx` | container | the frontend pod serves the site here |
+| **80** frontend Service | `k8s/base/frontend.yaml` → Service `frontend` | Service `port: 80 → targetPort: 80` | in-cluster; becomes a `LoadBalancer` locally (MetalLB) |
+| **30080** nodePort | `k8s/overlays/gke/patch-frontend-nodeport.yaml` | `type: NodePort`, `nodePort: 30080` | **public**: `http://<node-external-ip>:30080` on GKE. The matching firewall rule `gke-<cluster>-nodeport` (tcp:30080, scoped to the node tag) is created by `scripts/deploy_gcp.sh` |
+| **8000** serving | `k8s/base/serving.yaml` → Deployment `containerPort: 8000` + Service `serving` | container + Service `port: 8000 → targetPort: 8000` | ClusterIP only; nginx proxies `/api/*` here. Never published |
+| **7077 / 8080** spark-master | `k8s/base/spark.yaml` → Deployment ports + **headless** Service (`clusterIP: None`) | container + Service | in-cluster RPC (7077) and master UI (8080); the notebooks/job dial `spark://spark-master:7077` |
+| **8081** spark-worker UI | not declared | - | the worker's UI exists but has no declared containerPort/Service; training only uses the master endpoint |
+| **ephemeral** driver↔executor | not declared | - | Spark executors dial the driver pod IP on ports the driver picks at runtime |
+| **443** GCS / Artifact Registry / Google APIs | not in k8s | - | egress from pods to `storage.googleapis.com`, `…-docker.pkg.dev`, IAM |
+| **53 / 443 / 8132** cluster services | GKE-managed | - | `kube-dns` 53, `metrics-server` 443, konnectivity 8132 |
+| **4443** fake-gcs-server | `k8s/overlays/local-kind/gcs.yaml` (StatefulSet + Service) | container + Service | **local-kind only**; `overlays/local-kind/kustomization.yaml` sets `STORAGE_EMULATOR_HOST=http://gcs:4443` |
+
+**Traffic path (GKE):** browser → `node:30080` → frontend pod `:80` → nginx
+`location /api/` → `serving:8000` (ClusterIP) → GCS API on 443 via Workload
+Identity. **Locally** the last hop is the emulator at `gcs:4443`, and the frontend
+is reached at `http://localhost:30080` because `docker-compose.yml` publishes
+`30080:80` - the same port number as the GKE nodePort.
+
+**Changing a port:** the public port is a script variable - `NODE_PORT=30100 bash
+scripts/deploy_gcp.sh` recreates the firewall rule and prints the new URL. It must
+stay inside the cluster's node-port range (30000-32767, fixed by GKE; not
+configurable through `gcloud container clusters create|update`). The in-cluster
+ports (80, 8000, 7077, 8080) are edited in `k8s/base/*.yaml`; the local publish
+mapping is in `docker-compose.yml` (`<host>:<container>`).
+
 ## Local cluster (kind)
 
 ```bash

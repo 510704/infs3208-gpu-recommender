@@ -43,6 +43,10 @@ docker compose up -d --build              # gcs + ingest + serving + frontend
 docker compose --profile training up -d  # Spark + Jupyter for the notebooks
 ```
 
+Site: `http://localhost:30080` (the host publishes 30080, the same port number as
+the GKE NodePort, so the URL shape matches in both environments; API on
+`http://localhost:8000`).
+
 Run the notebooks in order from `notebooks/`; figures land in `figures/` and are
 published to the Insights tab. See `k8s/README.md` for the cluster deployment and
 `data/README.md` for the dataset.
