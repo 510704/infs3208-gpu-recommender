@@ -195,6 +195,54 @@ kubectl -n gpu-recsys rollout restart deploy/serving   # reload the new artifact
    `numpy<1.25` / `pandas<2.0` so a cp38 wheel resolves; `vector_to_array` in
    notebook 03 needs pandas installed.
 
+## Code in GCP (copy of record)
+
+The repository lives on GitHub (`510704/infs3208-gpu-recommender`, private). A
+snapshot is also published to the project bucket, so the code is available inside
+GCP without GitHub credentials:
+
+```
+gs://<BUCKET>/release/infs3208-gpu-recommender.bundle   # full history (git bundle, cloneable)
+gs://<BUCKET>/release/infs3208-gpu-recommender.zip      # working tree
+```
+
+### Cloud Shell commands
+
+Cloud Shell has `gcloud`, `git`, `docker` and `kubectl`, so `scripts/deploy_gcp.sh`
+runs there end to end.
+
+```bash
+gcloud config set project <PROJECT>
+
+# 1. restore the code from the bucket (full history)
+gcloud storage cp gs://<BUCKET>/release/infs3208-gpu-recommender.bundle .
+git clone infs3208-gpu-recommender.bundle infs3208-gpu-recommender
+cd infs3208-gpu-recommender
+git log --oneline -3
+
+#    or just unpack the working tree
+gcloud storage cp gs://<BUCKET>/release/infs3208-gpu-recommender.zip .
+unzip -q infs3208-gpu-recommender.zip -d infs3208-gpu-recommender
+
+# 2. or clone straight from GitHub (private: username = your account,
+#    password = a fine-grained PAT with "Contents: read")
+git clone https://github.com/510704/infs3208-gpu-recommender.git
+#    with the GitHub CLI instead:
+gh auth login && gh repo clone 510704/infs3208-gpu-recommender
+
+# 3. deploy from Cloud Shell
+PROJECT=<PROJECT> BUCKET=<BUCKET> bash scripts/deploy_gcp.sh
+```
+
+Publish a new snapshot of the code after pushing:
+
+```bash
+git bundle create infs3208-gpu-recommender.bundle --all
+git archive --format=zip -o infs3208-gpu-recommender.zip HEAD
+gcloud storage cp infs3208-gpu-recommender.bundle infs3208-gpu-recommender.zip \
+  gs://<BUCKET>/release/
+```
+
 ## Teardown
 
 ```bash

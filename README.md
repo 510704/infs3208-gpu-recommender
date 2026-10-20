@@ -60,6 +60,8 @@ to ≈ A$85 / ≈ A$102.
   and cost tables with assumptions
 - [`docs/cloud_resources.csv`](docs/cloud_resources.csv) — merged service + cost
   table
+- Code snapshot in the bucket (`gs://<BUCKET>/release/`: git bundle + zip) with the
+  Cloud Shell commands — see [`k8s/README.md`](k8s/README.md)
 
 ## Notes
 
