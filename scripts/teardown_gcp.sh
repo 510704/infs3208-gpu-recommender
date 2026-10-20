@@ -1,47 +1,32 @@
 #!/usr/bin/env bash
-# Remove everything scripts/deploy_gcp.sh created in your project.
+# ---------------------------------------------------------------------------
+# Tear down everything scripts/deploy_gcp.sh created in your Google Cloud
+# project, so nothing keeps costing money.
 #
 #   PROJECT=my-project BUCKET=my-gpu-rec-bucket bash scripts/teardown_gcp.sh
+#
+# Deletes, in order: the Kubernetes workloads, the GKE cluster, the Artifact
+# Registry repo (with its images), the Cloud Storage bucket (with the trained
+# artefacts) and the two Google service accounts.
+# ---------------------------------------------------------------------------
 set -euo pipefail
 
+# Always run from the repository root, so relative paths below work.
 cd "$(dirname "$0")/.."
 
-# Personal settings live in the gitignored .env; explicit env vars still win.
-# tr -d '\r' so a .env edited on Windows (CRLF) still sources cleanly.
-if [[ -f .env ]]; then
-  set -a
-  # shellcheck disable=SC1091
-  . <(tr -d '\r' < .env)
-  set +a
-fi
+# Shared configuration and helpers (.env handling, project fallback, friendly
+# errors) live in one file so deploy and teardown never drift apart.
+# shellcheck disable=SC1091
+. scripts/_config.sh
 
-PROJECT="${PROJECT:-${GCP_PROJECT:-}}"
-BUCKET="${BUCKET:-${GCP_BUCKET:-}}"
-REGION="${REGION:-${GCP_REGION:-australia-southeast1}}"
-ZONE="${ZONE:-${GCP_ZONE:-${REGION}-a}}"
-CLUSTER="${CLUSTER:-${GKE_CLUSTER:-gpu-recsys}}"
-REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
-
-# No .env (a fresh clone has none - it is gitignored): fall back to the active
-# gcloud project, and help find the bucket instead of just failing.
-if [[ -z "$PROJECT" ]]; then
-  PROJECT="$(gcloud config get-value project 2>/dev/null | tr -d '\r')"
-  [[ -n "$PROJECT" && "$PROJECT" != "(unset)" ]] && echo "using the active gcloud project: $PROJECT"
-fi
-if [[ -z "$PROJECT" ]]; then
-  echo "set GCP_PROJECT in .env, or run: PROJECT=<id> BUCKET=<bucket> bash scripts/teardown_gcp.sh"
-  exit 1
-fi
-if [[ -z "$BUCKET" ]]; then
-  echo "BUCKET is not set. Buckets in ${PROJECT}:"
-  gcloud storage buckets list --project "$PROJECT" --format="value(name)" 2>/dev/null | sed 's/^/  /'
-  echo
-  echo "then run: PROJECT=${PROJECT} BUCKET=<bucket> bash scripts/teardown_gcp.sh"
-  exit 1
-fi
+load_dotenv
+resolve_config
+resolve_project
+require_project_and_bucket
 
 gcloud config set project "$PROJECT"
 
+# Everything is `|| true` so a partially-deleted setup still cleans up the rest.
 kubectl delete -k k8s/overlays/gke --ignore-not-found 2>/dev/null || true
 gcloud container clusters delete "$CLUSTER" --zone "$ZONE" --quiet || true
 gcloud artifacts repositories delete "$REPO" --location "$REGION" --quiet || true
@@ -50,6 +35,7 @@ for n in serving training; do
   gcloud iam service-accounts delete "gpu-recsys-${n}@${PROJECT}.iam.gserviceaccount.com" --quiet || true
 done
 
+# Print what is left so you can confirm the teardown worked.
 echo "== remaining =="
 gcloud container clusters list --format="value(name)"
 gcloud artifacts repositories list --location "$REGION" --format="value(name)"
