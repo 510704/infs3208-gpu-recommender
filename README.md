@@ -138,6 +138,27 @@ clobbering, the pandas `n/a`-read bug, a stdlib `io` module shadowing, a Spark
 `StringIndexer` null-label failure when caching, the lightbox `hidden`/`display`
 conflict, and the trend's integrated-GPU share only counting one iGPU.
 
+#### Structured AI/MT declaration
+
+Tool: **opencode** — an AI coding assistant CLI driven by a large language model
+(DeepSeek-V4.1-flash). Prompts below are quoted from this session, abridged.
+
+| Area | Purpose of use | Prompt(s) used | Where used |
+|---|---|---|---|
+| Tier model | Choose the production regression model | "…like using **random forest rather than GBT**" (author's decision, recorded in this session) | `notebooks/02_models.ipynb` (model comparison, `selected_model`), `spark/jobs/` |
+| Data pipeline | Build/reuse the Spark notebooks and shared code | "**plan code optimizations on large code like notebooks with reusable components**" | `notebooks/01…06`, `spark/jobs/*`, `spark/jobs/tests/test_pure.py` |
+| Visualisations | Fix labels, bins, panels and colour clashes in the report figures | "**use more human readible words, not phrazes**"; "**games per required G3D x axis should use ranges like 0-5000, 5000-10000**"; "**remove availibility by form factor**"; "**remove unclassified and circles**"; "**IGPU didnot mean esport, use GMM BIC to justify the k of kmeans instead of hardcode**"; "**shortly but clearly explain top rules by lift**"; "**required tier over time should display curves for recommanded and minimal g3d**"; "**use finer interval since there is nothing above 30k**"; "**level 1 and 7, level2 and 8, their label colors are too close**"; "**order the figure in grid with importance and relevance to each other**" | `notebooks/06_visualisations.ipynb`, `figures/*.png`, `spark/jobs/viz.py`, `spark/jobs/catalog.py` |
+| Recommendation quality | Distinguish legacy GPUs so old cards are not recommended | "**review how to distinguish legacy gpu since i find GTX1080 is recommended for Cyberpunk 2077**" | `notebooks/03_gpu_catalog.ipynb` (generation map), `serving/app.py` (`cheaper_alternative`, `legacy_fallback`) |
+| Resolution option | Add 1080p/1440p/4K without complexity | "**where can i integrate the resolution parameters without over complexity**"; "**plan to visualize diagram from fps to required g3d**" | `spark/jobs/curves.py`, `serving/app.py` (`resolution_factor`), `frontend/app.js`, `notebooks/06` (figure 08) |
+| Frontend | Embed the figures in the site; fix the blocking overlay | "**visualization should be embeded into frontend**"; "**the div lightbox make localhost not interactable**" | `frontend/index.html`, `frontend/app.js`, `frontend/styles.css`, `serving/app.py` (`/figures`) |
+| Rubric compliance | Make the storage choice explicit and name two modelling points | "**…the data-storage requirement needs an explicit, defensible statement (GCS+Parquet …), and two minor polish items: name your outlier handling, and add one sentence clarifying the FPS curve is not an MLlib model and clustering/rules are unsupervised**" | `README.md` (storage section), `notebooks/01_features.ipynb`, `notebooks/02_models.ipynb` (markdown) |
+| Notebook prose | Rewrite the explanations concisely | "**rewrite markdown in notebooks with human readible and concise text**" | every `notebooks/*.ipynb` markdown cell |
+| Data rerun | Refresh the trend after an author data fix | "**rerun score and game mix over time since i fix some data**" | `notebooks/01_features.ipynb`, `notebooks/05_demand_patterns.ipynb`, `figures/07_demand_trend.png`, `data/curated/analytics_trend.csv` |
+| Insights text | Explain each figure inside the app | "**shortly explain graphs in insight of frontend**"; "**write the explanation in insight**" | `frontend/index.html` + `app.js` (Insights tab), `notebooks/06` gallery index |
+| Cloud deployment | Stage to GCP, price it and tear it down | "**stage to GCP and estimate the cloud cost, and unstage that after finishing**" | `k8s/`, `docs/cloud-usage-and-cost.md`, `docs/cloud_resources.csv` |
+| Cost reduction | Shrink the deployment while keeping Spark and a public URL | "**plan to potentially reduce the cost**"; "**reduce on node size and disk and replicas like B / keep spark and being accessed by GCP external url**"; "**switch to AUD**"; "**keep exact use like e2-standard-2 and 30GB disk**"; "**merge technology and cost into one**" | `k8s/overlays/gke/patch-scale.yaml`, `k8s/README.md`, `docs/cloud_resources.csv` |
+| Packaging | Zip the essentials and publish a personal repo | "**plan to zip the whole dir with essential components and stage to personal repo**"; "**execute it**"; "**check if anyone have the zip can deploy into cloud**" | `.gitignore`, `.gitattributes`, `scripts/deploy_gcp.sh`, `scripts/teardown_gcp.sh`, the GitHub repository and the release zip |
+
 #### Requirements and findings the author prompted
 
 The direction of the work came from the author's requirements, observations and
