@@ -1,0 +1,10 @@
+# Dev-cluster only: with two or more serving replicas, keep one available.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: serving
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: serving

@@ -1,0 +1,16 @@
+# Configuration shared by every environment: the bucket and object names the
+# serving loader reads (serving/app.py) and the training job writes.
+#
+# Overlays only override what differs - the emulator host locally, the real
+# bucket name on GKE - via a small strategic-merge patch, so the blob names are
+# defined exactly once.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  MODEL_BUCKET: gpu-recsys
+  CATALOG_BLOB: models/gpus_classified.csv
+  RAW_GPUS_BLOB: raw/gpus.csv
+  GAME_MODEL_BLOB: models/game_fps_model.csv
+  CURVE_BLOB: models/fps_curve.json

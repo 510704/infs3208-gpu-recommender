@@ -7,11 +7,12 @@ code — they are baked into the training image and executed by a CronJob.
 ```
 k8s/
   base/                     shared by every environment
-    serviceaccounts.yaml    serving / training / frontend
+    serviceaccounts.yaml    serving / training (the frontend is static)
     serving.yaml            Deployment + Service + PDB + HPA (no volumes)
     frontend.yaml           ConfigMap(nginx) + Deployment + Service (LoadBalancer locally, NodePort on GKE)
     spark.yaml              spark-master (headless Service) + spark-worker
     training-data.yaml      PVC shared by driver and executors
+    app-config.yaml         bucket + object names shared by both overlays
     training.yaml           CronJob: notebooks 01 -> 03 -> 02
   overlays/
     local-kind/             + fake-gcs-server StatefulSet(PVC) + ingest Job
@@ -200,7 +201,7 @@ gcloud container clusters create gpu-recsys-test --zone australia-southeast1-a \
   --workload-pool=<PROJECT>.svc.id.goog --scopes=cloud-platform
 
 # identity: one Google SA per Kubernetes SA
-for n in serving training frontend; do
+for n in serving training; do
   gcloud iam service-accounts create gpu-recsys-$n
   gcloud iam service-accounts add-iam-policy-binding \
     gpu-recsys-$n@<PROJECT>.iam.gserviceaccount.com \
@@ -209,7 +210,7 @@ for n in serving training frontend; do
 done
 gcloud storage buckets add-iam-policy-binding gs://<BUCKET> \
   --member=serviceAccount:gpu-recsys-serving@<PROJECT>.iam.gserviceaccount.com \
-  --role=roles/storage.objectViewer        # …training: objectAdmin, frontend: objectViewer
+  --role=roles/storage.objectViewer        # … training: objectAdmin
 
 docker build -f training/Dockerfile -t <AR>/training:v1 .   # + serving, frontend
 docker push <AR>/{serving,frontend,training}:v1
@@ -317,7 +318,7 @@ kubectl delete -k k8s/overlays/gke     # or delete the cluster (below)
 gcloud container clusters delete gpu-recsys-test --zone australia-southeast1-a
 gcloud artifacts repositories delete gpu-recsys --location=australia-southeast1
 gcloud storage rm -r gs://<BUCKET>
-for n in serving training frontend; do
+for n in serving training; do
   gcloud iam service-accounts delete gpu-recsys-$n@<PROJECT>.iam.gserviceaccount.com
 done
 ```

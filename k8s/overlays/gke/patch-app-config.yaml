@@ -1,0 +1,9 @@
+# Real Cloud Storage: STORAGE_EMULATOR_HOST is deliberately absent, so the client
+# uses the pod's Workload Identity credentials. Only the bucket differs from the
+# defaults in base/app-config.yaml (which holds the blob names).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  MODEL_BUCKET: BUCKET_NAME

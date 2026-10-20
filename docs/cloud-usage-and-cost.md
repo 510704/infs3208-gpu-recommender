@@ -39,7 +39,7 @@ assume 730 usage hours per month.
 | Cloud Storage | 6 MB Standard (Sydney) | A$0.0331/GiB-month | 0.01 |
 | Network egress | ~1 GB/month | A$0.1724/GB | 0.17 |
 | Cloud Logging / Monitoring | default GKE integration | free tier | 0.00 |
-| IAM / Workload Identity | service accounts | free | 0.00 |
+| IAM / Workload Identity | 2 service accounts (serving, training) | free | 0.00 |
 | **Total** | | | **102.49** |
 
 The merged machine-readable table is in [`cloud_resources.csv`](cloud_resources.csv).

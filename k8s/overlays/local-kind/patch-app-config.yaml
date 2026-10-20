@@ -1,0 +1,8 @@
+# Point the Google client at the in-cluster emulator. Everything else in
+# app-config comes from base/app-config.yaml.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  STORAGE_EMULATOR_HOST: http://gcs:4443

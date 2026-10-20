@@ -1,0 +1,11 @@
+# Single serving replica: minAvailable would block every voluntary disruption
+# (node drains, upgrades), so allow one unavailable instead.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: serving
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: serving

@@ -1,5 +1,5 @@
-# Low-cost serving shape: one replica per tier, one Spark worker, and an HPA
-# that cannot scale past the single replica (a second node would double the bill).
+# Low-cost shape: one replica per tier and a single Spark worker, so everything
+# fits on one small node (a second node would roughly double the bill).
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,14 +20,6 @@ metadata:
   name: spark-worker
 spec:
   replicas: 1
----
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  name: serving
-spec:
-  minReplicas: 1
-  maxReplicas: 1
 ---
 # The e2-standard-2 node exposes ~1.93 CPU and ~6 GiB to pods (GKE reserves the
 # rest). Without these requests Spark stayed Pending: the system DaemonSets

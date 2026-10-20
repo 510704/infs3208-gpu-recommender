@@ -66,11 +66,12 @@ render() {
   cp -r k8s "$root/k8s"
   local out="$root/k8s/overlays/gke"
   # image registry -> $AR, BUCKET_NAME -> $BUCKET, PROJECT_ID -> $PROJECT
+  # (every file that carries a placeholder must be listed here)
   sed -E -i \
     -e "s#(newName: ).*/(serving|frontend|training)\$#\1${AR}/\2#" \
     -e "s#BUCKET_NAME#${BUCKET}#g" \
     -e "s#PROJECT_ID#${PROJECT}#g" \
-    "$out/kustomization.yaml" "$out/patch-serviceaccounts.yaml"
+    "$out/kustomization.yaml" "$out/patch-serviceaccounts.yaml" "$out/patch-app-config.yaml"
   echo "$out"
 }
 
@@ -142,7 +143,9 @@ gcloud container clusters describe "$CLUSTER" --zone "$ZONE" >/dev/null 2>&1 \
 gcloud container clusters get-credentials "$CLUSTER" --zone "$ZONE" --quiet
 
 echo "== identity =="
-for n in serving frontend training; do
+# Only serving and training call Google APIs; the frontend is a static nginx
+# proxy, so it uses the namespace default account and needs no binding.
+for n in serving training; do
   gcloud iam service-accounts describe "gpu-recsys-${n}@${PROJECT}.iam.gserviceaccount.com" >/dev/null 2>&1 \
     || gcloud iam service-accounts create "gpu-recsys-$n" --display-name="gpu-recsys $n"
   gcloud iam service-accounts add-iam-policy-binding "gpu-recsys-${n}@${PROJECT}.iam.gserviceaccount.com" \
@@ -150,7 +153,6 @@ for n in serving frontend training; do
     --member="serviceAccount:${PROJECT}.svc.id.goog[${NS}/${n}]" --quiet >/dev/null
 done
 gcloud storage buckets add-iam-policy-binding "gs://$BUCKET" --member="serviceAccount:gpu-recsys-serving@${PROJECT}.iam.gserviceaccount.com" --role=roles/storage.objectViewer --quiet >/dev/null
-gcloud storage buckets add-iam-policy-binding "gs://$BUCKET" --member="serviceAccount:gpu-recsys-frontend@${PROJECT}.iam.gserviceaccount.com" --role=roles/storage.objectViewer --quiet >/dev/null
 gcloud storage buckets add-iam-policy-binding "gs://$BUCKET" --member="serviceAccount:gpu-recsys-training@${PROJECT}.iam.gserviceaccount.com" --role=roles/storage.objectAdmin --quiet >/dev/null
 
 echo "== apply =="

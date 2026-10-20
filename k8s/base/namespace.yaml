@@ -1,0 +1,5 @@
+# Namespace shared by both overlays (previously one identical copy per overlay).
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gpu-recsys

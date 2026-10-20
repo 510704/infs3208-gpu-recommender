@@ -32,7 +32,7 @@ gcloud compute firewall-rules delete "gke-${CLUSTER}-nodeport" --quiet || true
 gcloud container clusters delete "$CLUSTER" --zone "$ZONE" --quiet || true
 gcloud artifacts repositories delete "$REPO" --location "$REGION" --quiet || true
 gcloud storage rm -r "gs://$BUCKET" --quiet || true
-for n in serving frontend training; do
+for n in serving training; do
   gcloud iam service-accounts delete "gpu-recsys-${n}@${PROJECT}.iam.gserviceaccount.com" --quiet || true
 done
 
