@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPU Recommender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>GPU Recommender</h1>
+      <p class="tagline">Two views of the same per-game performance curve, at 1080p High.</p>
+    </div>
+    <div id="model-badge" class="badge badge-muted">model: &hellip;</div>
+  </header>
+
+  <main>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="find" type="button" role="tab">Find a GPU</button>
+      <button class="tab" data-tab="fps" type="button" role="tab">Estimate FPS</button>
+      <button class="tab" data-tab="insights" type="button" role="tab">Insights</button>
+      <button class="tab" data-tab="status" type="button" role="tab">Status</button>
+    </nav>
+
+    <section id="tab-find" class="tab-panel" role="tabpanel">
+      <div class="card">
+        <h2>Find a GPU <span class="hint">game + target FPS &rarr; hardware</span></h2>
+
+        <div class="field">
+          <label for="game">Game <span class="hint">type a few letters to search</span></label>
+          <div class="suggest">
+            <input id="game" type="text" placeholder="e.g. Cyberpunk 2077" autocomplete="off">
+            <ul id="suggest-list" class="suggest-list" hidden></ul>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fps-number">Target FPS <span class="hint">30&ndash;360</span></label>
+          <div class="fps-row">
+            <input id="fps-slider" type="range" min="30" max="360" step="1" value="60">
+            <input id="fps-number" type="number" min="30" max="360" step="1" value="60">
+          </div>
+          <div class="presets">
+            <button class="chip" data-fps="60" type="button">60</button>
+            <button class="chip" data-fps="120" type="button">120</button>
+            <button class="chip" data-fps="144" type="button">144</button>
+            <button class="chip" data-fps="240" type="button">240</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Resolution <span class="hint">measurements are 1080p High</span></label>
+          <div class="segmented">
+            <label class="seg"><input type="radio" name="resolution" value="1080p" checked> 1080p</label>
+            <label class="seg"><input type="radio" name="resolution" value="1440p"> 1440p</label>
+            <label class="seg"><input type="radio" name="resolution" value="4k"> 4K</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Machine <span class="hint">recommendations come from one pool</span></label>
+          <div class="segmented">
+            <label class="seg"><input type="radio" name="segment" value="desktop" checked> Desktop</label>
+            <label class="seg"><input type="radio" name="segment" value="laptop"> Laptop</label>
+          </div>
+          <div class="toggles">
+            <label class="toggle"><input id="allow-pro" type="checkbox"> Allow workstation / pro cards</label>
+            <label class="toggle"><input id="allow-legacy" type="checkbox"> Include older generations</label>
+          </div>
+        </div>
+
+        <button id="go" class="primary" type="button">Find my GPU</button>
+        <p id="error" class="error" hidden></p>
+      </div>
+
+      <div id="result" class="card" hidden>
+        <h2>Recommendation</h2>
+        <div class="result-grid">
+          <div class="metric">
+            <span class="metric-label" id="r-game-line">Required G3D score</span>
+            <span class="metric-value" id="r-required">&ndash;</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Recommended GPU</span>
+            <span class="metric-value" id="r-gpu">&ndash;</span>
+            <span class="chip-static" id="r-type" hidden></span>
+            <span class="chip-static" id="r-market" hidden></span>
+            <span class="chip-static" id="r-avail" hidden></span>
+            <span class="chip-static" id="r-gen" hidden></span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Its benchmark score</span>
+            <span class="metric-value" id="r-score">&ndash;</span>
+          </div>
+        </div>
+        <div id="r-chart" class="result-chart" hidden>
+          <h3 class="chart-title">FPS to required score</h3>
+          <svg id="r-svg" viewBox="0 0 640 250" role="img" aria-label="Required score by target FPS"></svg>
+        </div>
+        <p id="r-alt" class="hint" hidden></p>
+        <p id="r-none" class="error" hidden>No GPU in this pool meets the requirement &mdash; try a lower FPS target, or allow workstation / older cards.</p>
+      </div>
+    </section>
+
+    <section id="tab-fps" class="tab-panel" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Estimate FPS <span class="hint">game + GPU &rarr; predicted FPS</span></h2>
+
+        <div class="field">
+          <label for="fps-game">Game <span class="hint">type a few letters to search</span></label>
+          <div class="suggest">
+            <input id="fps-game" type="text" placeholder="e.g. Cyberpunk 2077" autocomplete="off">
+            <ul id="fps-suggest-list" class="suggest-list" hidden></ul>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fps-gpu">GPU <span class="hint">type a few letters to search</span></label>
+          <div class="suggest">
+            <input id="fps-gpu" type="text" placeholder="e.g. GeForce RTX 4060" autocomplete="off">
+            <ul id="gpu-suggest-list" class="suggest-list" hidden></ul>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Resolution <span class="hint">measurements are 1080p High</span></label>
+          <div class="segmented">
+            <label class="seg"><input type="radio" name="fps-resolution" value="1080p" checked> 1080p</label>
+            <label class="seg"><input type="radio" name="fps-resolution" value="1440p"> 1440p</label>
+            <label class="seg"><input type="radio" name="fps-resolution" value="4k"> 4K</label>
+          </div>
+        </div>
+
+        <button id="fps-go" class="primary" type="button">Estimate FPS</button>
+        <p id="fps-error" class="error" hidden></p>
+
+        <div id="fps-result" hidden>
+          <div class="result-grid">
+            <div class="metric">
+              <span class="metric-label" id="fps-line">Predicted</span>
+              <span class="metric-value" id="fps-value">&ndash;</span>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip-static" id="fps-ff" hidden></span>
+            <span class="chip-static" id="fps-avail" hidden></span>
+            <span class="chip-static" id="fps-curve" hidden></span>
+          </div>
+          <p id="fps-note" class="hint" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-insights" class="tab-panel" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Analytics <span class="hint">figures published by notebook 06</span></h2>
+        <p class="hint">Each card summarises one analysis of the game and GPU data: the caption gives the headline
+          numbers and the note below it explains how to read the chart. Click a figure to enlarge.</p>
+        <div id="insights-grid" class="insights-grid"></div>
+        <p id="insights-empty" class="hint" hidden>No figures published yet &mdash; run notebook 06 to generate and upload them.</p>
+      </div>
+    </section>
+
+    <section id="tab-status" class="tab-panel" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Service status</h2>
+        <dl class="status-list">
+          <div><dt>API</dt><dd id="s-status">&hellip;</dd></div>
+          <div><dt>GPU catalogue</dt><dd id="s-gpus">&hellip;</dd></div>
+          <div><dt>Storage</dt><dd id="s-emulator">&hellip;</dd></div>
+        </dl>
+        <button id="refresh" class="ghost" type="button">Refresh status</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <footer>
+    <p>Dataset: Zenodo &mdash; &ldquo;PC Game System Requirements &amp; Estimated FPS by GPU&rdquo; (CC&nbsp;BY&nbsp;4.0).
+      REST endpoints via <code>/api/</code>: <code>GET /healthz</code> &middot; <code>GET /model</code> &middot;
+      <code>POST /recommend</code> &middot; <code>POST /fps</code>.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

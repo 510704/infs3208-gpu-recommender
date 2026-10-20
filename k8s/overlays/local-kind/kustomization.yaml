@@ -1,0 +1,25 @@
+# Local cluster overlay (kind/minikube): swap real GCS for the emulator.
+# The only functional differences from the GKE overlay are this ConfigMap and
+# the extra storage resources below - which is the whole portability argument.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: gpu-recsys
+
+resources:
+  - namespace.yaml
+  - ../../base
+  - gcs.yaml
+  - ingest-job.yaml
+
+configMapGenerator:
+  - name: app-config
+    options:
+      disableNameSuffixHash: true
+    literals:
+      - STORAGE_EMULATOR_HOST=http://gcs:4443
+      - MODEL_BUCKET=gpu-recsys
+      - CATALOG_BLOB=models/gpus_classified.csv
+      - RAW_GPUS_BLOB=raw/gpus.csv
+      - GAME_MODEL_BLOB=models/game_fps_model.csv
+      - CURVE_BLOB=models/fps_curve.json

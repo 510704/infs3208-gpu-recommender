@@ -1,0 +1,91 @@
+# Training pipeline: one pod runs notebooks 01 -> 03 -> 02 against the Spark
+# cluster above, then the notebooks upload the refreshed artifacts to the bucket.
+# Suspended by default so nothing fires unattended; run manually with:
+#   kubectl create job --from=cronjob/retrain retrain-manual
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: retrain
+spec:
+  schedule: "0 3 * * 0"
+  suspend: true
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          restartPolicy: Never
+          serviceAccountName: training
+          initContainers:
+            # The notebooks read DATA_DIR/games.csv + gpus.csv + _provenance.json
+            # (a bind mount in docker-compose). In the cluster the durable copy
+            # is in the bucket, so fetch it into the job's scratch volume.
+            - name: fetch-raw
+              image: gpu-recsys-training:latest
+              imagePullPolicy: IfNotPresent
+              envFrom:
+                - configMapRef:
+                    name: app-config
+              command: ["python3", "-c"]
+              args:
+                - |
+                  import os, pathlib, time
+                  from google.cloud import storage
+                  data = pathlib.Path('/data')
+                  data.mkdir(parents=True, exist_ok=True)
+                  bucket = storage.Client().bucket(os.environ['MODEL_BUCKET'])
+                  for name in ('raw/games.csv', 'raw/gpus.csv', 'raw/_provenance.json'):
+                      dest = data / pathlib.Path(name).name
+                      for attempt in range(30):
+                          try:
+                              bucket.blob(name).download_to_filename(str(dest))
+                              print('fetched', name)
+                              break
+                          except Exception as exc:
+                              print('retry', name, exc)
+                              time.sleep(4)
+              volumeMounts:
+                - name: scratch
+                  mountPath: /data
+          containers:
+            - name: training
+              image: gpu-recsys-training:latest
+              imagePullPolicy: IfNotPresent
+              envFrom:
+                - configMapRef:
+                    name: app-config
+              env:
+                # The apache/spark image ships the Python bindings under
+                # /opt/spark/python but does not put them on PYTHONPATH, so
+                # `import pyspark` fails unless we point at them explicitly.
+                - name: PYTHONPATH
+                  value: /opt/spark/python:/opt/spark/python/lib/py4j-0.10.9.7-src.zip
+                - name: SPARK_MASTER
+                  value: spark://spark-master:7077
+                # The driver runs in this pod; executors must dial it back by its
+                # own IP. Injected from the downward API so no notebook edits.
+                - name: SPARK_DRIVER_HOST
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: status.podIP
+                - name: DATA_DIR
+                  value: /data
+                - name: JOBS_DIR
+                  value: /jobs
+              volumeMounts:
+                - name: scratch
+                  mountPath: /data
+              resources:
+                requests:
+                  cpu: 250m
+                  memory: 1Gi
+                limits:
+                  memory: 3Gi
+          volumes:
+            - name: scratch
+              persistentVolumeClaim:
+                claimName: training-data

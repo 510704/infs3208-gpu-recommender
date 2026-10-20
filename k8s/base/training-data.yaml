@@ -1,0 +1,22 @@
+# Training data shared by the DRIVER (training Job) and the EXECUTORS
+# (spark-worker pods).
+#
+# In docker-compose both containers bind-mount ./data, so a
+# `file:/home/jovyan/data/games.csv` read works from either side. In Kubernetes
+# the driver's emptyDir is invisible to executor pods, and Spark fails with
+# "File .../games.csv does not exist" on the executor.
+#
+# ReadWriteOnce is enough because both pods run on the same node in this
+# single-node test cluster. If the worker pool ever spans nodes, either use a
+# RWX class (Filestore/NFS) or have the job read through the GCS connector
+# instead of the filesystem.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: training-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

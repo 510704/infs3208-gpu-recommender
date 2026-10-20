@@ -1,0 +1,26 @@
+{
+  "source": "zenodo",
+  "record_id": 23162309,
+  "concept_recid": "23162308",
+  "doi": "10.5281/zenodo.23162309",
+  "concept_doi": "10.5281/zenodo.23162308",
+  "version": "2026-10-03",
+  "publication_date": "2026-10-03",
+  "license": "cc-by-4.0",
+  "publisher": "Zenodo",
+  "retrieved_at": "2026-10-13T02:21:58+00:00",
+  "files": [
+    {
+      "key": "games.csv",
+      "size": 4480665,
+      "checksum": "md5:b15f433693e8d7aeeb1d859ab21abbe5",
+      "status": "skipped"
+    },
+    {
+      "key": "gpus.csv",
+      "size": 124459,
+      "checksum": "md5:b03cf2cce1bca9b4e60583b3a5db3c09",
+      "status": "skipped"
+    }
+  ]
+}

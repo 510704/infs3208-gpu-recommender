@@ -1,0 +1,12 @@
+# Optional training component: the in-cluster retraining pipeline.
+#
+# It lives in components/ rather than base/ on purpose - a local cluster (and the
+# docker-compose stack) trains through Jupyter, so shipping it a CronJob, a PVC
+# and a training image it never uses would just be unused surface area.
+#
+# Referenced by overlays/gke. Run it with:
+#   kubectl create job --from=cronjob/retrain retrain-manual
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+resources:
+  - training.yaml

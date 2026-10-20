@@ -1,0 +1,18 @@
+# Cluster-agnostic resources. Environment specifics live in overlays/, and the
+# service configuration is injected as `app-config` (see overlays) so the same
+# manifests run locally and on GKE without code edits.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - serviceaccounts.yaml
+  - serving.yaml
+  - frontend.yaml
+  - spark.yaml
+  # Shared by the driver and the executors, so it is part of the base topology;
+  # only the scheduled retraining CronJob is optional (components/training).
+  - training-data.yaml
+
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: gpu-recsys

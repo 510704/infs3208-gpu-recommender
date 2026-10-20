@@ -1,0 +1,108 @@
+# Training tier workers: a static Spark cluster, exactly mirroring the
+# docker-compose layout. The notebooks connect with SPARK_MASTER (env-driven), so
+# no notebook code changes between compose and the cluster.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spark-master
+  template:
+    metadata:
+      labels:
+        app: spark-master
+    spec:
+      containers:
+        - name: spark-master
+          image: apache/spark:3.5.1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SPARK_NO_DAEMONIZE
+              value: "true"
+            # Kubernetes injects SPARK_MASTER_PORT/SERVICE_HOST for the Service
+            # below - and the injected value is "tcp://<ip>:7077", which Spark
+            # tries to parse as an int (NumberFormatException). Set them
+            # explicitly, and use env rather than CLI args so there is one source.
+            - name: SPARK_MASTER_HOST
+              value: spark-master
+            - name: SPARK_MASTER_PORT
+              value: "7077"
+            - name: SPARK_MASTER_WEBUI_PORT
+              value: "8080"
+          command: ["/opt/spark/sbin/start-master.sh"]
+          ports:
+            - name: rpc
+              containerPort: 7077
+            - name: ui
+              containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+            limits:
+              memory: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark-master
+spec:
+  # Headless: the name must resolve to the master pod's own IP, not a ClusterIP.
+  # The master binds to its advertised host, and a ClusterIP is not a local
+  # address on the pod (BindException: cannot assign requested address).
+  clusterIP: None
+  selector:
+    app: spark-master
+  ports:
+    - name: rpc
+      port: 7077
+      targetPort: 7077
+    - name: ui
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spark-worker
+  template:
+    metadata:
+      labels:
+        app: spark-worker
+    spec:
+      containers:
+        - name: spark-worker
+          image: apache/spark:3.5.1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SPARK_NO_DAEMONIZE
+              value: "true"
+            - name: SPARK_WORKER_CORES
+              value: "2"
+            - name: SPARK_WORKER_MEMORY
+              value: "2g"
+          command: ["/opt/spark/sbin/start-worker.sh"]
+          args: ["spark://spark-master:7077"]
+          # Executors run in THIS pod, so the training data must be visible here
+          # at the same path the driver uses (DATA_DIR=/data).
+          volumeMounts:
+            - name: data
+              mountPath: /data
+          resources:
+            requests:
+              cpu: 200m
+              memory: 1Gi
+            limits:
+              memory: 2500Mi
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: training-data

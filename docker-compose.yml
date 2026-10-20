@@ -1,0 +1,226 @@
+# Local development stack for the INFS3208 GPU/game hardware recommender.
+#
+# Mirrors the cloud design using free local stand-ins, so nothing here costs
+# money and nothing needs cloud credentials:
+#
+#   Google Colab          -> run notebooks on a host Jupyter / VS Code instead
+#   Cloud Storage (GCS)   -> gcs          (fake-gcs-server emulator)
+#   Dataproc Serverless   -> spark-master + spark-worker (Spark + MLlib)
+#   GKE / minikube        -> serving      (IDENTICAL image to what you deploy)
+#
+# Notebook pipeline (run in this order, needs the `training` profile):
+#   01_features     raw CSVs  -> curated features
+#   03_gpu_catalog  GPU catalog classification (rules + classifier)
+#   02_models       RF tier model + FPS curve -> bucket artifacts
+#
+# Optional analytics (report material; nothing is served from them):
+#   04_game_clusters   KMeans + Gaussian mixture demand bands
+#   05_demand_patterns FPGrowth rules over discretized specs + demand trend
+#
+# Dataset (the only external dependency):
+#   "PC Game System Requirements & Estimated FPS by GPU"
+#   Zenodo, version 2026-10-03, DOI 10.5281/zenodo.23162309, CC BY 4.0
+#   Fetched by the `ingest` service, which verifies each file's published MD5.
+#
+# Quick start (site only - 4 services):
+#   copy .env.example .env
+#   docker compose up -d --build
+#   curl http://localhost:8000/healthz
+#   open http://localhost:3000      # web UI
+#
+# Training (adds Spark + Jupyter, then run the notebooks in order):
+#   docker compose --profile training up -d
+#   # http://localhost:8888/?token=infs3208
+#   docker compose down -v
+#
+# NOTE: verify the image tags below against Docker Hub before relying on them.
+#
+# Page won't open? The WSL VM idles out and stops the Docker daemon. From
+# Windows PowerShell, re-wake the stack:
+#   wsl -d FedoraLinux-44 -- sh -lc "cd ~/infs3208-project && docker compose up -d"
+# gcs, serving and frontend have restart: unless-stopped, so they come back on
+# their own as soon as the VM (and its Docker daemon) starts again.
+# fake-gcs-server uses a filesystem backend persisted to ./data/gcs, so raw
+# uploads and the trained model survive restarts.
+
+name: gpu-recsys
+
+services:
+
+  # ------------------------------------------------------------------ storage
+  # Emulates the Google Cloud Storage JSON API.
+  #   REST endpoint  -> http://localhost:4443
+  #   in-container   -> http://gcs:4443  (via STORAGE_EMULATOR_HOST)
+  # Objects persist under ./data/gcs (filesystem backend), so the trained
+  # model and raw uploads survive restarts.
+  gcs:
+    image: fsouza/fake-gcs-server:latest
+    command:
+      - -scheme=http
+      - -port=4443
+      - -backend=filesystem
+      - -filesystem-root=/storage
+      - -public-host=localhost:4443
+    ports:
+      - "4443:4443"
+    volumes:
+      - ./data/gcs:/storage
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------- ingest
+  # Fetches the versioned dataset from Zenodo, verifies the published MD5 of
+  # each file, writes data/_provenance.json, then uploads to the emulator
+  # bucket. Runs once per `up` and exits -- expected, not a failure.
+  #
+  #   docker compose run --rm ingest --latest     # follow the concept DOI
+  #   docker compose run --rm ingest --force      # re-download everything
+  #   docker compose logs ingest                  # see what it did
+  ingest:
+    build:
+      context: ./ingest
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # The scheme is REQUIRED. "gcs:4443" makes the client build
+      # "gcs:4443/storage/v1/..." and fail with "No connection adapters".
+      STORAGE_EMULATOR_HOST: http://gcs:4443
+    volumes:
+      - ./data:/data
+    depends_on:
+      - gcs
+    restart: "no"
+
+  # ------------------------------------------------------------- spark master
+  # Stand-in for Dataproc Serverless: the Spark driver/executor coordinator.
+  # Submit jobs with:
+  #   docker compose exec spark-master \
+  #     /opt/spark/bin/spark-submit \
+  #       --master spark://spark-master:7077 \
+  #       --conf spark.driver.host=spark-master \
+  #       /opt/spark/jobs/etl.py
+  spark-master:
+    image: apache/spark:3.5.1
+    user: root
+    profiles: ["training"]
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+    command:
+      - /opt/spark/sbin/start-master.sh
+      - --host
+      - spark-master
+      - --port
+      - "7077"
+      - --webui-port
+      - "8080"
+    ports:
+      - "17077:7077"   # cluster endpoint (host-safe)
+      - "18080:8080"   # master UI (host-safe)
+    volumes:
+      - ./spark/jobs:/opt/spark/jobs
+      - ./data:/home/jovyan/data
+    mem_limit: 1g
+
+  # ------------------------------------------------------------- spark worker
+  spark-worker:
+    image: apache/spark:3.5.1
+    user: root
+    profiles: ["training"]
+    depends_on:
+      - spark-master
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+      SPARK_WORKER_CORES: "2"
+      SPARK_WORKER_MEMORY: "2g"
+    command:
+      - /opt/spark/sbin/start-worker.sh
+      - spark://spark-master:7077
+      - --webui-port
+      - "8081"
+    ports:
+      - "18081:8081"   # worker UI (host-safe)
+    volumes:
+      - ./spark/jobs:/opt/spark/jobs
+      - ./data:/home/jovyan/data
+    mem_limit: 3g
+
+  # ------------------------------------------------------------------ jupyter
+  # PySpark + MLlib notebook environment. Connects to the cluster above rather
+  # than running Spark in local mode, so you exercise the same code path a
+  # Dataproc job would use.
+  #
+  #   http://localhost:8888/?token=infs3208
+  #
+  # The token is fixed for coursework convenience. Never do this for real.
+  # SPARK_DRIVER_HOST is required: the driver runs in this container and the
+  # executors in spark-worker must be able to reach it by name.
+  jupyter:
+    build:
+      context: ./notebooks
+    profiles: ["training"]
+    environment:
+      JUPYTER_TOKEN: infs3208
+      SPARK_MASTER: spark://spark-master:7077
+      SPARK_DRIVER_HOST: jupyter
+      STORAGE_EMULATOR_HOST: http://gcs:4443
+      DATA_DIR: /home/jovyan/data
+    ports:
+      - "8888:8888"   # JupyterLab
+      - "4040:4040"   # Spark application UI
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/data
+      - ./spark/jobs:/home/jovyan/jobs
+      - ./figures:/home/jovyan/figures
+    mem_limit: 4g
+    depends_on:
+      - spark-master
+      - gcs
+
+  # ------------------------------------------------------------------ serving
+  # The SAME image that gets deployed to minikube (local test) and to GKE
+  # (production). Only the environment variables change:
+  #
+  #   local  : STORAGE_EMULATOR_HOST=gcs:4443
+  #   GKE    : no emulator host; real Google credentials via Workload Identity
+  serving:
+    build:
+      context: ./serving
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      STORAGE_EMULATOR_HOST: http://gcs:4443
+    ports:
+      - "8000:8000"
+    depends_on:
+      - gcs
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request;urllib.request.urlopen('http://localhost:8000/healthz').read()
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------ frontend
+  # Static single-page app served by nginx. The browser talks same-origin to
+  # /api/*, which nginx reverse-proxies to the serving container -- so the
+  # serving image needs no CORS middleware and stays byte-identical to the
+  # image deployed to minikube/GKE. The read-only ./data mount lets the UI
+  # offer game suggestions (games.csv) and GPU types (gpus.csv) without any
+  # extra API endpoints.
+  #
+  #   http://localhost:3000
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - serving
+    restart: unless-stopped

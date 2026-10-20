@@ -1,0 +1,30 @@
+# One-shot dataset fetch (MD5-verified from Zenodo) into the local bucket.
+# Not part of the GKE overlay: there the bucket is the durable source of truth.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ingest
+  labels:
+    app: ingest
+spec:
+  backoffLimit: 2
+  ttlSecondsAfterFinished: 900
+  template:
+    metadata:
+      labels:
+        app: ingest
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: ingest
+          image: gpu-recsys-ingest:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: STORAGE_EMULATOR_HOST
+              value: http://gcs:4443
+          volumeMounts:
+            - name: scratch
+              mountPath: /data
+      volumes:
+        - name: scratch
+          emptyDir: {}

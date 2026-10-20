@@ -1,0 +1,18 @@
+# Python / notebooks
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local env and editor state
+.env
+.vscode/
+
+# Word/Excel lock files
+~$*
+~WRL*
+
+# Local GCS emulator data and build outputs
+data/gcs/
+*.zip
+__MACOSX/

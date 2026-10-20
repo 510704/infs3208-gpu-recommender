@@ -1,0 +1,61 @@
+# Local object storage: fake-gcs-server with a filesystem backend on a PVC, so
+# the dataset and trained model survive pod restarts (the memory backend lost
+# them repeatedly in docker-compose).
+apiVersion: v1
+kind: Service
+metadata:
+  name: gcs
+  labels:
+    app: gcs
+spec:
+  selector:
+    app: gcs
+  ports:
+    - name: http
+      port: 4443
+      targetPort: 4443
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: gcs
+spec:
+  serviceName: gcs
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gcs
+  template:
+    metadata:
+      labels:
+        app: gcs
+    spec:
+      containers:
+        - name: fake-gcs-server
+          image: fsouza/fake-gcs-server:latest
+          imagePullPolicy: IfNotPresent
+          args:
+            - -scheme=http
+            - -port=4443
+            - -backend=filesystem
+            - -filesystem-root=/storage
+          ports:
+            - containerPort: 4443
+          readinessProbe:
+            httpGet:
+              path: /storage/v1/b
+              port: 4443
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          volumeMounts:
+            - name: storage
+              mountPath: /storage
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi

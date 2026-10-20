@@ -1,0 +1,63 @@
+# Low-cost serving shape: one replica per tier, one Spark worker, and an HPA
+# that cannot scale past the single replica (a second node would double the bill).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serving
+spec:
+  replicas: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-worker
+spec:
+  replicas: 1
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: serving
+spec:
+  minReplicas: 1
+  maxReplicas: 1
+---
+# The e2-standard-2 node exposes ~1.93 CPU and ~6 GiB to pods (GKE reserves the
+# rest). Without these requests Spark stayed Pending: the system DaemonSets
+# already hold ~0.7 CPU. These are scheduling requests only - with no CPU limit
+# Spark still bursts to SPARK_WORKER_CORES=2 when a training run needs it.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-master
+spec:
+  template:
+    spec:
+      containers:
+        - name: spark-master
+          resources:
+            requests:
+              cpu: 50m
+              memory: 512Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-worker
+spec:
+  template:
+    spec:
+      containers:
+        - name: spark-worker
+          resources:
+            requests:
+              cpu: 100m
+              memory: 1Gi
+

@@ -1,0 +1,16 @@
+service,spec,status,monthly_aud
+Compute Engine,e2-standard-2 node (2 vCPU / 8 GiB),used,99.74
+Compute Engine,30 GB pd-standard boot disk,used,2.33
+Compute Engine,1 GiB pd-balanced PVC,used,0.20
+Cloud Load Balancing,forwarding rule + external IPv4 (HTTP),used,31.47
+Cloud Load Balancing,5 GB data processing,used,0.06
+Networking,1 GB internet egress,used,0.17
+Artifact Registry,0.25 GiB container images,used,0.04
+Cloud Storage,6 MB standard storage + operations,used,0.01
+GKE,zonal control plane (first free cluster),used,0.00
+Apache Spark on GKE,master + 1 worker,used,0.00
+Workload Identity + IAM,3 service accounts,used,0.00
+Cloud Logging / Monitoring,free tier,used,0.00
+Cloud Billing API,price lookup,used,0.00
+Billing budget + alerts,planned,planned,0.00
+TOTAL,,,134.02

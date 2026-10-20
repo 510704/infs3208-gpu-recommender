@@ -1,0 +1,46 @@
+# Google Kubernetes Engine overlay.
+#
+# Differences from the local overlay are configuration only:
+#   - real Cloud Storage (no STORAGE_EMULATOR_HOST) + Workload Identity
+#   - images pulled from Artifact Registry
+#   - smaller Spark worker count to fit a single test node
+# Nothing in serving/app.py, frontend/ or the notebooks changes.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: gpu-recsys
+
+resources:
+  - namespace.yaml
+  - ../../base
+
+components:
+  - ../../components/training
+
+images:
+  - name: gpu-recsys-serving
+    newName: australia-southeast1-docker.pkg.dev/lucid-formula-504604-k8/gpu-recsys/serving
+    newTag: v1
+  - name: gpu-recsys-frontend
+    newName: australia-southeast1-docker.pkg.dev/lucid-formula-504604-k8/gpu-recsys/frontend
+    newTag: v1
+  - name: gpu-recsys-training
+    newName: australia-southeast1-docker.pkg.dev/lucid-formula-504604-k8/gpu-recsys/training
+    newTag: v1
+
+configMapGenerator:
+  - name: app-config
+    options:
+      disableNameSuffixHash: true
+    literals:
+      # No STORAGE_EMULATOR_HOST: the client falls back to real GCS with the
+      # pod's Workload Identity credentials.
+      - MODEL_BUCKET=gpu-recsys-lucid-504604-test
+      - CATALOG_BLOB=models/gpus_classified.csv
+      - RAW_GPUS_BLOB=raw/gpus.csv
+      - GAME_MODEL_BLOB=models/game_fps_model.csv
+      - CURVE_BLOB=models/fps_curve.json
+
+patches:
+  - path: patch-serviceaccounts.yaml
+  - path: patch-scale.yaml
