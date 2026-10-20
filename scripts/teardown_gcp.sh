@@ -4,14 +4,26 @@
 #   PROJECT=my-project BUCKET=my-gpu-rec-bucket bash scripts/teardown_gcp.sh
 set -euo pipefail
 
-PROJECT="${PROJECT:?set PROJECT}"
-BUCKET="${BUCKET:?set BUCKET}"
-REGION="${REGION:-australia-southeast1}"
-ZONE="${ZONE:-${REGION}-a}"
-CLUSTER="${CLUSTER:-gpu-recsys}"
-REPO="${REPO:-gpu-recsys}"
-
 cd "$(dirname "$0")/.."
+
+# Personal settings live in the gitignored .env; explicit env vars still win.
+if [[ -f .env ]]; then
+  set -a
+  # shellcheck disable=SC1091
+  . ./.env
+  set +a
+fi
+
+PROJECT="${PROJECT:-${GCP_PROJECT:-}}"
+BUCKET="${BUCKET:-${GCP_BUCKET:-}}"
+REGION="${REGION:-${GCP_REGION:-australia-southeast1}}"
+ZONE="${ZONE:-${GCP_ZONE:-${REGION}-a}}"
+CLUSTER="${CLUSTER:-${GKE_CLUSTER:-gpu-recsys}}"
+REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
+
+[[ -n "$PROJECT" ]] || { echo "set GCP_PROJECT in .env (or PROJECT=...)"; exit 1; }
+[[ -n "$BUCKET" ]] || { echo "set GCP_BUCKET in .env (or BUCKET=...)"; exit 1; }
+
 gcloud config set project "$PROJECT"
 
 kubectl delete -k k8s/overlays/gke --ignore-not-found 2>/dev/null || true

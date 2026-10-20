@@ -1,7 +1,8 @@
 # Cloud technologies and monthly cost estimate
 
-The project runs on **Google Cloud Platform**, region
-`australia-southeast1` (Sydney), project `lucid-formula-504604-k8`.
+The project runs on **Google Cloud Platform** in the author's project in
+`australia-southeast1` (Sydney); the project id, bucket and cluster name live in
+the gitignored `.env` (documented in `.env.example`).
 Prices are Google Cloud on-demand list prices converted to **AUD** at
 **1 USD = 1.437 AUD** (ECB reference rate, 2026-10-16), checked 2026-10-19, and
 assume 730 usage hours per month.

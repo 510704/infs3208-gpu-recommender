@@ -25,11 +25,14 @@ are byte-identical between docker-compose, the local cluster and GKE.
 
 ## Deploy from this repository (any project)
 
-The files under `overlays/gke` keep the author's example values (project id,
-bucket, service-account emails). To deploy to **your own** project, use the
-script, which re-renders that overlay with your values first:
+The files under `overlays/gke` use the placeholders `PROJECT_ID` and
+`BUCKET_NAME`. Put your own values in the gitignored `.env` (see `.env.example`)
+and run the script, which re-renders that overlay with them first:
 
 ```bash
+cp .env.example .env      # then set GCP_PROJECT / GCP_BUCKET / GKE_CLUSTER ...
+bash scripts/deploy_gcp.sh
+# or inline, without .env:
 PROJECT=<your-project> BUCKET=<your-bucket> bash scripts/deploy_gcp.sh
 ```
 

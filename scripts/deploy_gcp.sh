@@ -12,18 +12,29 @@
 # RENDER_ONLY=1 (no cloud calls - print the rendered overlay and exit).
 set -euo pipefail
 
-PROJECT="${PROJECT:?set PROJECT to your Google Cloud project id}"
-BUCKET="${BUCKET:?set BUCKET to the Cloud Storage bucket name to create/use}"
-REGION="${REGION:-australia-southeast1}"
-ZONE="${ZONE:-${REGION}-a}"
-CLUSTER="${CLUSTER:-gpu-recsys}"
-REPO="${REPO:-gpu-recsys}"
-MACHINE_TYPE="${MACHINE_TYPE:-e2-standard-2}"
-DISK_SIZE="${DISK_SIZE:-30}"
+cd "$(dirname "$0")/.."
+
+# Personal settings live in the gitignored .env; explicit env vars still win.
+if [[ -f .env ]]; then
+  set -a
+  # shellcheck disable=SC1091
+  . ./.env
+  set +a
+fi
+
+PROJECT="${PROJECT:-${GCP_PROJECT:-}}"
+BUCKET="${BUCKET:-${GCP_BUCKET:-}}"
+REGION="${REGION:-${GCP_REGION:-australia-southeast1}}"
+ZONE="${ZONE:-${GCP_ZONE:-${REGION}-a}}"
+CLUSTER="${CLUSTER:-${GKE_CLUSTER:-gpu-recsys}}"
+REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
+MACHINE_TYPE="${MACHINE_TYPE:-${GKE_MACHINE_TYPE:-e2-standard-2}}"
+DISK_SIZE="${DISK_SIZE:-${GKE_DISK_SIZE:-30}}"
 NS=gpu-recsys
 AR="${REGION}-docker.pkg.dev/${PROJECT}/${REPO}"
 
-cd "$(dirname "$0")/.."
+[[ -n "$PROJECT" ]] || { echo "set GCP_PROJECT in .env (or PROJECT=...)"; exit 1; }
+[[ -n "$BUCKET" ]] || { echo "set GCP_BUCKET in .env (or BUCKET=...)"; exit 1; }
 
 render() {
   local root="$1"
@@ -31,11 +42,11 @@ render() {
   mkdir -p "$root"
   cp -r k8s "$root/k8s"
   local out="$root/k8s/overlays/gke"
-  # image registry -> $AR, bucket -> $BUCKET, project id -> $PROJECT
+  # image registry -> $AR, BUCKET_NAME -> $BUCKET, PROJECT_ID -> $PROJECT
   sed -E -i \
     -e "s#(newName: ).*/(serving|frontend|training)\$#\1${AR}/\2#" \
-    -e "s#gpu-recsys-lucid-504604-test#${BUCKET}#g" \
-    -e "s#lucid-formula-504604-k8#${PROJECT}#g" \
+    -e "s#BUCKET_NAME#${BUCKET}#g" \
+    -e "s#PROJECT_ID#${PROJECT}#g" \
     "$out/kustomization.yaml" "$out/patch-serviceaccounts.yaml"
   echo "$out"
 }

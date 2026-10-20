@@ -1,9 +1,10 @@
 # Google Kubernetes Engine overlay.
 #
-# NOTE: the project id, bucket and service-account emails below are the author's
-# example environment. To deploy to your own project, use
+# PROJECT_ID and BUCKET_NAME are placeholders. scripts/deploy_gcp.sh copies this
+# tree, rewrites them (and the image registry) from your .env or from
+# PROJECT=/BUCKET= on the command line, and applies the rendered copy:
 #   PROJECT=<id> BUCKET=<bucket> bash scripts/deploy_gcp.sh
-# which copies this tree and rewrites those values before applying it.
+# Applying this file directly would target the wrong project, so use the script.
 #
 # Differences from the local overlay are configuration only:
 #   - real Cloud Storage (no STORAGE_EMULATOR_HOST) + Workload Identity
@@ -24,13 +25,13 @@ components:
 
 images:
   - name: gpu-recsys-serving
-    newName: australia-southeast1-docker.pkg.dev/lucid-formula-504604-k8/gpu-recsys/serving
+    newName: australia-southeast1-docker.pkg.dev/PROJECT_ID/gpu-recsys/serving
     newTag: v1
   - name: gpu-recsys-frontend
-    newName: australia-southeast1-docker.pkg.dev/lucid-formula-504604-k8/gpu-recsys/frontend
+    newName: australia-southeast1-docker.pkg.dev/PROJECT_ID/gpu-recsys/frontend
     newTag: v1
   - name: gpu-recsys-training
-    newName: australia-southeast1-docker.pkg.dev/lucid-formula-504604-k8/gpu-recsys/training
+    newName: australia-southeast1-docker.pkg.dev/PROJECT_ID/gpu-recsys/training
     newTag: v1
 
 configMapGenerator:
@@ -40,7 +41,7 @@ configMapGenerator:
     literals:
       # No STORAGE_EMULATOR_HOST: the client falls back to real GCS with the
       # pod's Workload Identity credentials.
-      - MODEL_BUCKET=gpu-recsys-lucid-504604-test
+      - MODEL_BUCKET=BUCKET_NAME
       - CATALOG_BLOB=models/gpus_classified.csv
       - RAW_GPUS_BLOB=raw/gpus.csv
       - GAME_MODEL_BLOB=models/game_fps_model.csv
