@@ -1,0 +1,19 @@
+# Normalise line endings: the repository is deployed on Linux (containers, GKE,
+# bash scripts), so text files are stored with LF in the archive.
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.ipynb text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+Dockerfile text eol=lf
+.gitignore text eol=lf
+
+# Binary assets must not be touched.
+*.png binary
+*.docx binary
+*.parquet binary
