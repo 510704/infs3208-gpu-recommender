@@ -9,7 +9,7 @@ k8s/
   base/                     shared by every environment
     serviceaccounts.yaml    serving / training / frontend
     serving.yaml            Deployment + Service + PDB + HPA (no volumes)
-    frontend.yaml           ConfigMap(nginx) + Deployment + LoadBalancer Service
+    frontend.yaml           ConfigMap(nginx) + Deployment + Service (LoadBalancer locally, NodePort on GKE)
     spark.yaml              spark-master (headless Service) + spark-worker
     training-data.yaml      PVC shared by driver and executors
     training.yaml           CronJob: notebooks 01 -> 03 -> 02
@@ -71,8 +71,9 @@ reliable options:
    clone the repo (or restore it from `gs://…/release/`) and run the normal
    `bash scripts/deploy_gcp.sh`.
 
-Expected cost for the default shape is ≈ A$134/month
-(`docs/cloud-usage-and-cost.md`); tear it down when finished.
+Expected cost for the default shape is ≈ A$102/month
+(`docs/cloud-usage-and-cost.md`); tear it down when finished. The script prints
+the site URL when it finishes:
 
 The serving artefacts are committed under `data/curated/` (catalogue, FPS curves,
 metrics, Parquet parts, gallery index), so the API works as soon as the bucket is
@@ -91,24 +92,30 @@ seeded. To regenerate them instead, run the notebooks (see the training CronJob)
 `patch-scale.yaml` also pins serving and frontend to **one replica each** and the
 HPA to min=max=1, so a busy demo cannot add a second node.
 
-### Cost profile (Sydney list prices)
+### Cost profile (Sydney list prices, AUD)
 
 | item | monthly |
 |---|---|
-| `e2-standard-2` node (2 vCPU / 8 GiB) | $69.41 |
-| 30 GB `pd-standard` boot disk | $1.62 |
-| Frontend `LoadBalancer` (rule + IP) | $21.90 |
-| GKE zonal control plane | $0 (first free zonal cluster) |
-| Artifact Registry + GCS + PVC | ≈ $0.2 |
-| **Total** | **≈ $93/mo** (~$0.13/h) |
+| `e2-standard-2` node (2 vCPU / 8 GiB) | A$99.74 |
+| 30 GB `pd-standard` boot disk | A$2.33 |
+| 1 GiB `pd-balanced` PVC (training scratch) | A$0.20 |
+| Internet egress (~1 GB) | A$0.17 |
+| Node external IPv4 (ephemeral, attached) | A$0.00 |
+| GKE zonal control plane | A$0 (first free zonal cluster) |
+| Artifact Registry + GCS | ≈ A$0.05 |
+| **Total** | **≈ A$102/mo** (~A$0.14/h) |
+
+The frontend is exposed on the **node's external IP** (`NodePort` 30080, opened by
+a firewall rule created by `scripts/deploy_gcp.sh`) instead of a Cloud Load
+Balancer, which is what keeps the total at ≈ A$102 rather than ≈ A$134 — the LB
+forwarding rule and its IP alone are ≈ A$31/month.
 
 `e2-medium` was tried first and is not usable here: shared-core sizing plus the
 GKE reservation leaves only **940m CPU** allocatable, so the Spark worker never
 schedules. `e2-standard-2` is the smallest node that runs Spark, serving and the
-frontend together. Spot nodes cut the node line by ~49% (≈ $59/mo total) at the
-cost of eviction risk. Dropping the `LoadBalancer` for `NodePort` +
-`kubectl port-forward` saves another ~$22/mo. The previous shape
-(e2-standard-4, 2 replicas, autoscaling to 2 nodes) was ≈ $174/mo.
+frontend together. Spot nodes cut the node line by ~49% (≈ A$59/mo total) at the
+cost of eviction risk. The earlier shape (e2-standard-4, 2 replicas, autoscaling
+to 2 nodes, Cloud Load Balancer) was ≈ A$250/mo.
 
 Serving has **no volumes at all**: the catalogue (`models/gpus_classified.csv`) and
 the per-game FPS curve (`models/game_fps_model.csv`, `models/fps_curve.json`) are
@@ -182,8 +189,9 @@ kubectl -n gpu-recsys rollout restart deploy/serving   # reload the new artifact
 
 ### Verified in a real GKE cluster
 
-- `frontend` LoadBalancer → a Google Cloud LB IP; site, `/api/healthz`,
-  `/api/recommend`, `/api/fps` all served **through the LB**.
+- `frontend` reachable on the **node's external IP** (`http://<node-ip>:30080`);
+  site, `/api/healthz`, `/api/recommend`, `/api/fps` all served through it, with
+  the port opened by the `gke-<cluster>-nodeport` firewall rule.
 - serving with **no volumes**: `gpus_loaded: 1381, catalog: classified,
   curve: loaded, emulator: null` — real Cloud Storage via
   Workload Identity, identical image to docker-compose.

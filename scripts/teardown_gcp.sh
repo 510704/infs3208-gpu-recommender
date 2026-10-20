@@ -7,10 +7,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 # Personal settings live in the gitignored .env; explicit env vars still win.
+# tr -d '\r' so a .env edited on Windows (CRLF) still sources cleanly.
 if [[ -f .env ]]; then
   set -a
   # shellcheck disable=SC1091
-  . ./.env
+  . <(tr -d '\r' < .env)
   set +a
 fi
 
@@ -27,6 +28,7 @@ REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
 gcloud config set project "$PROJECT"
 
 kubectl delete -k k8s/overlays/gke --ignore-not-found 2>/dev/null || true
+gcloud compute firewall-rules delete "gke-${CLUSTER}-nodeport" --quiet || true
 gcloud container clusters delete "$CLUSTER" --zone "$ZONE" --quiet || true
 gcloud artifacts repositories delete "$REPO" --location "$REGION" --quiet || true
 gcloud storage rm -r "gs://$BUCKET" --quiet || true

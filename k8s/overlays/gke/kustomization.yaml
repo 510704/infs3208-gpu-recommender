@@ -50,3 +50,4 @@ configMapGenerator:
 patches:
   - path: patch-serviceaccounts.yaml
   - path: patch-scale.yaml
+  - path: patch-frontend-nodeport.yaml
