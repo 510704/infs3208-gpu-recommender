@@ -12,6 +12,10 @@ __pycache__/
 ~$*
 ~WRL*
 
+# Course materials (not project components)
+Individual Project_2026.pdf
+Marking Criteria_2026.pdf
+
 # Local GCS emulator data and build outputs
 data/gcs/
 *.zip
