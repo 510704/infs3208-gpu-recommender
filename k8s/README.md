@@ -23,6 +23,39 @@ counts, storage class, emulator vs real bucket, service-account annotations. The
 application itself is untouched — `serving/app.py`, `frontend/` and the notebooks
 are byte-identical between docker-compose, the local cluster and GKE.
 
+## Deploy from this repository (any project)
+
+The files under `overlays/gke` keep the author's example values (project id,
+bucket, service-account emails). To deploy to **your own** project, use the
+script, which re-renders that overlay with your values first:
+
+```bash
+PROJECT=<your-project> BUCKET=<your-bucket> bash scripts/deploy_gcp.sh
+```
+
+Prerequisites: a Linux host (or WSL) with `gcloud`, `docker` and `kubectl`, a
+project with billing enabled and the Owner/Editor role. The script is idempotent:
+it enables the APIs, creates the Artifact Registry repo and the bucket, builds
+and pushes the images, uploads the pre-built artefacts from `data/curated/`,
+creates the cluster (`e2-standard-2`, 30 GB disk, Workload Identity), binds the
+service accounts and applies the overlay.
+
+Useful variables: `REGION` (default `australia-southeast1`), `ZONE`, `CLUSTER`,
+`REPO`, `MACHINE_TYPE`, `DISK_SIZE`, `WITH_TRAINING=1` (also build the training
+image) and `RENDER_ONLY=1` (print the rendered overlay without touching the
+cloud). Tear down with:
+
+```bash
+PROJECT=<your-project> BUCKET=<your-bucket> bash scripts/teardown_gcp.sh
+```
+
+Expected cost for the default shape is ≈ A$134/month
+(`docs/cloud-usage-and-cost.md`); tear it down when finished.
+
+The serving artefacts are committed under `data/curated/` (catalogue, FPS curves,
+metrics, Parquet parts, gallery index), so the API works as soon as the bucket is
+seeded. To regenerate them instead, run the notebooks (see the training CronJob).
+
 ## Where the environment switch happens
 
 | knob | local (kind/minikube) | GKE |

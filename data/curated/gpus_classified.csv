@@ -1,0 +1,1382 @@
+name,type,g3d_mark,form_factor,market,availability,generation,gen_year,is_legacy,ff_source
+GeForce RTX 5090 D,Desktop,41594,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+RTX PRO 5000 72GB Blackwell,Desktop,40493,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 5090,Desktop,38943,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+GeForce RTX 4090,Desktop,38081,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+GeForce RTX 5080,Desktop,35712,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+RTX PRO 6000 Blackwell Workstation Edition,Desktop,35449,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 4080,Desktop,34446,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+GeForce RTX 4080 SUPER,Desktop,34260,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+RTX PRO 4500 Blackwell,Desktop,33194,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 5070 Ti,Desktop,32457,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+RTX PRO 6000 Blackwell Max-Q Workstation Edition,Desktop,31910,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 4070 Ti SUPER,Desktop,31786,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+RTX PRO 5000 Blackwell,Desktop,31710,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 4070 Ti,Desktop,31557,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+Radeon RX 7900 XTX,Desktop,31372,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 5090 D v2,Desktop,31108,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+GeForce RTX 4090 D,Unknown,30628,desktop,consumer,current,RTX 40 (Ada),2022,0,model
+GeForce RTX 4070 SUPER,Desktop,29969,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+GeForce RTX 3090 Ti,Desktop,29312,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 7900 XT,Desktop,28994,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 5070,Desktop,28771,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+GeForce RTX 5090 Laptop GPU,Mobile,28475,laptop,consumer,current,RTX 50 (Blackwell),2025,0,rule
+Radeon RX 6950 XT,Desktop,28091,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+Radeon AI PRO R9700,Desktop,27698,desktop,consumer,current,Radeon AI Pro,2025,0,column
+Radeon RX 7900 GRE,Desktop,27344,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+RTX PRO 4000 Blackwell,Desktop,27314,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 4090 Laptop GPU,Mobile,27120,laptop,consumer,current,RTX 40 (Ada),2022,0,rule
+GeForce RTX 4070,Desktop,26918,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+Radeon RX 9070 XT,Desktop,26897,desktop,consumer,current,RX 9000 (RDNA 4),2025,0,column
+GeForce RTX 3080 Ti,Desktop,26785,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 6900 XT,Desktop,26698,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+GeForce RTX 3080 12GB,Desktop,26570,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+GeForce RTX 3090,Desktop,26558,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+GeForce RTX 5080 Laptop GPU,Mobile,26499,laptop,consumer,current,RTX 50 (Blackwell),2025,0,rule
+Radeon RX 9070,Desktop,25429,desktop,consumer,current,RX 9000 (RDNA 4),2025,0,column
+RTX 5880 Ada Generation,Desktop,25096,desktop,consumer,current,RTX Ada workstation,2023,0,column
+GeForce RTX 3080,Desktop,25038,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 6800 XT,Desktop,25035,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+GeForce RTX 4080 Laptop GPU,Mobile,24719,laptop,consumer,current,RTX 40 (Ada),2022,0,rule
+Radeon RX 9070 GRE,Desktop,24418,desktop,consumer,current,RX 9000 (RDNA 4),2025,0,column
+RTX PRO 5000 Blackwell Generation Laptop GPU,Desktop,24359,laptop,workstation,current,RTX Pro,2024,0,rule
+Radeon RX 7800 XT,Desktop,24322,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+RTX PRO 4000 Blackwell Generation Laptop GPU,Desktop,23611,laptop,workstation,current,RTX Pro,2024,0,rule
+RTX 3500 Ada Generation Embedded GPU,Desktop,23495,desktop,consumer,current,RTX Ada workstation,2023,0,column
+RTX PRO 4000 Blackwell SFF Edition,Desktop,23366,desktop,workstation,current,RTX Pro,2024,0,column
+RTX 5000 Ada Generation Laptop GPU,Mobile,23320,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+GeForce RTX 3070 Ti,Desktop,23262,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+GeForce RTX 5070 Ti Laptop GPU,Mobile,22694,laptop,consumer,current,RTX 50 (Blackwell),2025,0,rule
+GeForce RTX 5060 Ti 16GB,Desktop,22676,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+GeForce RTX 4060 Ti 16GB,Desktop,22670,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+Radeon RX 7700 XT,Desktop,22635,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 4060 Ti,Desktop,22628,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+GeForce RTX 5060 Ti 8GB,Desktop,22491,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+RTX PRO 3000 Blackwell Generation Laptop GPU,Mobile,22238,laptop,workstation,current,RTX Pro,2024,0,rule
+GeForce RTX 3070,Desktop,22135,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 7900M,Mobile,22111,laptop,consumer,current,RX 7000 (RDNA 3),2022,0,rule
+Radeon RX 6800,Desktop,22036,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+RTX 4000 Ada Generation Laptop GPU,Mobile,21978,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+GeForce RTX 2080 Ti,Desktop,21478,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+RTX PRO 6000 Blackwell Server Edition,Desktop,21388,desktop,workstation,current,RTX Pro,2024,0,column
+Radeon RX 7700,Desktop,21241,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 5060,Desktop,20836,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+Radeon RX 6750 XT,Desktop,20717,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+RTX PRO 2000 Blackwell,Desktop,20657,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce RTX 3060 Ti,Desktop,20283,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 6750 GRE 12GB,Unknown,20178,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,model
+Radeon RX 9060 XT 16GB,Desktop,20084,desktop,consumer,current,RX 9000 (RDNA 4),2025,0,column
+TITAN V,Desktop,20072,desktop,consumer,aging,Titan,2017,1,column
+TITAN RTX,Workstation,19947,desktop,consumer,aging,Titan,2017,1,model
+Radeon RX 9060 XT 8GB,Desktop,19823,desktop,consumer,current,RX 9000 (RDNA 4),2025,0,column
+Radeon RX 6700 XT,Desktop,19739,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+RTX 3500 Ada Generation Laptop GPU,Mobile,19722,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+GeForce RTX 4070 Laptop GPU,Mobile,19538,laptop,consumer,current,RTX 40 (Ada),2022,0,rule
+GeForce RTX 4060,Desktop,19530,desktop,consumer,current,RTX 40 (Ada),2022,0,column
+SMI USB Display,Desktop,19462,desktop,invalid,legacy_secondhand,Display adapter,2015,1,column
+GeForce RTX 2080 SUPER,Desktop,19459,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+GeForce RTX 5070 Laptop GPU,Mobile,19271,laptop,consumer,current,RTX 50 (Blackwell),2025,0,rule
+Radeon RX 6750 GRE 10GB,Unknown,18986,unclassified,consumer,current,RX 6000 (RDNA 2),2020,0,unclassified
+LIANLI USB Display-60hz,Desktop,18968,desktop,invalid,legacy_secondhand,Display adapter,2015,1,column
+GeForce RTX 3080 Ti Laptop GPU,Mobile,18952,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+Radeon RX 6700,Desktop,18908,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+NVIDIA TITAN Xp,Desktop,18762,desktop,consumer,aging,Titan,2017,1,column
+GeForce RTX 2080,Desktop,18617,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+GeForce GTX 1080 Ti,Desktop,18588,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+TITAN Xp COLLECTORS EDITION,Desktop,18570,desktop,consumer,aging,Titan,2017,1,column
+Radeon RX 9060,Desktop,18332,desktop,consumer,current,RX 9000 (RDNA 4),2025,0,column
+Radeon RX 7650 GRE,Desktop,18281,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 2070 SUPER,Desktop,18146,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+Radeon 8060S,Desktop,18139,laptop,consumer,current,Radeon iGPU,2023,0,rule
+GeForce RTX 3070 Ti Laptop GPU,Mobile,17499,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+Radeon Pro W6900X,Desktop,17413,desktop,workstation,current,Radeon Pro (RDNA),2023,0,column
+GeForce RTX 4060 Laptop GPU,Mobile,17402,laptop,consumer,current,RTX 40 (Ada),2022,0,rule
+GeForce RTX 5050,Desktop,17370,desktop,consumer,current,RTX 50 (Blackwell),2025,0,column
+Radeon RX 7600 XT,Desktop,17307,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+Radeon RX 6850M XT,Mobile,17183,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Radeon RX 6650 XT,Desktop,17116,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+RTX A5500 Laptop GPU,Mobile,17111,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+Radeon RX 6650M XT,Mobile,17071,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+RTX 5000 Ada Generation Embedded GPU,Desktop,17056,desktop,consumer,current,RTX Ada workstation,2023,0,column
+GeForce RTX 3060,Desktop,17008,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+TITAN V CEO Edition,Desktop,16988,desktop,consumer,aging,Titan,2017,1,column
+GeForce RTX 5060 Laptop GPU,Mobile,16948,laptop,consumer,current,RTX 50 (Blackwell),2025,0,rule
+RTX A4500 Laptop GPU,Mobile,16792,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+GeForce RTX 3060 12GB,Desktop,16749,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 7800M,Mobile,16748,laptop,consumer,current,RX 7000 (RDNA 3),2022,0,rule
+RTX PRO 2000 Blackwell Generation Laptop GPU,Mobile,16725,laptop,workstation,current,RTX Pro,2024,0,rule
+Radeon Pro W6800X,Desktop,16619,desktop,workstation,current,Radeon Pro (RDNA),2023,0,column
+Radeon RX 5700 XT 50th Anniversary,Desktop,16579,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Radeon RX 7600,Desktop,16548,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 2060 SUPER,Desktop,16480,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+Radeon RX 6600 XT,Desktop,16448,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+Radeon VII,Desktop,16239,desktop,consumer,aging,Radeon VII,2019,1,column
+Radeon 8050S,Desktop,16222,laptop,consumer,current,Radeon iGPU,2023,0,rule
+GeForce RTX 3080 Laptop GPU,Mobile,16142,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+Radeon RX 5700 XT,Desktop,16114,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+GeForce RTX 2070,Desktop,16061,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+RTX 3000 Ada Generation Laptop GPU,Mobile,15980,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+GeForce RTX 2060 12GB,Desktop,15928,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+RTX 2000E Ada Generation,Desktop,15873,desktop,consumer,current,RTX Ada workstation,2023,0,column
+Intel Arc B580,Desktop,15865,desktop,consumer,current,Intel Arc,2022,0,column
+Radeon RX 6800S,Mobile,15765,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+GeForce GTX 1080,Desktop,15610,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+Radeon RX 7600S,Mobile,15573,laptop,consumer,current,RX 7000 (RDNA 3),2022,0,rule
+Radeon RX 7700S,Unknown,15507,laptop,consumer,current,RX 7000 (RDNA 3),2022,0,rule
+GeForce RTX 3060 8GB,Desktop,15257,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon RX 6650M,Mobile,15179,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+GeForce RTX 3070 Laptop GPU,Mobile,15121,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+Radeon RX 6700S,Mobile,15079,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Radeon RX 6600,Desktop,15072,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+GeForce RTX 2080 (Mobile),Mobile,15014,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+RTX PRO 1000 Blackwell Generation Laptop GPU,Mobile,14941,laptop,workstation,current,RTX Pro,2024,0,rule
+RTX 2000 Ada Generation Laptop GPU,Mobile,14875,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+Radeon Pro W6800X Duo,Desktop,14742,desktop,workstation,current,Radeon Pro (RDNA),2023,0,column
+Intel Arc Pro B60,Desktop,14717,desktop,workstation,current,Arc Pro,2024,0,column
+Radeon RX 7600M XT,Mobile,14692,laptop,consumer,current,RX 7000 (RDNA 3),2022,0,rule
+GeForce GTX 1070 Ti,Desktop,14658,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+GeForce RTX 5050 Laptop GPU,Mobile,14434,laptop,consumer,current,RTX 50 (Blackwell),2025,0,rule
+GeForce RTX 4050 Laptop GPU,Mobile,14329,laptop,consumer,current,RTX 40 (Ada),2022,0,rule
+Radeon RX 5700,Desktop,14256,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Radeon Pro W5700,Desktop,14153,desktop,workstation,current,Radeon Pro (RDNA),2023,0,column
+GeForce RTX 2060,Desktop,14103,desktop,consumer,aging,RTX 20 (Turing),2018,1,column
+Radeon RX 6600 LE,Unknown,14096,unclassified,consumer,current,RX 6000 (RDNA 2),2020,0,unclassified
+RTX 2000 Ada Generation Embedded GPU,Desktop,14061,desktop,consumer,current,RTX Ada workstation,2023,0,column
+RadeonT RX 6850M XT,Mobile,13992,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Intel Arc B570,Desktop,13962,desktop,consumer,current,Intel Arc,2022,0,column
+RTX A3000 12GB Laptop GPU,Mobile,13915,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+Radeon RX 6600M,Mobile,13913,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Radeon RX Vega 64,Desktop,13904,desktop,consumer,aging,Vega,2017,1,column
+GeForce GTX 980 Ti,Desktop,13660,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+NVIDIA TITAN X,Desktop,13660,desktop,consumer,aging,Titan,2017,1,column
+RTX 1000 Ada Generation Laptop GPU,Mobile,13631,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+Radeon RX 6700M,Mobile,13617,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+A10G,Desktop,13598,desktop,invalid,current,Data-center,2021,0,column
+GeForce RTX 2080 Super with Max-Q Design,Mobile,13522,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+GeForce GTX 1070,Desktop,13507,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+GeForce RTX 2070 Super with Max-Q Design,Mobile,13427,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+Radeon RX 5600 XT,Desktop,13415,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Intel Arc A770,Desktop,13352,desktop,consumer,current,Intel Arc,2022,0,column
+A100-SXM4-40GB,Desktop,13326,desktop,invalid,current,Data-center,2021,0,column
+RTX PRO 500 Blackwell Generation Laptop GPU,Mobile,13274,laptop,workstation,current,RTX Pro,2024,0,rule
+Radeon RX 6800M,Mobile,13236,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Radeon PRO W7900 Dual Slot,Desktop,13182,desktop,workstation,current,Radeon Pro (RDNA),2023,0,column
+GeForce RTX 3060 Laptop GPU,Mobile,13148,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+Radeon RX 6600S,Mobile,13016,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Radeon RX Vega 56,Desktop,13003,desktop,consumer,aging,Vega,2017,1,column
+GeForce RTX 2080 with Max-Q Design,Mobile,12730,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+GeForce GTX 1660 SUPER,Desktop,12683,desktop,consumer,aging,GTX 16 (Turing),2019,1,column
+GeForce GTX 1660 Ti,Desktop,12677,desktop,consumer,aging,GTX 16 (Turing),2019,1,column
+Radeon Vega Frontier Edition,Desktop,12674,desktop,consumer,aging,Vega,2017,1,column
+Intel Arc A750,Desktop,12620,desktop,consumer,current,Intel Arc,2022,0,column
+Radeon Pro WX 8200,Desktop,12592,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+GeForce GTX TITAN X,Desktop,12551,desktop,consumer,aging,Titan,2017,1,column
+GeForce RTX 3050 8GB,Desktop,12509,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Radeon Pro 5700 XT,Desktop,12457,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+Radeon RX 5600 OEM,Unknown,12390,desktop,consumer,aging,RX 5000 (RDNA),2019,1,model
+GeForce RTX 2070 (Mobile),Mobile,12357,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+Radeon RX 6850M,Mobile,12274,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Intel Arc Pro B50,Desktop,12191,desktop,workstation,current,Arc Pro,2024,0,column
+Quadro RTX 4000 with Max-Q Design,Mobile,12086,laptop,workstation,current,RTX 40 (Ada),2022,0,rule
+Intel Arc A580,Desktop,12076,desktop,consumer,current,Intel Arc,2022,0,column
+Radeon Pro Vega 56,Desktop,12061,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+GeForce RTX 3050 Laptop GPU,Mobile,12003,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+Radeon RX 7400,Desktop,11909,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+GeForce RTX 3050 OEM,Desktop,11905,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+Intel Arc A770M,Mobile,11854,laptop,consumer,current,Intel Arc,2022,0,rule
+RTX A4000H,Desktop,11815,desktop,consumer,current,RTX Ada workstation,2023,0,column
+Radeon Pro WX 9100,Desktop,11811,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+Radeon RX 5600,Desktop,11753,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Quadro RTX 4000 (Mobile),Mobile,11687,laptop,workstation,current,RTX 40 (Ada),2022,0,rule
+Radeon Instinct MI60,Desktop,11638,desktop,consumer,aging,Instinct,2018,1,column
+GeForce GTX 1660,Desktop,11622,desktop,consumer,aging,GTX 16 (Turing),2019,1,column
+GeForce GTX 1080 with Max-Q Design,Mobile,11615,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Radeon Pro 5700,Desktop,11457,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+GeForce RTX 2070 with Max-Q Design,Mobile,11398,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+GeForce RTX 2060 (Mobile),Mobile,11353,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+Quadro P5200,Mobile,11297,laptop,workstation,legacy_secondhand,Quadro (Kepler-Pascal),2015,1,rule
+RTX 500 Ada Generation Laptop GPU,Mobile,11179,laptop,consumer,current,RTX Ada workstation,2023,0,rule
+Radeon PRO W6600M,Mobile,11153,laptop,workstation,current,Radeon Pro (RDNA),2023,0,rule
+GeForce RTX 3050 A Laptop GPU,Mobile,11140,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+RTX A2000 Embedded GPU,Desktop,11117,desktop,workstation,current,RTX Ada workstation,2023,0,column
+GeForce GTX 980,Desktop,11073,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX 7600M,Mobile,10999,laptop,consumer,current,RX 7000 (RDNA 3),2022,0,rule
+RTX A1000,Desktop,10790,desktop,workstation,current,RTX Ada workstation,2023,0,column
+GeForce RTX 3050 6GB,Desktop,10765,desktop,consumer,current,RTX 30 (Ampere),2020,0,column
+RTX A2000 8GB Laptop GPU,Mobile,10503,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+GeForce GTX 1070 (Mobile),Mobile,10465,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Radeon 8040S,Desktop,10431,laptop,consumer,current,Radeon iGPU,2023,0,rule
+GeForce GTX 1650 SUPER,Desktop,10188,desktop,consumer,aging,GTX 16 (Turing),2019,1,column
+GeForce RTX 3050 6GB Laptop GPU,Mobile,10130,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+GeForce GTX 1660 Ti (Mobile),Mobile,10098,laptop,consumer,aging,GTX 16 (Turing),2019,1,rule
+GeForce RTX 3050 Ti Laptop GPU,Mobile,10091,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+RTX A1000 6GB Laptop GPU,Mobile,10069,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+GeForce GTX 1060,Desktop,10055,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+RTX PRO 500 Blackwell Embedded GPU,Desktop,9910,desktop,workstation,current,RTX Pro,2024,0,column
+GeForce GTX 1060 3GB,Desktop,9831,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+Intel Arc A730M,Unknown,9808,laptop,consumer,current,Intel Arc,2022,0,rule
+GeForce GTX 1070 with Max-Q Design,Mobile,9780,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Radeon R9 Fury + Fury X,Desktop,9741,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 970,Desktop,9638,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX 6500 XT,Desktop,9633,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+GeForce RTX 2060 with Max-Q Design,Mobile,9628,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+Radeon RX 6550M,Mobile,9620,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Radeon R9 Fury,Unknown,9523,unclassified,consumer,aging,Radeon GCN,2016,1,unclassified
+Intel Arc Pro A60,Unknown,9493,desktop,workstation,current,Arc Pro,2024,0,model
+GeForce RTX 3050 4GB Laptop GPU,Mobile,9490,laptop,consumer,current,RTX 30 (Ampere),2020,0,rule
+RTX A1000 Laptop GPU,Mobile,9479,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+GeForce GTX 780 Ti,Desktop,9468,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Intel Arc GPU,Desktop,9446,desktop,consumer,unknown,,,,column
+Intel Arc B390 GPU,Desktop,9393,desktop,consumer,current,Intel Arc,2022,0,column
+Radeon R9 Fury X,Unknown,9376,unclassified,consumer,aging,Radeon GCN,2016,1,unclassified
+Radeon RX 590,Desktop,9301,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Pro 5600M,Mobile,9285,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Radeon R9 390X,Desktop,9257,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 1060 5GB,Desktop,9212,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+GeForce GTX TITAN Black,Desktop,9192,desktop,consumer,aging,Titan,2017,1,column
+Quadro P4000 with Max-Q Design,Mobile,9083,laptop,workstation,legacy_secondhand,Quadro (Kepler-Pascal),2015,1,rule
+Radeon RX 5500 XT,Desktop,9072,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Radeon Pro W5500,Desktop,8941,desktop,workstation,current,Radeon Pro (RDNA),2023,0,column
+GeForce GTX TITAN Z,Desktop,8897,desktop,consumer,aging,Titan,2017,1,column
+Radeon RX 5500,Desktop,8853,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Radeon R9 295X2,Desktop,8816,desktop,consumer,unknown,,,,column
+Radeon R9 390,Desktop,8808,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon RX 580,Desktop,8791,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon RX 5600M,Mobile,8789,laptop,consumer,aging,RX 5000 (RDNA),2019,1,rule
+Intel Arc B370 GPU,Desktop,8755,desktop,consumer,current,Intel Arc,2022,0,column
+GeForce GTX 1660 Ti with Max-Q Design,Mobile,8616,laptop,consumer,aging,GTX 16 (Turing),2019,1,rule
+Radeon RX 480,Desktop,8540,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon R9 290X,Unknown,8432,desktop,consumer,aging,Radeon GCN,2016,1,model
+Radeon R9 290X / 390X,Desktop,8380,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Pro Duo,Desktop,8371,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+Ryzen 5 4600HS with Radeon Graphics,Unknown,8371,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX590 GME,Desktop,8341,desktop,consumer,unknown,,,,column
+GeForce GTX Titan,Desktop,8195,desktop,consumer,aging,Titan,2017,1,column
+Quadro RTX 3000 with Max-Q Design,Mobile,8169,laptop,workstation,current,RTX 30 (Ampere),2020,0,rule
+GeForce GTX 1060 (Mobile),Mobile,8160,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Radeon R9 290,Unknown,8153,unclassified,consumer,aging,Radeon GCN,2016,1,unclassified
+Radeon R9 290 / 390,Desktop,8150,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon 890M,Mobile,8149,integrated,consumer,n/a,,,,rule
+Intel Arc A530M,Unknown,8045,laptop,consumer,current,Intel Arc,2022,0,rule
+Ryzen 9 6900HS,Unknown,8005,unclassified,invalid,unknown,,,,unclassified
+GeForce GTX 780,Desktop,7946,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX 470/570,Desktop,7924,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 1650,Desktop,7873,desktop,consumer,aging,GTX 16 (Turing),2019,1,column
+T1200 Laptop GPU,Mobile,7843,laptop,workstation,current,T-series workstation,2020,0,rule
+GeForce GTX 1060 with Max-Q Design,Mobile,7832,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Ryzen 7 8845HS with Radeon 780M,Mobile,7766,integrated,consumer,n/a,,,,rule
+Radeon RX 6400,Desktop,7746,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,column
+GeForce RTX 2050,Mobile,7712,laptop,consumer,aging,RTX 20 (Turing),2018,1,rule
+T1000 8GB,Unknown,7684,unclassified,workstation,current,T-series workstation,2020,0,unclassified
+Radeon 880M,Mobile,7672,integrated,consumer,n/a,,,,rule
+Radeon RX 780,Unknown,7658,desktop,consumer,unknown,,,,model
+T1000,Unknown,7647,unclassified,workstation,current,T-series workstation,2020,0,unclassified
+Radeon RX 580 2048SP,Desktop,7628,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon RX 5300,Desktop,7606,desktop,consumer,aging,RX 5000 (RDNA),2019,1,column
+Radeon RX 6500,Unknown,7579,desktop,consumer,current,RX 6000 (RDNA 2),2020,0,model
+Radeon Pro 580X,Desktop,7540,desktop,workstation,aging,Radeon Pro (GCN),2016,1,column
+GeForce GTX 1650 Ti,Mobile,7536,laptop,consumer,aging,GTX 16 (Turing),2019,1,rule
+Radeon RX 580X,Desktop,7478,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 980M,Mobile,7383,laptop,consumer,unknown,,,,rule
+Radeon RX 6500M,Mobile,7332,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+Quadro T2000,Mobile,7284,laptop,workstation,current,T-series workstation,2020,0,rule
+RadeonT 780M,Mobile,7103,laptop,consumer,unknown,,,,rule
+T600 Laptop GPU,Mobile,7042,laptop,workstation,current,T-series workstation,2020,0,rule
+Quadro T2000 with Max-Q Design,Mobile,7018,laptop,workstation,current,T-series workstation,2020,0,rule
+GeForce GTX 1650 (Mobile),Mobile,6968,laptop,consumer,aging,GTX 16 (Turing),2019,1,rule
+Radeon 780M,Mobile,6866,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 6900HS,Unknown,6737,integrated,consumer,n/a,,,,rule
+Radeon Pro 5500M,Mobile,6733,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+GeForce GTX 970XM FORCE,Unknown,6707,unclassified,consumer,unknown,,,,unclassified
+Quadro T1000 with Max-Q Design,Mobile,6689,laptop,workstation,current,T-series workstation,2020,0,rule
+Radeon R9 285,Unknown,6680,unclassified,consumer,aging,Radeon GCN,2016,1,unclassified
+Intel Arc Pro 140T GPU,Desktop,6659,desktop,workstation,current,Arc Pro,2024,0,column
+Intel Arc 140T GPU,Desktop,6636,desktop,consumer,unknown,,,,column
+GeForce GTX 1650 Ti with Max-Q Design,Mobile,6616,laptop,consumer,aging,GTX 16 (Turing),2019,1,rule
+Radeon RX 6450M,Mobile,6601,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+RTX A500 Laptop GPU,Mobile,6576,laptop,workstation,current,RTX Ada workstation,2023,0,rule
+Radeon RX Vega M GH,Unknown,6559,unclassified,consumer,aging,Vega,2017,1,unclassified
+Quadro T1000,Mobile,6501,laptop,workstation,current,T-series workstation,2020,0,rule
+AMD Ryzen Z1 Extreme,Unknown,6438,unclassified,consumer,unknown,,,,unclassified
+Radeon RX 6300M,Mobile,6421,laptop,consumer,current,RX 6000 (RDNA 2),2020,0,rule
+T600,Unknown,6363,unclassified,workstation,current,T-series workstation,2020,0,unclassified
+GeForce GTX 1050 Ti,Desktop,6359,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+GeForce GTX 1650 with Max-Q Design,Mobile,6339,laptop,consumer,aging,GTX 16 (Turing),2019,1,rule
+GeForce MX570 A,Unknown,6296,laptop,consumer,aging,GeForce MX,2019,1,rule
+Intel Arc A380E,Desktop,6290,desktop,consumer,current,Intel Arc,2022,0,column
+Intel Arc A380,Desktop,6284,desktop,consumer,current,Intel Arc,2022,0,column
+Radeon Pro WX 7130,Mobile,6271,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Ryzen 7 6800HS with Radeon Graphics,Unknown,6240,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 6800HS,Unknown,6215,integrated,consumer,n/a,,,,rule
+RTX A500 Embedded GPU,Desktop,6197,desktop,workstation,current,RTX Ada workstation,2023,0,column
+Intel Arc Pro 130T GPU,Desktop,6178,desktop,workstation,current,Arc Pro,2024,0,column
+Ryzen 9 PRO 6950H with Radeon Graphics,Unknown,6176,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Arc 130T GPU,Desktop,6173,desktop,consumer,unknown,,,,column
+GeForce GTX 960,Desktop,6138,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R9 380X,Desktop,6130,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 9 6900HS with Radeon Graphics,Unknown,6110,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R9 280X,Desktop,6083,desktop,consumer,aging,Radeon GCN,2016,1,column
+RTX A400,Desktop,6003,desktop,workstation,current,RTX Ada workstation,2023,0,column
+Radeon RX 5500M,Mobile,5995,laptop,consumer,aging,RX 5000 (RDNA),2019,1,rule
+Radeon R9 380,Desktop,5977,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 770,Desktop,5968,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 7 6810U,Desktop,5937,integrated,consumer,n/a,,,,rule
+GeForce GTX 1050 Ti (Mobile),Mobile,5918,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Intel Arc Pro A30M,Unknown,5862,laptop,workstation,current,Arc Pro,2024,0,rule
+RadeonT 760M,Mobile,5846,laptop,consumer,unknown,,,,rule
+Intel Arc Pro,Desktop,5843,desktop,workstation,current,Arc Pro,2024,0,column
+Radeon Ryzen 7 7736U,Unknown,5826,integrated,consumer,n/a,,,,rule
+Radeon Pro 5300M,Mobile,5816,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Matrox LUMA A380P,Unknown,5811,unclassified,invalid,unknown,,,,unclassified
+Ryzen 7 PRO 6850H with Radeon Graphics,Unknown,5791,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 9 PRO 6950H,Unknown,5759,unclassified,invalid,unknown,,,,unclassified
+Intel Arc Pro A40/A50,Unknown,5758,desktop,workstation,current,Arc Pro,2024,0,model
+GeForce MX570,Unknown,5750,laptop,consumer,aging,GeForce MX,2019,1,rule
+GeForce GTX 970M,Mobile,5713,laptop,consumer,unknown,,,,rule
+Radeon E9550,Desktop,5693,desktop,consumer,unknown,,,,column
+RadeonT 680M Ryzen 7 7735HS,Mobile,5681,laptop,consumer,unknown,,,,rule
+RadeonT 680M,Mobile,5680,laptop,consumer,unknown,,,,rule
+Eng Sample: 100-000000560-40_Y,Unknown,5656,desktop,sample,unknown,,,,model
+Intel Arc 140T,Desktop,5635,desktop,consumer,unknown,,,,column
+Radeon Eng Sample: 100-000000544-40_Y,Desktop,5630,desktop,sample,unknown,,,,column
+GeForce GTX 680,Desktop,5615,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 9 PRO 6950H,Unknown,5609,integrated,consumer,n/a,,,,rule
+Ryzen 7 PRO 6850U,Unknown,5581,laptop,invalid,unknown,,,,rule
+Radeon HD 7990,Desktop,5566,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon R9 285 / 380,Desktop,5550,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon TM,Desktop,5535,desktop,consumer,unknown,,,,column
+Radeon R9 280,Desktop,5527,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen 7 PRO 6850H,Unknown,5521,integrated,consumer,n/a,,,,rule
+Ryzen 9 5900HS with Radeon Graphics,Unknown,5509,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 680M Ryzen 9 6900HX,Mobile,5493,integrated,consumer,n/a,,,,rule
+Intel Arc,Unknown,5492,desktop,consumer,unknown,,,,model
+GeForce GTX 760 Ti OEM,Unknown,5474,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,model
+L2,Desktop,5467,desktop,invalid,unknown,,,,column
+Ryzen 7 6800HS Creator Edition,Unknown,5465,unclassified,invalid,unknown,,,,unclassified
+Intel Arc A310,Desktop,5451,desktop,consumer,current,Intel Arc,2022,0,column
+GeForce GTX 690,Desktop,5448,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon 760M,Mobile,5392,integrated,consumer,n/a,,,,rule
+GeForce GTX 670,Desktop,5364,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce GTX 950,Desktop,5352,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX 6300,Unknown,5339,unclassified,consumer,current,RX 6000 (RDNA 2),2020,0,unclassified
+Radeon Ryzen 7 6800HS Creator Edition,Unknown,5322,integrated,consumer,n/a,,,,rule
+GeForce GTX 1050 Ti with Max-Q Design,Mobile,5308,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+GeForce GTX 760 Ti,Desktop,5307,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Ryzen 7 6800H,Unknown,5260,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 7 7735H,Unknown,5253,integrated,consumer,n/a,,,,rule
+Radeon HD 7970 / R9 280X,Desktop,5248,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon RX 5300M,Mobile,5243,laptop,consumer,aging,RX 5000 (RDNA),2019,1,rule
+Ryzen 7 6800HS,Unknown,5237,unclassified,invalid,unknown,,,,unclassified
+Radeon HD 8990,Desktop,5214,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 7 7735HS with Radeon Graphics,Unknown,5175,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Q12U-1,Unknown,5164,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 9 6900HS Creator Edition,Unknown,5156,integrated,consumer,n/a,,,,rule
+Radeon R9 M295X,Mobile,5150,laptop,consumer,unknown,,,,rule
+Ryzen 7 Pro 7735U with Radeon Graphics,Unknown,5142,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Arc 140V GPU,Desktop,5140,desktop,consumer,unknown,,,,column
+Ryzen 7 PRO 6850U with Radeon Graphics,Unknown,5116,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Arc A370M,Unknown,5115,laptop,consumer,current,Intel Arc,2022,0,rule
+GeForce GTX 1050 3GB,Desktop,5111,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+Ryzen 9 6900HX with Radeon Graphics,Unknown,5111,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R9 M395X,Mobile,5109,laptop,consumer,unknown,,,,rule
+Ryzen 7 7735U with Radeon Graphics,Unknown,5081,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 PRO 6860Z,Unknown,5077,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 7 PRO 6850HS,Unknown,5057,integrated,consumer,n/a,,,,rule
+GeForce GTX 1050,Desktop,5046,desktop,consumer,aging,GTX 10 (Pascal),2016,1,column
+Ryzen 7 6800U,Unknown,5006,laptop,invalid,unknown,,,,rule
+GeForce GTX 1630,Desktop,4985,desktop,consumer,aging,GTX 16 (Turing),2019,1,column
+Ryzen 7 6800H with Radeon Graphics,Unknown,4960,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Arc A310 LP,Desktop,4903,desktop,consumer,current,Intel Arc,2022,0,column
+Radeon Ryzen 7 7735HS,Unknown,4897,integrated,consumer,n/a,,,,rule
+Radeon 860M,Mobile,4890,integrated,consumer,n/a,,,,rule
+Intel Arc 130V GPU RI,Desktop,4882,desktop,consumer,unknown,,,,column
+Radeon R9 270X,Desktop,4875,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon R9 M395,Mobile,4870,laptop,consumer,unknown,,,,rule
+Ryzen 7 PRO 6860Z with Radeon Graphics,Unknown,4869,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 6800H,Unknown,4857,integrated,consumer,n/a,,,,rule
+GeForce GTX 760,Desktop,4823,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Intel Arc 140V GPU RI,Desktop,4822,desktop,consumer,unknown,,,,column
+Radeon Ryzen Z2 Go,Desktop,4784,integrated,consumer,n/a,,,,rule
+Radeon HD 7950 / R9 280,Desktop,4765,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 7 6800U with Radeon Graphics,Unknown,4760,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+T550 Laptop GPU,Mobile,4753,laptop,workstation,unknown,,,,rule
+Radeon Sky 500,Unknown,4723,unclassified,consumer,unknown,,,,unclassified
+Radeon R9 370,Desktop,4722,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 9 PRO 6950HS with Radeon Graphics,Unknown,4705,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 7735U,Unknown,4647,integrated,consumer,n/a,,,,rule
+GeForce GTX 580,Desktop,4631,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Pro WX Vega M GL,Mobile,4618,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Radeon Ryzen 7 170,Desktop,4605,integrated,consumer,n/a,,,,rule
+Radeon HD 7870,Desktop,4565,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+B8DKMDAP,Unknown,4557,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 7 PRO 6860Z,Unknown,4536,integrated,consumer,n/a,,,,rule
+Intel Arc 130V GPU,Desktop,4497,desktop,consumer,unknown,,,,column
+Radeon R7 370,Desktop,4482,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon HD 7870 XT,Desktop,4470,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GTX 1050 (Mobile),Mobile,4463,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Radeon Ryzen 9 PRO 6950HS,Unknown,4463,integrated,consumer,n/a,,,,rule
+GeForce MX550,Unknown,4450,laptop,consumer,aging,GeForce MX,2019,1,rule
+GeForce GTX 660 Ti,Desktop,4410,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon 680M Ryzen 7 7735HS,Mobile,4347,integrated,consumer,n/a,,,,rule
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C7 Ryzen,Unknown,4339,unclassified,invalid,unknown,,,,unclassified
+Radeon R9 270,Unknown,4306,unclassified,consumer,aging,Radeon GCN,2016,1,unclassified
+Radeon R9 270 / R7 370,Desktop,4260,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen 7 6800U,Unknown,4222,integrated,consumer,n/a,,,,rule
+Radeon Eng Sample: 100-000000536-40_Y,Desktop,4211,desktop,sample,unknown,,,,column
+Eng Sample: 100-000000561-40_Y,Unknown,4206,desktop,sample,unknown,,,,model
+Winsta0\Default,Desktop,4125,desktop,invalid,unknown,,,,column
+Radeon RX 460,Desktop,4100,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 7 PRO 6850HS with Radeon Graphics,Unknown,4087,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GTX 480,Desktop,4078,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+RadeonT 660M Ryzen 5 7535HS,Mobile,4051,laptop,consumer,unknown,,,,rule
+GeForce GTX 660,Desktop,4047,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon HD 7800-serie,Unknown,4029,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon 660M Ryzen 5 Pro 7535U,Mobile,4025,integrated,consumer,n/a,,,,rule
+Radeon Eng Sample: 100-000000263-50_Y,Desktop,3975,desktop,sample,unknown,,,,column
+GeForce GTX 775M,Mobile,3940,laptop,consumer,unknown,,,,rule
+MacroSilicon USB Display Ryzen 7 6800U,Desktop,3940,laptop,invalid,legacy_secondhand,Display adapter,2015,1,rule
+GeForce GTX 570,Desktop,3934,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX Vega M GL,Unknown,3926,unclassified,consumer,aging,Vega,2017,1,unclassified
+GeForce GTX 1050 with Max-Q Design,Mobile,3916,laptop,consumer,aging,GTX 10 (Pascal),2016,1,rule
+Radeon HD 7850,Desktop,3902,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GTX 750 Ti,Desktop,3900,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R9 M390X,Mobile,3895,laptop,consumer,unknown,,,,rule
+GeForce GTX 780M,Mobile,3890,laptop,consumer,unknown,,,,rule
+Radeon HD 8970M,Mobile,3876,laptop,consumer,unknown,,,,rule
+Matrox LUMA A310F,Unknown,3873,unclassified,invalid,unknown,,,,unclassified
+GeForce GTX 965M,Mobile,3870,laptop,consumer,unknown,,,,rule
+GeForce GTX 880M,Mobile,3841,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 7 Pro 7735U,Unknown,3828,integrated,consumer,n/a,,,,rule
+Radeon 840M,Mobile,3828,integrated,consumer,n/a,,,,rule
+T400 4GB,Unknown,3812,unclassified,workstation,current,T-series workstation,2020,0,unclassified
+Radeon R9 M485X,Unknown,3801,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 680MX,Mobile,3799,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 6600HS Creator Edition,Unknown,3794,integrated,consumer,n/a,,,,rule
+Ryzen 5 Pro 7535U with Radeon Graphics,Unknown,3750,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 5 PRO 6650H with Radeon Graphics,Unknown,3727,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 680M,Unknown,3717,integrated,consumer,n/a,,,,rule
+GeForce MX450,Unknown,3716,laptop,consumer,aging,GeForce MX,2019,1,rule
+Radeon Ryzen 5 PRO 6650H,Unknown,3704,integrated,consumer,n/a,,,,rule
+P102-100,Desktop,3703,desktop,mining,unknown,,,,column
+Ryzen 5 6600HS Creator Edition,Unknown,3691,unclassified,invalid,unknown,,,,unclassified
+Matrox LUMA A310,Unknown,3690,unclassified,invalid,unknown,,,,unclassified
+Radeon RX 560,Desktop,3681,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 5 7535HS with Radeon Graphics,Unknown,3680,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon HD 7970M,Mobile,3663,laptop,consumer,unknown,,,,rule
+T400,Unknown,3624,unclassified,workstation,current,T-series workstation,2020,0,unclassified
+T500,Unknown,3614,unclassified,workstation,unknown,,,,unclassified
+Ryzen 5 6600H with Radeon Graphics,Unknown,3580,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GTX 680M KY_Bullet Edition,Mobile,3569,laptop,consumer,unknown,,,,rule
+GeForce GTX 870M,Mobile,3547,laptop,consumer,unknown,,,,rule
+Ryzen 5 PRO 6650U with Radeon Graphics,Unknown,3534,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 680M Ryzen 7 Pro 7735U,Mobile,3531,integrated,consumer,n/a,,,,rule
+Ryzen 5 PRO 6650U,Unknown,3519,laptop,invalid,unknown,,,,rule
+Radeon Ryzen 5 PRO 6650U,Unknown,3517,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 6600H,Unknown,3477,integrated,consumer,n/a,,,,rule
+Radeon Pro W5500M,Mobile,3470,laptop,workstation,current,Radeon Pro (RDNA),2023,0,rule
+GeForce GTX 960A,Unknown,3465,unclassified,consumer,unknown,,,,unclassified
+Radeon RX 560X,Desktop,3428,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 650 Ti BOOST,Desktop,3407,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce GTX 960M,Mobile,3373,laptop,consumer,unknown,,,,rule
+Radeon HD8970M,Mobile,3369,laptop,consumer,unknown,,,,rule
+Radeon E8870PCIe,Unknown,3368,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 590,Desktop,3341,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Ryzen 5 7535U with Radeon Graphics,Unknown,3324,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 7533HS,Desktop,3321,integrated,consumer,n/a,,,,rule
+Radeon Eng Sample: 100-000000546-40_Y,Desktop,3307,desktop,sample,unknown,,,,column
+SMI USB Display Ryzen 7 7735HS,Desktop,3307,desktop,invalid,legacy_secondhand,Display adapter,2015,1,column
+GeForce GTX 750,Desktop,3302,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce GTX 680M,Mobile,3277,laptop,consumer,unknown,,,,rule
+GeForce 770M,Mobile,3246,laptop,consumer,unknown,,,,rule
+Snapdragon X Elite - X1E001DE - Qualcomm Adreno GP,Desktop,3246,integrated,consumer,n/a,,,,rule
+Radeon R9 M290X,Mobile,3244,laptop,consumer,unknown,,,,rule
+Radeon R9 M470X,Mobile,3244,laptop,consumer,unknown,,,,rule
+Custom GPU 0932,Desktop,3243,desktop,invalid,unknown,,,,column
+Ryzen 5 6600U with Radeon Graphics,Unknown,3233,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 660M,Mobile,3221,integrated,consumer,n/a,,,,rule
+Radeon 660M Ryzen 5 6600H,Mobile,3207,integrated,consumer,n/a,,,,rule
+RadeonT 660M Ryzen 5 6600H,Mobile,3207,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 7535HS,Unknown,3206,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 6600U,Unknown,3205,integrated,consumer,n/a,,,,rule
+Radeon R7 260X,Desktop,3204,desktop,consumer,aging,Radeon GCN,2016,1,column
+Intel Graphics,Unknown,3179,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 470,Desktop,3162,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 7 4800H,Unknown,3160,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 7535U,Unknown,3147,integrated,consumer,n/a,,,,rule
+Radeon RX 670,Desktop,3129,desktop,consumer,unknown,,,,column
+Radeon R7 360,Desktop,3127,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon HD 6990,Desktop,3118,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Matrox LUMA A310FP,Unknown,3093,unclassified,invalid,unknown,,,,unclassified
+Radeon HD 7790,Desktop,3090,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GTX 860M,Mobile,3089,laptop,consumer,unknown,,,,rule
+GeForce GTX 675MX,Mobile,3083,laptop,consumer,unknown,,,,rule
+GeForce GTX 560 Ti,Desktop,3078,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon 660M Ryzen 5 7535HS,Mobile,3078,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 7950X 16-Core,Unknown,3050,integrated,consumer,n/a,,,,rule
+Radeon R9 260,Unknown,3048,desktop,consumer,aging,Radeon GCN,2016,1,model
+Qualcomm Adreno X1-85 GPU,Desktop,3044,integrated,consumer,n/a,,,,rule
+Ryzen 7 4800HS with Radeon Graphics,Unknown,3044,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 9 4900HS with Radeon Graphics,Unknown,3044,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 9 4900HSS with Radeon Graphics,Unknown,3044,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 4800HS,Unknown,3044,integrated,consumer,n/a,,,,rule
+Radeon R9 360,Desktop,3032,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon 740M,Mobile,2999,integrated,consumer,n/a,,,,rule
+Snapdragon X Elite - X1E84100 - Qualcomm Adreno GP,Desktop,2981,integrated,consumer,n/a,,,,rule
+Ryzen 9 5900HX with Radeon Graphics,Unknown,2957,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 PRO 5800H,Desktop,2945,integrated,consumer,n/a,,,,rule
+Radeon 660M Ryzen 5 7533HS,Mobile,2938,integrated,consumer,n/a,,,,rule
+Radeon RX Vega Ryzen 7 5825U,Desktop,2916,laptop,consumer,aging,Vega,2017,1,rule
+Radeon R7 260,Desktop,2892,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen 7 PRO 5755G,Desktop,2886,integrated,consumer,n/a,,,,rule
+Ryzen 7 PRO 4700G with Radeon Graphics,Unknown,2880,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Eng Sample: 100-000000295-40_Y,Desktop,2879,desktop,sample,unknown,,,,column
+Radeon Pro WX 4170,Mobile,2870,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Radeon Ryzen 7 5800H,Unknown,2845,integrated,consumer,n/a,,,,rule
+Radeon HD 8950,Desktop,2834,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 6970,Desktop,2831,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce MX350,Unknown,2820,laptop,consumer,aging,GeForce MX,2019,1,rule
+GeForce GTX 770M,Mobile,2795,laptop,consumer,unknown,,,,rule
+Ryzen 7 5800HS with Radeon Graphics,Unknown,2795,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 Pro 7535U,Unknown,2793,integrated,consumer,n/a,,,,rule
+GeForce GTX 560,Desktop,2780,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R9 M380,Mobile,2759,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 9 5980HS,Unknown,2749,integrated,consumer,n/a,,,,rule
+Ryzen 7 5800H with Radeon Graphics,Unknown,2737,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Renoir D1 Ryzen 5 5500U,Desktop,2731,laptop,consumer,unknown,,,,rule
+Ryzen 7 5700G with Radeon Graphics,Unknown,2722,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 9 4900H with Radeon Graphics,Unknown,2714,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX 550,Desktop,2691,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 7 Pro 4750G with Radeon Graphics,Unknown,2682,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GTX 465,Desktop,2656,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Eng Sample: 100-000000285-30_Y,Desktop,2640,desktop,sample,unknown,,,,column
+MONSTER GeForce GTX 675M,Mobile,2637,laptop,consumer,unknown,,,,rule
+Intel Iris Xe,Unknown,2610,integrated,consumer,n/a,Iris Xe,2020,0,rule
+Radeon HD 8770,Unknown,2607,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Ryzen 7 5700GE with Radeon Graphics,Unknown,2607,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Snapdragon X Plus - X1P64100 - Qualcomm Adreno GPU,Desktop,2607,integrated,consumer,n/a,,,,rule
+Snapdragon X Elite - X1E80100 - Qualcomm Adreno GP,Desktop,2603,integrated,consumer,n/a,,,,rule
+Radeon RX Vega 11 Ryzen 7 3700U,Unknown,2602,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GTX 950A,Unknown,2599,unclassified,consumer,unknown,,,,unclassified
+Radeon Ryzen 5 150,Desktop,2595,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 4950U Mobile,Mobile,2594,integrated,consumer,n/a,,,,rule
+Radeon HD 6950,Desktop,2594,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon Ryzen 7 4700GE,Unknown,2586,integrated,consumer,n/a,,,,rule
+GeForce GTX 950M,Mobile,2574,laptop,consumer,unknown,,,,rule
+Snapdragon X Elite - X1E78100 - Qualcomm Adreno GP,Desktop,2573,integrated,consumer,n/a,,,,rule
+Ryzen 7 PRO 7730U with Radeon Graphics,Unknown,2567,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 9 4900H,Unknown,2555,integrated,consumer,n/a,,,,rule
+Radeon Pro WX 4150,Mobile,2551,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Radeon Ryzen 7 5800HS,Unknown,2550,integrated,consumer,n/a,,,,rule
+Ryzen 7 PRO 4750GE with Radeon Graphics,Unknown,2550,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 5 5600GE with Radeon Graphics,Unknown,2547,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 5 5600G with Radeon Graphics,Unknown,2545,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 3 PRO 5355G,Desktop,2544,integrated,consumer,n/a,,,,rule
+GeForce GTX 850M,Mobile,2540,laptop,consumer,unknown,,,,rule
+Ryzen 9 5980HS with Radeon Graphics,Unknown,2534,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon HD 6850 X2,Unknown,2534,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+GeForce GTX 650 Ti,Desktop,2533,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 7 PRO 4750G,Unknown,2529,integrated,consumer,n/a,,,,rule
+FireStream 9370,Workstation,2528,laptop,invalid,unknown,,,,model
+N18E-Q1,Unknown,2525,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 7 4700G,Unknown,2519,integrated,consumer,n/a,,,,rule
+Ryzen 7 4700GE with Radeon Graphics,Unknown,2496,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 5 PRO 5650G with Radeon Graphics,Unknown,2481,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX Vega 11 Ryzen 5 3350GE,Desktop,2480,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 5 PRO 5650GE with Radeon Graphics,Unknown,2455,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 7730U with Radeon Graphics,Unknown,2433,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 5825U,Unknown,2419,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 5500GT,Unknown,2411,integrated,consumer,n/a,,,,rule
+Radeon Eng Sample: 100-000000252-50_Y,Desktop,2411,desktop,sample,unknown,,,,column
+Radeon RX Vega 11 PRD,Unknown,2402,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GT 1030,Desktop,2402,desktop,consumer,unknown,,,,column
+Radeon Ryzen 5 5600GT,Unknown,2393,integrated,consumer,n/a,,,,rule
+Radeon RX Vega Ryzen 5 5600GT,Desktop,2393,desktop,consumer,aging,Vega,2017,1,column
+Radeon Ryzen 7 5800U,Unknown,2386,integrated,consumer,n/a,,,,rule
+RadeonT 680M Ryzen 7 6800H,Mobile,2381,laptop,consumer,unknown,,,,rule
+Ryzen 7 PRO 5750GE with Radeon Graphics,Unknown,2377,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce MX250,Mobile,2376,laptop,consumer,aging,GeForce MX,2019,1,rule
+Ryzen 5 Pro 4650G with Radeon Graphics,Unknown,2375,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Eng Sample: 100-000000562-40_Y,Unknown,2370,desktop,sample,unknown,,,,model
+Radeon RX 550X,Desktop,2367,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen 5 5600H,Unknown,2364,integrated,consumer,n/a,,,,rule
+GeForce GTX 485M,Mobile,2360,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 4600GE with Radeon Graphics,Unknown,2357,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX Vega Ryzen 5 5500U,Unknown,2356,laptop,consumer,aging,Vega,2017,1,rule
+Ryzen 7 5825U with Radeon Graphics,Unknown,2351,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 PRO 4750GE,Unknown,2348,integrated,consumer,n/a,,,,rule
+GeForce MX330,Unknown,2345,laptop,consumer,aging,GeForce MX,2019,1,rule
+Ryzen 7 4800U with Radeon Graphics,Unknown,2344,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 PRO 5750G with Radeon Graphics,Unknown,2335,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 5 4600G with Radeon Graphics,Unknown,2331,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R9 M470,Mobile,2331,laptop,consumer,unknown,,,,rule
+Radeon RX Vega Ryzen 3 5300U,Unknown,2330,laptop,consumer,aging,Vega,2017,1,rule
+Moore Threads MTT S80,Desktop,2330,desktop,invalid,unknown,,,,column
+Radeon Ryzen 7 7730U,Unknown,2323,integrated,consumer,n/a,,,,rule
+Red Hat VirtIO GPU DOD controller,Unknown,2320,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 5 PRO 5650G,Unknown,2313,integrated,consumer,n/a,,,,rule
+Radeon RX Vega - Renoir Ryzen 3 5300U,Unknown,2312,laptop,consumer,aging,Vega,2017,1,rule
+Ryzen 7 5800U with Radeon Graphics,Unknown,2310,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 5600GE,Unknown,2310,integrated,consumer,n/a,,,,rule
+Ryzen 5 PRO 4400G with Radeon Graphics,Unknown,2306,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 3 PRO 5350G with Radeon Graphics,Unknown,2305,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 4800U,Unknown,2299,integrated,consumer,n/a,,,,rule
+Ryzen 5 5600H with Radeon Graphics,Unknown,2297,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 4400G,Unknown,2296,integrated,consumer,n/a,,,,rule
+Radeon HD 5970,Desktop,2290,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 3 4300GE with Radeon Graphics,Unknown,2278,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 PRO 4400G,Desktop,2273,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 PRO 5655G,Desktop,2272,integrated,consumer,n/a,,,,rule
+GeForce GTX 460,Desktop,2272,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 7 5800HS Creator Edition,Unknown,2271,integrated,consumer,n/a,,,,rule
+Radeon HD 6970M,Mobile,2270,laptop,consumer,unknown,,,,rule
+Ryzen 5 7430U with Radeon Graphics,Unknown,2270,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R7 250X,Desktop,2269,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen 5 PRO 4655G,Unknown,2267,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 PRO 7730U,Unknown,2261,integrated,consumer,n/a,,,,rule
+Ryzen 7 PRO 5850U with Radeon Graphics,Unknown,2261,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce MX150,Mobile,2254,laptop,consumer,aging,GeForce MX,2019,1,rule
+Radeon Ryzen 5 7430U,Desktop,2252,integrated,consumer,n/a,,,,rule
+Ryzen 7 9700X 8-Core Processor,Unknown,2251,unclassified,invalid,unknown,,,,unclassified
+Ryzen 5 7530U with Radeon Graphics,Unknown,2250,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 5700U with Radeon Graphics,Unknown,2241,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen Embedded V2748,Unknown,2241,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 PRO 5650GE,Unknown,2237,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 Microsoft Surface Edition,Unknown,2231,integrated,consumer,n/a,,,,rule
+Ryzen 5 5500GT with Radeon Graphics,Unknown,2224,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX 640,"Desktop, Mobile",2223,desktop,consumer,unknown,,,,model
+Radeon Pro WX 3200,Mobile,2222,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+RadeonT 660M,Mobile,2221,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 PRO 4655GE,Unknown,2217,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 5700U,Unknown,2204,integrated,consumer,n/a,,,,rule
+Radeon HD 6870,Desktop,2202,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 5 5600GT with Radeon Graphics,Unknown,2201,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Vega 11 Ryzen 5 PRO 3350G,Unknown,2194,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 7 4700G with Radeon Graphics,Unknown,2187,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 820M,Mobile,2180,integrated,consumer,n/a,,,,rule
+Radeon HD 5870,Desktop,2180,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon Ryzen 5 7530U,Unknown,2176,integrated,consumer,n/a,,,,rule
+Radeon RX 540,Desktop,2175,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen 7 PRO 5875U,Unknown,2174,integrated,consumer,n/a,,,,rule
+Radeon HD 7770,Desktop,2171,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 5 PRO 4650GE with Radeon Graphics,Unknown,2169,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 3 7335U,Desktop,2169,integrated,consumer,n/a,,,,rule
+Ryzen 5 5600U with Radeon Graphics,Unknown,2151,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 660M Ryzen 3 7335U,Mobile,2151,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 PRO 4700G,Desktop,2148,integrated,consumer,n/a,,,,rule
+Ryzen 3 PRO 7330U with Radeon Graphics,Unknown,2144,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce 945M,Mobile,2138,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 7 4850U Mobile,Unknown,2138,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 7900X 12-Core,Unknown,2128,integrated,consumer,n/a,,,,rule
+Radeon 550,Unknown,2127,desktop,consumer,unknown,,,,model
+GeForce GTX 745,Desktop,2121,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 7 PRO 5755GE,Desktop,2120,integrated,consumer,n/a,,,,rule
+Radeon RX Vega 11 Ryzen 5 3400G,Unknown,2119,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 5 4600H with Radeon Graphics,Unknown,2113,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 4800H with Radeon Graphics,Unknown,2113,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Eng Sample: 100-000000288-40_Y,Desktop,2103,desktop,sample,unknown,,,,column
+Ryzen 5 5560U with Radeon Graphics,Unknown,2098,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 Extreme Edition,Unknown,2095,unclassified,invalid,unknown,,,,unclassified
+Radeon RX Vega 11,Desktop,2091,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Ryzen 5 5600U,Unknown,2090,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 PRO 4500U,Unknown,2078,integrated,consumer,n/a,,,,rule
+GeForce GTX 460 v2,Desktop,2074,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Ryzen 7 PRO 5875U with Radeon Graphics,Unknown,2067,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R9 M385,Mobile,2061,laptop,consumer,unknown,,,,rule
+Radeon TM R9 A360,Unknown,2060,desktop,consumer,unknown,,,,model
+Ryzen 3 Pro 4350G with Radeon Graphics,Unknown,2059,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 5500H,Unknown,2049,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 5625U,Unknown,2048,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 4700U,Unknown,2040,integrated,consumer,n/a,,,,rule
+Ryzen 7 4700U with Radeon Graphics,Unknown,2034,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 Microsoft Surface Edition,Unknown,2032,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 5560U,Unknown,2031,integrated,consumer,n/a,,,,rule
+Ryzen 7 PRO 4750U with Radeon Graphics,Unknown,2030,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Iris Pro P580,Unknown,2026,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 5500U,Unknown,2018,integrated,consumer,n/a,,,,rule
+Radeon R9 350,Desktop,2016,desktop,consumer,aging,Radeon GCN,2016,1,column
+Ryzen 5 PRO 4500U with Radeon Graphics,Unknown,2008,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GT 645,Unknown,2006,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,model
+Radeon Vega 8 Mobile Ryzen 5 3500U,Mobile,2006,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GTX 765M,Mobile,2005,laptop,consumer,unknown,,,,rule
+Radeon Ryzen Embedded V2718,Unknown,1999,integrated,consumer,n/a,,,,rule
+Ryzen 5 5625U with Radeon Graphics,Unknown,1997,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Moore Threads S3000 MTvGPU-1132,Desktop,1997,desktop,invalid,unknown,,,,column
+Ryzen 5 PRO 5650U with Radeon Graphics,Unknown,1995,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R9 M385X,Mobile,1994,laptop,consumer,unknown,,,,rule
+Ryzen 3 5300G with Radeon Graphics,Unknown,1992,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GTX 460 SE,Desktop,1992,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Vega 11 Ryzen 5 PRO 3400G,Unknown,1987,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Ryzen 3 PRO 7335U,Unknown,1983,integrated,consumer,n/a,,,,rule
+Ryzen 3 7335U with Radeon Graphics,Unknown,1980,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GTX 670MX,Mobile,1978,laptop,consumer,unknown,,,,rule
+Intel Iris Pro 580,Unknown,1973,integrated,consumer,n/a,,,,rule
+Radeon RX Vega 11 Ryzen 5 3400GE,Unknown,1971,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 5 5500U with Radeon Graphics,Unknown,1971,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 PRO 4750U,Unknown,1968,integrated,consumer,n/a,,,,rule
+Ryzen 3 5300GE with Radeon Graphics,Unknown,1968,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Iris Xe MAX 100,Unknown,1965,integrated,consumer,n/a,Iris Xe,2020,0,rule
+GeForce GTX 470M,Mobile,1953,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 3 PRO 5355GE,Desktop,1952,integrated,consumer,n/a,,,,rule
+Radeon HD 5850,Desktop,1948,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 6850,Desktop,1936,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 3 PRO 4350GE with Radeon Graphics,Unknown,1936,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX 570X,Desktop,1923,desktop,consumer,aging,Radeon GCN,2016,1,column
+RadeonT RX Vega 11,Unknown,1917,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Vega 8 Ryzen 3 3200GE,Unknown,1916,integrated,consumer,n/a,Vega,2017,1,rule
+Moore Threads MTT S70,Desktop,1915,desktop,invalid,unknown,,,,column
+Intel UHD Graphics 770,Unknown,1910,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon Pro WX 4130,Mobile,1909,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Ryzen 5 PRO 7530U with Radeon Graphics,Unknown,1905,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon RX Vega 11 Ryzen 5 3350G,Unknown,1902,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon HD 7700-serie,Unknown,1899,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Ryzen 5 4600U with Radeon Graphics,Unknown,1896,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Qualcomm Adreno X1-45 GPU,Desktop,1896,integrated,consumer,n/a,,,,rule
+RadeonT Vega 8,Unknown,1894,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Pro WX 2100,Mobile,1892,laptop,workstation,aging,Radeon Pro (GCN),2016,1,rule
+Radeon R7 450,Desktop,1880,desktop,consumer,aging,Radeon GCN,2016,1,column
+GeForce GTX 645,Desktop,1877,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 5 PRO 5675U,Unknown,1875,integrated,consumer,n/a,,,,rule
+Radeon RX 7500,Desktop,1873,desktop,consumer,current,RX 7000 (RDNA 3),2022,0,column
+Intel HD 5600,Unknown,1869,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon Ryzen 9 7900 12-Core,Unknown,1866,integrated,consumer,n/a,,,,rule
+Radeon Vega 11,Unknown,1866,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GTX 570M,Mobile,1861,laptop,consumer,unknown,,,,rule
+Ryzen 5 9600X 6-Core Processor,Unknown,1859,unclassified,invalid,unknown,,,,unclassified
+Intel Iris Xe MAX,Unknown,1858,integrated,consumer,n/a,Iris Xe,2020,0,rule
+GeForce GTX 675M,Mobile,1857,laptop,consumer,unknown,,,,rule
+Radeon RX Vega 11 Ryzen 7 3750H,Unknown,1856,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce 945A,Unknown,1852,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 580M,Mobile,1851,laptop,consumer,unknown,,,,rule
+GeForce GTX 560 SE,Desktop,1847,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX Vega 10 Ryzen 7 3750H,Unknown,1846,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Ryzen 3 PRO 7330U,Unknown,1843,integrated,consumer,n/a,,,,rule
+Embedded Radeon E9173,Unknown,1832,desktop,consumer,unknown,,,,model
+Ryzen 7 9800X3D 8-Core Processor,Unknown,1830,unclassified,invalid,unknown,,,,unclassified
+GeForce MX230,Mobile,1821,laptop,consumer,aging,GeForce MX,2019,1,rule
+Radeon Vega 8 Ryzen 5 3550H,Unknown,1814,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R9 M360,Unknown,1813,laptop,consumer,unknown,,,,model
+Matrox C900 PCIe x16,Unknown,1812,unclassified,invalid,unknown,,,,unclassified
+Radeon Vega 11 Ryzen 5 PRO 3350GE,Unknown,1811,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon 610M Ryzen 9 7945HX,Mobile,1810,integrated,consumer,n/a,,,,rule
+GeForce MX130,Unknown,1805,laptop,consumer,aging,GeForce MX,2019,1,rule
+Ryzen 5 4500U with Radeon Graphics,Unknown,1805,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Matrox C680 PCIe x16,Unknown,1803,unclassified,invalid,unknown,,,,unclassified
+Radeon HD 8870M / R9 M270X / M370X,Mobile,1800,laptop,consumer,unknown,,,,rule
+Ryzen 3 PRO 4200G with Radeon Graphics,Unknown,1799,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen Embedded V2516,Unknown,1796,integrated,consumer,n/a,,,,rule
+Radeon R7 M465X,Unknown,1787,unclassified,consumer,unknown,,,,unclassified
+Ryzen 3 PRO 5350GE with Radeon Graphics,Unknown,1786,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 7 7700X 8-Core,Unknown,1786,integrated,consumer,n/a,,,,rule
+Intel Iris Plus,Unknown,1784,integrated,consumer,n/a,Iris Plus,2019,1,rule
+Radeon RX Vega 11 Processor,Unknown,1783,integrated,consumer,n/a,Vega,2017,1,rule
+Intel UHD Graphics P630,Unknown,1779,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon RX Vega 10 Ryzen 5 3500U,Unknown,1778,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 9 9950X 16-Core Processor,Unknown,1770,laptop,invalid,unknown,,,,model
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C6 Ryzen,Unknown,1769,unclassified,invalid,unknown,,,,unclassified
+Radeon Ryzen 7 7800X3D 8-Core,Unknown,1766,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 7900X3D 12-Core,Unknown,1764,integrated,consumer,n/a,,,,rule
+Radeon Vega 3 Mobile Ryzen 5 3500U,Desktop,1764,integrated,consumer,n/a,Vega,2017,1,rule
+Intel UHD 770#0x1c005d839205d7e9#,Desktop,1759,desktop,consumer,unknown,,,,column
+GeForce GTX 650,Desktop,1759,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Intel Iris Plus 645,Unknown,1750,integrated,consumer,n/a,Iris Plus,2019,1,rule
+Ryzen 3 PRO 4200GE with Radeon Graphics,Unknown,1748,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon R9 M375X,Mobile,1746,laptop,consumer,unknown,,,,rule
+Radeon Ryzen Embedded R2544,Unknown,1743,integrated,consumer,n/a,,,,rule
+GeForce GTX 760M,Mobile,1742,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 PRO 5655GE,Desktop,1741,integrated,consumer,n/a,,,,rule
+Intel Iris P555,Desktop,1737,integrated,consumer,n/a,,,,rule
+Ryzen 9 9900X 12-Core Processor,Unknown,1729,laptop,invalid,unknown,,,,model
+GeForce GT 755M,Mobile,1728,laptop,consumer,unknown,,,,rule
+Radeon HD HD7850M,Mobile,1727,laptop,consumer,unknown,,,,rule
+Intel Iris Plus 655,Unknown,1727,integrated,consumer,n/a,Iris Plus,2019,1,rule
+GeForce GTX 670M,Mobile,1725,laptop,consumer,unknown,,,,rule
+Radeon HD 5830,Desktop,1724,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon Ryzen 3 PRO 5475U,Unknown,1720,integrated,consumer,n/a,,,,rule
+Ryzen 5 PRO 5675U with Radeon Graphics,Unknown,1720,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+PCI GDIHOOK5,Unknown,1703,unclassified,invalid,unknown,,,,unclassified
+Radeon HD 7750,Desktop,1700,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 3 4300G with Radeon Graphics,Unknown,1700,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon HD 6900M,Mobile,1695,laptop,consumer,unknown,,,,rule
+Ryzen 3 7330U with Radeon Graphics,Unknown,1693,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel UHD Graphics 750,Unknown,1692,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Ryzen 3 5425U with Radeon Graphics,Unknown,1691,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon E8860,Unknown,1691,unclassified,consumer,unknown,,,,unclassified
+Ryzen 5 PRO 4650U with Radeon Graphics,Unknown,1690,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 5 7600 6-Core,Unknown,1685,integrated,consumer,n/a,,,,rule
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C2 Ryzen,Unknown,1681,unclassified,invalid,unknown,,,,unclassified
+Radeon Vega 8 Ryzen 3 3200G,Unknown,1676,integrated,consumer,n/a,Vega,2017,1,rule
+Intel UHD Graphics P750,Unknown,1669,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon R7 M380,Unknown,1669,unclassified,consumer,unknown,,,,unclassified
+Radeon Ryzen 7 PRO 7745 8-Core,Unknown,1661,integrated,consumer,n/a,,,,rule
+Radeon 610M Ryzen 9 7945HX3D,Mobile,1660,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 7700 8-Core,Unknown,1655,integrated,consumer,n/a,,,,rule
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C3 Ryzen,Unknown,1654,unclassified,invalid,unknown,,,,unclassified
+GeForce GTX 480M,Mobile,1653,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 7600X3D 6-Core,Desktop,1643,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 7950X3D 16-Core,Unknown,1640,integrated,consumer,n/a,,,,rule
+Radeon HD 8870M,Mobile,1638,laptop,consumer,unknown,,,,rule
+Radeon RX Vega 10,Unknown,1628,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Ryzen 3 PRO 4355GE,Unknown,1622,integrated,consumer,n/a,,,,rule
+Radeon Vega 8 Ryzen 5 3580U,Desktop,1621,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 3 PRO 5450U with Radeon Graphics,Unknown,1617,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Ryzen 7 2700U with Radeon Vega,Unknown,1617,laptop,consumer,aging,Vega,2017,1,rule
+Radeon Ryzen 5 PRO 7645 6-Core,Unknown,1616,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 7 7745HX,Unknown,1614,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 5900H,Unknown,1610,integrated,consumer,n/a,,,,rule
+Radeon R9 M275X,Unknown,1609,unclassified,consumer,unknown,,,,unclassified
+Radeon Ryzen 5 7600X 6-Core,Unknown,1608,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 9 PRO 7945 12-Core,Unknown,1608,integrated,consumer,n/a,,,,rule
+Radeon RX Vega11 Ryzen 7 3750H,Unknown,1607,unclassified,consumer,unknown,,,,unclassified
+Radeon 540X,Unknown,1607,unclassified,consumer,unknown,,,,unclassified
+Radeon RX Vega11,Unknown,1605,unclassified,consumer,unknown,,,,unclassified
+Seria Radeon HD 7700,Unknown,1604,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+GeForce GTX 555,Desktop,1604,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon 630,Unknown,1603,desktop,consumer,unknown,,,,model
+Ryzen 3 5400U with Radeon Graphics,Unknown,1602,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen 3 PRO 5450U,Unknown,1602,integrated,consumer,n/a,,,,rule
+Intel Iris Plus 650,Mobile,1601,integrated,consumer,n/a,Iris Plus,2019,1,rule
+Radeon 610M Ryzen 7 7840HX,Mobile,1600,integrated,consumer,n/a,,,,rule
+Radeon 610M Ryzen 9 7845HX,Mobile,1600,integrated,consumer,n/a,,,,rule
+Radeon 610M Ryzen 9 8940HX,Mobile,1600,integrated,consumer,n/a,,,,rule
+Radeon 610M Ryzen 9 8945HX,Mobile,1600,integrated,consumer,n/a,,,,rule
+Radeon RX 5700m 8GB 256 bit Ryzen 5 5600U,Unknown,1599,laptop,consumer,aging,RX 5000 (RDNA),2019,1,rule
+Radeon 610M Ryzen 9 7940HX,Mobile,1594,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 5 PRO 7445 6-Core,Desktop,1592,integrated,consumer,n/a,,,,rule
+Radeon Vega 9,Unknown,1588,unclassified,consumer,aging,Vega,2017,1,unclassified
+Intel Iris Pro P6300,Unknown,1582,integrated,consumer,n/a,,,,rule
+Radeon R9 M275X / M375,Mobile,1575,laptop,consumer,unknown,,,,rule
+Radeon Athlon Gold PRO 4150GE,Unknown,1574,unclassified,consumer,unknown,,,,unclassified
+Radeon R9 M370X,Mobile,1573,laptop,consumer,unknown,,,,rule
+Radeon HD 6790,Desktop,1568,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon Vega 8,"Desktop, Mobile",1567,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GTX 550 Ti,Desktop,1559,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Ryzen 3 5425U,Unknown,1547,integrated,consumer,n/a,,,,rule
+Radeon Ryzen 3 7330U,Unknown,1547,integrated,consumer,n/a,,,,rule
+Radeon HD 4890,Desktop,1546,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Ryzen 3 PRO 4300U with Radeon Graphics,Unknown,1543,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Iris Pro Graphics 6200,Unknown,1541,integrated,consumer,n/a,,,,rule
+Intel UHD Graphics 730,Unknown,1541,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon RX Vega 8,Unknown,1540,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 3 5300U with Radeon Graphics,Unknown,1539,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Vega 10 Mobile,Unknown,1535,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Vega 9 Ryzen 5 Microsoft Surface Edition,Unknown,1527,unclassified,consumer,aging,Vega,2017,1,unclassified
+Radeon Ryzen 3 5300U,Unknown,1523,integrated,consumer,n/a,,,,rule
+Intel UHD Graphics,Unknown,1518,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon Vega 9 Ryzen 5 3550H,Unknown,1517,unclassified,consumer,aging,Vega,2017,1,unclassified
+GeForce 940MX,Unknown,1510,laptop,consumer,unknown,,,,rule
+Radeon HD 7870M,Mobile,1507,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 7400 6-Core,Desktop,1506,integrated,consumer,n/a,,,,rule
+Ryzen 5 2500U with Radeon Vega,Unknown,1503,laptop,consumer,aging,Vega,2017,1,rule
+Radeon Vega 10,Unknown,1501,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce 845M,Mobile,1501,laptop,consumer,unknown,,,,rule
+Radeon RX Vega 6,Unknown,1492,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon RX Vega11 Ryzen 7 Microsoft Surface Edition,Unknown,1488,unclassified,consumer,unknown,,,,unclassified
+Radeon R9 M365X,Mobile,1482,laptop,consumer,unknown,,,,rule
+Radeon 550X,Unknown,1480,desktop,consumer,unknown,,,,model
+GeForce GTX 285,Desktop,1477,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon RX Vega 10 Ryzen 7 3700U,Unknown,1471,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 3 PRO 4450U with Radeon Graphics,Unknown,1461,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon 540,Unknown,1459,desktop,consumer,unknown,,,,model
+Intel Iris 550,Unknown,1451,integrated,consumer,n/a,,,,rule
+GeForce GTX 660M,Mobile,1448,laptop,consumer,unknown,,,,rule
+Radeon Vega 8 Mobile,Unknown,1448,integrated,consumer,n/a,Vega,2017,1,rule
+Ryzen 5 PRO 4400GE with Radeon Graphics,Unknown,1442,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Radeon Ryzen Embedded V2546,Desktop,1435,integrated,consumer,n/a,,,,rule
+Intel Iris 650,Unknown,1433,integrated,consumer,n/a,,,,rule
+Ryzen 3 PRO 5475U with Radeon Graphics,Unknown,1432,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+GeForce GT 740,Desktop,1427,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Vega 6 Ryzen 3 3350U,Unknown,1420,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R7 M370,Mobile,1418,laptop,consumer,unknown,,,,rule
+GeForce MX110,Unknown,1412,laptop,consumer,aging,GeForce MX,2019,1,rule
+Radeon Vega 8 Ryzen 3 PRO 3200G,Unknown,1410,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Vega 8 Ryzen 5 3500C,Desktop,1410,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R9 255,Desktop,1391,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon Ryzen Embedded R2514,Unknown,1387,integrated,consumer,n/a,,,,rule
+Radeon HD 4870,Desktop,1386,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 7850M,Mobile,1373,laptop,consumer,unknown,,,,rule
+Ryzen 3 4300U with Radeon Graphics,Unknown,1368,integrated,consumer,n/a,Radeon iGPU,2020,0,rule
+Intel Iris Plus 640,Mobile,1358,integrated,consumer,n/a,Iris Plus,2019,1,rule
+Radeon Vega 8 Ryzen 5 3500U,Unknown,1357,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GTX 275,Desktop,1354,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon HD 5770,Desktop,1348,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GTS 450,Desktop,1344,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Vega 6 Ryzen 3 3300U,Unknown,1344,integrated,consumer,n/a,Vega,2017,1,rule
+FireStream 9270,Workstation,1341,laptop,invalid,unknown,,,,model
+Radeon 610M Ryzen 7 8745HX,Mobile,1336,integrated,consumer,n/a,,,,rule
+GeForce GT 750M,Mobile,1331,laptop,consumer,unknown,,,,rule
+Radeon Vega 6,Unknown,1310,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Vega 8 Ryzen 5 3450U,Unknown,1310,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon HD 4870 X2,Desktop,1309,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 8790M,Mobile,1306,laptop,consumer,unknown,,,,rule
+GeForce GTX 280,Desktop,1285,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Intel HD P630,Unknown,1283,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 A370,Unknown,1281,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 560M,Mobile,1280,laptop,consumer,unknown,,,,rule
+Radeon HD 6770,Desktop,1277,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce 930MX,Mobile,1276,laptop,consumer,unknown,,,,rule
+Intel Iris 540,Unknown,1275,integrated,consumer,n/a,,,,rule
+Ryzen3 5300U Ryzen 3 5300U,Unknown,1268,laptop,invalid,unknown,,,,rule
+Radeon with 3 5300U Ryzen 3 5300U,Unknown,1266,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 3550H,Desktop,1249,integrated,consumer,n/a,,,,rule
+GeForce GT 745A,Unknown,1234,unclassified,consumer,unknown,,,,unclassified
+Radeon 610M,Mobile,1231,integrated,consumer,n/a,,,,rule
+Intel UHD Graphics 630,Unknown,1228,integrated,consumer,n/a,Intel UHD,2017,1,rule
+GeForce GTX 295,Desktop,1220,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce 930A,Unknown,1218,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 460M,Mobile,1218,laptop,consumer,unknown,,,,rule
+Radeon HD 8790M / R9 M290X,Mobile,1211,laptop,consumer,unknown,,,,rule
+N16P-GX,Unknown,1205,unclassified,invalid,unknown,,,,unclassified
+Radeon R9 M270X,Mobile,1204,laptop,consumer,unknown,,,,rule
+GeForce GTX 260,Desktop,1202,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R7 +8G,Unknown,1191,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7750M,Mobile,1191,laptop,consumer,unknown,,,,rule
+GeForce GT 650M,Mobile,1182,laptop,consumer,unknown,,,,rule
+Radeon HD 5750,Desktop,1174,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Intel Iris Pro 5200,Unknown,1173,integrated,consumer,n/a,,,,rule
+GeForce 830A,Unknown,1173,unclassified,consumer,unknown,,,,unclassified
+Radeon R9 M265X,Mobile,1173,laptop,consumer,unknown,,,,rule
+Radeon RX Vega 10 Ryzen 7 3700C,Desktop,1166,integrated,consumer,n/a,Vega,2017,1,rule
+FireStream 9250,Workstation,1165,laptop,invalid,unknown,,,,model
+GeForce GT 640,Desktop,1165,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon HD 7730,Desktop,1163,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Intel Coffee Lake UHD,Unknown,1158,desktop,consumer,unknown,,,,model
+GeForce GPU,Mobile,1154,laptop,consumer,unknown,,,,rule
+Intel HD P530,Unknown,1153,unclassified,consumer,unknown,,,,unclassified
+NVS 810,Unknown,1147,unclassified,invalid,legacy_secondhand,NVS,2010,1,unclassified
+Radeon R7 A8-7690K,Unknown,1141,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8850M / R9 M265X,Mobile,1140,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 7 3700U,Unknown,1136,integrated,consumer,n/a,,,,rule
+Radeon HD 4850 X2,Desktop,1132,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce 940M,Mobile,1132,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 5 3450U,Unknown,1120,integrated,consumer,n/a,,,,rule
+GeForce GT 545,Unknown,1119,unclassified,consumer,legacy_secondhand,Legacy GeForce,2014,1,unclassified
+Radeon R9 M275,Mobile,1115,laptop,consumer,unknown,,,,rule
+GeForce 940A,Unknown,1114,unclassified,consumer,unknown,,,,unclassified
+Intel HD 630,Unknown,1110,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon Ryzen 3 3300U,Desktop,1108,integrated,consumer,n/a,,,,rule
+Radeon Ryzen Embedded R2314,Unknown,1107,integrated,consumer,n/a,,,,rule
+Radeon R7 M465,Unknown,1099,unclassified,consumer,unknown,,,,unclassified
+GeForce 840M,Mobile,1099,laptop,consumer,unknown,,,,rule
+GeForce GTX 850M - MODDED,Mobile,1092,laptop,consumer,unknown,,,,rule
+Radeon Vega 3 Athlon Gold 3150G,Unknown,1089,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R7 430,Unknown,1086,desktop,consumer,aging,Radeon GCN,2016,1,model
+GeForce 840A,Unknown,1082,laptop,consumer,unknown,,,,model
+MIRRORV3,Unknown,1081,unclassified,invalid,unknown,,,,unclassified
+GeForce GT 745M,Mobile,1078,laptop,consumer,unknown,,,,rule
+Radeon R7 M350,Unknown,1076,unclassified,consumer,unknown,,,,unclassified
+Mobility Radeon HD 5870,Mobile,1075,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon R7 M460,Unknown,1074,unclassified,consumer,unknown,,,,unclassified
+Radeon 625,Unknown,1073,desktop,consumer,unknown,,,,model
+GeForce GTX 760A,Unknown,1071,unclassified,consumer,unknown,,,,unclassified
+RadeonT 610M,Mobile,1066,laptop,consumer,unknown,,,,rule
+Radeon HD 8750M,Mobile,1061,laptop,consumer,unknown,,,,rule
+GeForce 920MX,Unknown,1060,laptop,consumer,unknown,,,,rule
+Radeon R7 A10-7870K,Unknown,1054,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon Vega 3 Mobile,Unknown,1053,integrated,consumer,n/a,Vega,2017,1,rule
+OPAL XT/GL,Unknown,1053,unclassified,invalid,unknown,,,,unclassified
+Radeon R7 250,Desktop,1052,desktop,consumer,aging,Radeon GCN,2016,1,column
+Intel UHD Graphics 710,Unknown,1050,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon HD 7670A,Unknown,1050,unclassified,consumer,unknown,,,,unclassified
+Radeon 535,Unknown,1046,unclassified,consumer,unknown,,,,unclassified
+Intel UHD Graphics 620,Desktop,1042,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon HD 6750,Desktop,1038,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon 530,Unknown,1035,desktop,consumer,unknown,,,,model
+Radeon HD 8600/8700M,Mobile,1030,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon R9 A375,Unknown,1024,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6700M,Mobile,1017,laptop,consumer,unknown,,,,rule
+GeForce 930M,Mobile,1012,laptop,consumer,unknown,,,,rule
+Radeon HD 7690M XT,Mobile,1009,laptop,consumer,unknown,,,,rule
+Radeon R7 M260X,Mobile,1009,laptop,consumer,unknown,,,,rule
+Sharing Monitor,Desktop,1007,desktop,invalid,unknown,,,,column
+Glenfly Arise-GT-10C0,Desktop,1007,desktop,invalid,unknown,,,,column
+Radeon R9 M375,Mobile,1005,laptop,consumer,unknown,,,,rule
+Radeon R7 A10-7890K,Unknown,999,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon R7 A265,Unknown,994,unclassified,consumer,unknown,,,,unclassified
+Radeon Vega 3 Athlon 300GE,Unknown,994,integrated,consumer,n/a,Vega,2017,1,rule
+Intel HD 530,Unknown,990,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon HD 8690M,Mobile,984,laptop,consumer,unknown,,,,rule
+Radeon R7 PRO A8-8670E,Unknown,978,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 PRO A12-8870,Unknown,974,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8850M,Mobile,973,laptop,consumer,unknown,,,,rule
+GeForce GT 1010,Unknown,972,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 PRO A12-9800E,Unknown,968,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6770M,Mobile,964,laptop,consumer,unknown,,,,rule
+Radeon R7 M270DX,Unknown,962,unclassified,consumer,unknown,,,,unclassified
+Radeon 620,Unknown,954,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 340,Unknown,953,desktop,consumer,aging,Radeon GCN,2016,1,model
+Radeon R7 M445,Unknown,953,unclassified,consumer,unknown,,,,unclassified
+Radeon Vega 3 Athlon 3000G,Unknown,948,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon HD 4850,Desktop,947,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 6670/7670,Unknown,946,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+GeForce GT 645M,Mobile,945,laptop,consumer,unknown,,,,rule
+Radeon R7 PRO A12-9800,Unknown,940,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8570,Desktop,940,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 6750M,Mobile,937,laptop,consumer,unknown,,,,rule
+Intel Iris Pro 6100,Unknown,925,integrated,consumer,n/a,,,,rule
+Radeon R7 A10-7850K,Desktop,922,desktop,consumer,current,Data-center,2021,0,column
+Radeon R7 PRO A10-9700E,Unknown,920,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon Vega 3 Athlon Gold PRO 3150GE,Unknown,920,integrated,consumer,n/a,Vega,2017,1,rule
+Intel HD Graphics 620,Unknown,919,integrated,consumer,n/a,Intel HD / Radeon HD,2012,1,rule
+Radeon 6750M,Mobile,911,integrated,consumer,n/a,Radeon iGPU,2023,0,rule
+Radeon HD 4770,Desktop,909,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon RX Vega 6 Ryzen 3 3200U,Unknown,906,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R7 240,Desktop,904,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon R7 M440,Unknown,903,unclassified,consumer,unknown,,,,unclassified
+Intel Iris 6100,Unknown,900,integrated,consumer,n/a,,,,rule
+Radeon Vega 3,Unknown,892,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R7 PRO A10-8770,Unknown,888,unclassified,consumer,current,Data-center,2021,0,unclassified
+GeForce GT 640M,Mobile,887,laptop,consumer,unknown,,,,rule
+Radeon R5 430,Unknown,884,desktop,consumer,aging,Radeon GCN,2016,1,model
+Radeon 520,Unknown,882,desktop,consumer,unknown,,,,model
+Intel HD 6000,Unknown,877,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon R7 PRO A12-8870E,Unknown,875,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 A10-7860K,Unknown,871,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon R7 G,Unknown,870,unclassified,consumer,unknown,,,,unclassified
+Radeon R5 M435,Unknown,869,unclassified,consumer,unknown,,,,unclassified
+Mobility Radeon HD 4850,Mobile,866,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon HD 4830,Desktop,866,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Intel HD 520,Unknown,860,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon R5 340,Unknown,857,desktop,consumer,aging,Radeon GCN,2016,1,model
+Radeon R7 A10-8750,Unknown,856,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon HD 8500M/8700M,Mobile,853,laptop,consumer,unknown,,,,rule
+Radeon E6760,Unknown,850,desktop,consumer,unknown,,,,model
+Radeon R7 A8-7670K,Unknown,847,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 M365X,Unknown,842,unclassified,consumer,unknown,,,,unclassified
+Radeon Vega 3 Ryzen 3 3200U,Unknown,841,integrated,consumer,n/a,Vega,2017,1,rule
+FireGL V8600,Workstation,839,desktop,invalid,unknown,,,,model
+Radeon Vega 3 Athlon Gold PRO 3150G,Desktop,837,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R7 PRO A8-9600,Unknown,837,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6650A,Unknown,836,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8730M,Mobile,835,laptop,consumer,unknown,,,,rule
+Radeon HD 7690M,Mobile,832,laptop,consumer,unknown,,,,rule
+Intel HD 5200,Unknown,830,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+GeForce GT 730,Desktop,824,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon HD 3850 X2,Desktop,822,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon R7 FX-8800P,Unknown,820,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 PRO A10-9700,Unknown,818,unclassified,consumer,current,Data-center,2021,0,unclassified
+GeForce 920A,Unknown,818,laptop,consumer,unknown,,,,model
+Radeon R7 M260DX,Unknown,817,unclassified,consumer,unknown,,,,unclassified
+Radeon Ryzen 3 3200U,Desktop,816,integrated,consumer,n/a,,,,rule
+Intel UHD Graphics 617,Unknown,815,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Radeon R9 M280X,Mobile,814,laptop,consumer,unknown,,,,rule
+Radeon Vega 3 Athlon 300U,Unknown,814,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R7 A8-7500,Unknown,811,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 635,Unknown,811,unclassified,consumer,legacy_secondhand,Legacy GeForce,2014,1,unclassified
+GeForce GT 730M,Mobile,806,laptop,consumer,unknown,,,,rule
+Radeon R7 A10 Extreme Edition,Unknown,806,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon Vega 3 Athlon Silver 3050U,Unknown,806,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon Ryzen 3 3500U,Desktop,803,integrated,consumer,n/a,,,,rule
+Radeon HD 7670,Desktop,803,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 5670,Desktop,799,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon R8 M445DX,Unknown,797,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 PRO A10-8770E,Unknown,790,unclassified,consumer,current,Data-center,2021,0,unclassified
+GeForce GT 445M,Mobile,790,laptop,consumer,unknown,,,,rule
+Intel UHD 770,Desktop,790,desktop,consumer,unknown,,,,column
+Radeon HD 7730M,Mobile,786,laptop,consumer,unknown,,,,rule
+Radeon Ryzen 3 3250U,Unknown,785,integrated,consumer,n/a,,,,rule
+Radeon R7 A365,Unknown,781,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 M270,Unknown,780,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 A8-7680,Unknown,778,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 740M,Mobile,777,laptop,consumer,unknown,,,,rule
+Radeon HD 4810,Desktop,775,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon Athlon Gold 3150U,Unknown,773,laptop,consumer,unknown,,,,rule
+Radeon HD 6650M,Mobile,773,laptop,consumer,unknown,,,,rule
+Radeon R7 A10-8850,Unknown,773,unclassified,consumer,current,Data-center,2021,0,unclassified
+Mobility Radeon HD 5000,Unknown,773,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon 535DX,Unknown,771,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 A8-7600,Unknown,770,unclassified,consumer,unknown,,,,unclassified
+GeForce 9800 GTX,Desktop,769,desktop,consumer,unknown,,,,column
+GeForce GT 440,Desktop,768,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R7 A10-7700K,Unknown,767,unclassified,consumer,current,Data-center,2021,0,unclassified
+GeForce GTX 850A,Unknown,767,unclassified,consumer,unknown,,,,unclassified
+GeForce 730A,Unknown,765,unclassified,consumer,unknown,,,,unclassified
+Mobility Radeon HD 5850,Mobile,763,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon R5 435,Unknown,762,laptop,consumer,aging,Radeon GCN,2016,1,model
+Radeon R7 A8-7650K,Unknown,761,unclassified,consumer,unknown,,,,unclassified
+GeForce 825M,Mobile,761,laptop,consumer,unknown,,,,rule
+Radeon Ryzen Embedded R2312,Desktop,755,integrated,consumer,n/a,,,,rule
+IncrediblE HD 4600,Unknown,750,unclassified,invalid,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon M535DX,Unknown,750,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6800M,Mobile,749,laptop,consumer,unknown,,,,rule
+GeForce GT 730A,Unknown,743,unclassified,consumer,unknown,,,,unclassified
+RadeonT Athlon Silver 3050e,Desktop,742,desktop,consumer,unknown,,,,column
+Radeon Vega 3 Athlon 320GE,Unknown,741,integrated,consumer,n/a,Vega,2017,1,rule
+Intel Poison Ivy,Unknown,739,desktop,consumer,unknown,,,,model
+GeForce GT 340,Desktop,738,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R7 A10-7800,Unknown,738,unclassified,consumer,current,Data-center,2021,0,unclassified
+Intel Iris 5100,Unknown,733,integrated,consumer,n/a,,,,rule
+Radeon HD 6670,Desktop,731,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon Vega 3 Ryzen Embedded R1505G,Unknown,731,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon HD 7550M/7650M,Mobile,729,laptop,consumer,unknown,,,,rule
+Asus GTX 650 FML II EC-EGPU,Unknown,721,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,model
+Mobility Radeon HD 4870,Mobile,720,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon R7 A8-8650,Unknown,719,unclassified,consumer,unknown,,,,unclassified
+Intel UHD Graphics 615,Unknown,718,integrated,consumer,n/a,Intel UHD,2017,1,rule
+GeForce 920M,Mobile,716,laptop,consumer,unknown,,,,rule
+GeForce GT 740A,Unknown,710,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6550A,Unknown,708,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7570M/HD 7670M,Mobile,699,laptop,consumer,unknown,,,,rule
+GeForce GT 640M LE,Mobile,689,laptop,consumer,unknown,,,,rule
+Intel HD 615,Unknown,689,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon Vega 3 Ryzen 3 3250U,Unknown,688,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce GT 630,Desktop,686,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon HD 6630M,Mobile,685,laptop,consumer,unknown,,,,rule
+Intel UHD Graphics 610,Unknown,685,integrated,consumer,n/a,Intel UHD,2017,1,rule
+GeForce GTS 160M,Mobile,679,laptop,consumer,unknown,,,,rule
+NVS 510,Workstation,677,unclassified,invalid,legacy_secondhand,NVS,2010,1,unclassified
+Radeon Athlon Silver 3050U,Unknown,677,laptop,consumer,unknown,,,,rule
+Intel HD 610,Unknown,674,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Radeon Vega 3 Athlon Gold 3150U,Unknown,672,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon R5 A6-7480,Unknown,672,unclassified,consumer,unknown,,,,unclassified
+Radeon R8 M535DX,Unknown,670,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 720,Desktop,661,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+FireGL V7700,Workstation,660,desktop,invalid,unknown,,,,model
+GeForce GT 735M,Mobile,660,laptop,consumer,unknown,,,,rule
+Radeon HD 2900 XT,Desktop,660,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GT 140,Desktop,658,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce GT 530,Desktop,658,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce 810A,Unknown,655,unclassified,consumer,unknown,,,,unclassified
+Intel HD 4600 manual-gen9_2015-134121,Desktop,653,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+SUMO 9640,Unknown,650,unclassified,invalid,unknown,,,,unclassified
+Radeon R5 M430,Unknown,649,unclassified,consumer,unknown,,,,unclassified
+Radeon R8 M365DX,Unknown,647,unclassified,consumer,unknown,,,,unclassified
+FireStream 9170,Unknown,647,laptop,invalid,unknown,,,,model
+GeForce GT 555M,Mobile,646,laptop,consumer,unknown,,,,rule
+Radeon R7 M340,Mobile,645,laptop,consumer,unknown,,,,rule
+GeForce 8800 Ultra,Desktop,643,desktop,consumer,unknown,,,,column
+Intel HD 515,Unknown,637,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+GeForce 9800 S,Unknown,636,desktop,consumer,unknown,,,,model
+Radeon HD 7610M,Mobile,632,laptop,consumer,unknown,,,,rule
+GeForce GTS 360M,Mobile,631,laptop,consumer,unknown,,,,rule
+Intel HD 4600,Desktop,631,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Intel HD P4600/P4700,Unknown,631,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 2900 PRO,Desktop,628,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Intel HD 510,Unknown,624,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon HD 7570,Desktop,621,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GT 710,Desktop,620,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+FireGL V7600,Workstation,616,desktop,invalid,unknown,,,,model
+Radeon R7 A360,Unknown,616,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 5600/5700,Unknown,615,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Intel UHD 630,Desktop,615,desktop,consumer,unknown,,,,column
+NVS 5400M,Workstation,615,laptop,invalid,legacy_secondhand,NVS,2010,1,rule
+GeForce 9800 GX2,Desktop,613,desktop,consumer,unknown,,,,column
+Radeon R6,"Desktop, Mobile",609,unclassified,consumer,unknown,,,,unclassified
+Radeon R6 M255DX,Unknown,605,unclassified,consumer,unknown,,,,unclassified
+GeForce 910M,Mobile,598,laptop,consumer,unknown,,,,rule
+GeForce GT 430,Desktop,598,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Intel HD 5500,Unknown,597,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Matrox C420 LP PCIe x16,Unknown,597,unclassified,invalid,unknown,,,,unclassified
+Radeon R5 M330,Mobile,596,laptop,consumer,unknown,,,,rule
+Intel HD 5000,Unknown,591,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon R7 M360,Mobile,589,laptop,consumer,unknown,,,,rule
+Radeon R5 A6-8500P,Unknown,587,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 3870 X2,Desktop,587,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GTX 285M,Mobile,584,laptop,consumer,unknown,,,,rule
+Radeon R7 A8-7A8-7600,Unknown,583,unclassified,consumer,unknown,,,,unclassified
+RadeonT Ryzen 3 3250U,Desktop,582,laptop,consumer,unknown,,,,rule
+Radeon Vega 3 Ryzen Embedded R1305G,Unknown,581,integrated,consumer,n/a,Vega,2017,1,rule
+Moore Threads MTT S30,Desktop,580,desktop,invalid,unknown,,,,column
+TRINITY DEVASTATOR MOBILE,Unknown,579,laptop,invalid,unknown,,,,rule
+Intel Skylake HD DT GT2,Unknown,577,unclassified,consumer,unknown,,,,unclassified
+GeForce 720A,Unknown,577,unclassified,consumer,unknown,,,,unclassified
+GeForce GTX 280M,Mobile,576,laptop,consumer,unknown,,,,rule
+Radeon R5 A240,Unknown,576,unclassified,consumer,unknown,,,,unclassified
+Radeon R5 420,Unknown,575,desktop,consumer,aging,Radeon GCN,2016,1,model
+GeForce 9800 GTX/9800 GTX+,Unknown,571,desktop,consumer,unknown,,,,model
+GeForce GT 720A,Unknown,567,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8550D,Unknown,567,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6610M,Mobile,565,laptop,consumer,unknown,,,,rule
+GeForce GTS 250,Desktop,565,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R7E,Unknown,565,unclassified,consumer,unknown,,,,unclassified
+Radeon Athlon 300GE,Desktop,563,desktop,consumer,unknown,,,,column
+Radeon Athlon PRO 3045B,Unknown,563,unclassified,consumer,unknown,,,,unclassified
+Radeon R5 240,Desktop,560,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon R7 M265,Mobile,559,laptop,consumer,unknown,,,,rule
+Radeon HD 7650A,Unknown,556,unclassified,consumer,unknown,,,,unclassified
+GeForce 820A,Unknown,556,unclassified,consumer,unknown,,,,unclassified
+GeForce 8800 GTX,Desktop,556,desktop,consumer,unknown,,,,column
+Radeon HD 6570,Desktop,554,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GF117,Unknown,554,unclassified,invalid,unknown,,,,unclassified
+GeForce GT 550M,Mobile,553,laptop,consumer,unknown,,,,rule
+Radeon HD 3870,Desktop,552,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon R7 7850A10-7850K,Unknown,551,unclassified,consumer,unknown,,,,unclassified
+FireGL V8650,Workstation,550,desktop,invalid,unknown,,,,model
+GeForce 8800 GTS 512,Desktop,550,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R5 M335,Mobile,549,laptop,consumer,unknown,,,,rule
+Mobility Radeon HD 3870,Mobile,548,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon R6 A10-8700P,Unknown,545,unclassified,consumer,current,Data-center,2021,0,unclassified
+Radeon R5 M255,Mobile,544,laptop,consumer,unknown,,,,rule
+GeForce GT 820M,Mobile,538,laptop,consumer,unknown,,,,rule
+GeForce GT 435M,Mobile,536,laptop,consumer,unknown,,,,rule
+GeForce GT 635M,Mobile,536,laptop,consumer,unknown,,,,rule
+Radeon 6600M,Mobile,533,integrated,consumer,n/a,Radeon iGPU,2023,0,rule
+RADEON HD6530D,Unknown,532,unclassified,consumer,unknown,,,,unclassified
+Intel HD 4400,Unknown,530,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon R7 M260,Mobile,530,laptop,consumer,unknown,,,,rule
+Radeon Vega 3 3020e,Unknown,527,integrated,consumer,n/a,Vega,2017,1,rule
+Mobility Radeon HD 5570,Unknown,525,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon R5 330,Desktop,523,desktop,consumer,aging,Radeon GCN,2016,1,column
+Radeon HD 8670M,Mobile,520,laptop,consumer,unknown,,,,rule
+GeForce GTS 250M,Mobile,520,laptop,consumer,unknown,,,,rule
+GeForce GT 630M,Mobile,519,laptop,consumer,unknown,,,,rule
+Radeon HD 8670D,Unknown,519,laptop,consumer,unknown,,,,model
+Radeon HD 8690A,Unknown,517,unclassified,consumer,unknown,,,,unclassified
+GeForce 9800M GS,Mobile,517,laptop,consumer,unknown,,,,rule
+IncrediblE HD 4000,Unknown,517,unclassified,invalid,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Intel HD P4000,Unknown,516,unclassified,consumer,unknown,,,,unclassified
+GeForce GTS 240,Desktop,515,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon Vega 3 Athlon Silver 3050e,Unknown,514,integrated,consumer,n/a,Vega,2017,1,rule
+Radeon HD 7660D,Desktop,513,desktop,consumer,unknown,,,,column
+Mobility Radeon HD 4830,Mobile,512,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Mobility Radeon HD 5730,Mobile,507,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Intel HD P4600,Unknown,506,unclassified,consumer,unknown,,,,unclassified
+Radeon Vega 2,Unknown,506,unclassified,consumer,aging,Vega,2017,1,unclassified
+Radeon RX Vega 10 Athlon 300U,Desktop,506,integrated,consumer,n/a,Vega,2017,1,rule
+GeForce 615,Unknown,505,unclassified,consumer,unknown,,,,unclassified
+GeForce GTS 150M,Mobile,504,laptop,consumer,unknown,,,,rule
+Radeon 3020e,Unknown,504,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8650G,Unknown,499,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 425M,Mobile,499,laptop,consumer,unknown,,,,rule
+Radeon R5 M420,Unknown,499,unclassified,consumer,unknown,,,,unclassified
+Radeon R7 M265DX,Unknown,499,unclassified,consumer,unknown,,,,unclassified
+SUMO 964A,Unknown,498,unclassified,invalid,unknown,,,,unclassified
+TRINITY SCRAPPER MOBILE,Unknown,498,laptop,invalid,unknown,,,,rule
+Radeon R5 M315,Unknown,496,unclassified,consumer,unknown,,,,unclassified
+NVS 5200M,Workstation,496,laptop,invalid,legacy_secondhand,NVS,2010,1,rule
+ASUS EAH4870x2,Unknown,496,unclassified,invalid,unknown,,,,unclassified
+GeForce 9800 GTX+,Desktop,489,desktop,consumer,unknown,,,,column
+Radeon R5 M240,Unknown,488,unclassified,consumer,unknown,,,,unclassified
+Radeon Vega 2 Athlon Silver 3050U,Unknown,488,laptop,consumer,aging,Vega,2017,1,rule
+Radeon R4E,Unknown,487,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 625M,Mobile,485,laptop,consumer,unknown,,,,rule
+Radeon HD 7660G,Unknown,481,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7670M,Mobile,480,laptop,consumer,unknown,,,,rule
+GeForce 820M,Mobile,480,laptop,consumer,unknown,,,,rule
+Mobility Radeon HD 5000 Serisi,Unknown,479,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+Mobility Radeon HD 3870 X2,Mobile,478,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon HD8530M,Mobile,478,laptop,consumer,unknown,,,,rule
+GeForce GT 240,Desktop,478,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce 800M,Mobile,477,laptop,consumer,unknown,,,,rule
+Radeon R5 M320,Unknown,475,unclassified,consumer,unknown,,,,unclassified
+Radeon R6 A8-8600P,Unknown,475,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 5570,Desktop,475,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce 9600 GT,Desktop,472,desktop,consumer,unknown,,,,column
+GeForce GT 540M,Mobile,472,laptop,consumer,unknown,,,,rule
+GeForce GT 320,Desktop,470,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+SUMO 9644,Unknown,466,unclassified,invalid,unknown,,,,unclassified
+Radeon HD 7550M,Mobile,465,laptop,consumer,unknown,,,,rule
+Intel HD Family,Unknown,465,unclassified,consumer,unknown,,,,unclassified
+Mobility Radeon HD 4670,Mobile,463,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+GeForce 8800M GTX,Mobile,462,laptop,consumer,unknown,,,,rule
+GeForce 705M,Mobile,456,laptop,consumer,unknown,,,,rule
+GeForce 8800 GT,Desktop,455,desktop,consumer,unknown,,,,column
+GeForce 9800M GTX,Mobile,454,laptop,consumer,unknown,,,,rule
+Radeon HD 7560D,Desktop,451,desktop,consumer,unknown,,,,column
+Radeon HD 8570M,Mobile,450,laptop,consumer,unknown,,,,rule
+Radeon HD 8500M,Mobile,449,laptop,consumer,unknown,,,,rule
+GeForce GT 525M,Mobile,448,laptop,consumer,unknown,,,,rule
+Radeon HD 7640G,Unknown,447,laptop,consumer,unknown,,,,model
+PHDGD Ivy 5,Unknown,445,unclassified,invalid,unknown,,,,unclassified
+GeForce 9800 GT,Desktop,444,desktop,consumer,unknown,,,,column
+GeForce 710M,Mobile,442,laptop,consumer,unknown,,,,rule
+Mobility Radeon HD 5650,Mobile,441,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+GeForce GT 720M,Mobile,438,laptop,consumer,unknown,,,,rule
+GeForce 800A,Unknown,435,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8410G,Unknown,435,desktop,consumer,unknown,,,,model
+GeForce GT 420,Desktop,434,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Matrox M9138 LP PCIe x16,Unknown,433,unclassified,invalid,unknown,,,,unclassified
+Radeon HD 3850 AGP,Desktop,432,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Radeon HD 7650M,Mobile,432,laptop,consumer,unknown,,,,rule
+GeForce 710A,Desktop,429,desktop,consumer,unknown,,,,column
+GeForce GT 620M,Mobile,428,laptop,consumer,unknown,,,,rule
+GeForce GT 710M,Mobile,427,laptop,consumer,unknown,,,,rule
+Radeon R5 M230,Mobile,427,laptop,consumer,unknown,,,,rule
+RADEON HD6410D,Unknown,423,unclassified,consumer,unknown,,,,unclassified
+GeForce GT625M,Mobile,422,laptop,consumer,unknown,,,,rule
+GeForce 810M,Mobile,420,laptop,consumer,unknown,,,,rule
+Intel 4th Generation Haswell HD,Unknown,420,laptop,consumer,unknown,,,,model
+Radeon HD 7570M,Mobile,418,laptop,consumer,unknown,,,,rule
+Radeon HD 8550G,Unknown,417,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8570D,Unknown,409,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7470M,Mobile,408,laptop,consumer,unknown,,,,rule
+Intel HD 5300,Unknown,406,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,model
+RADEON E4690,Unknown,405,unclassified,consumer,unknown,,,,unclassified
+GeForce 8800 GTS,Desktop,403,desktop,consumer,unknown,,,,column
+Radeon HD 3850,Desktop,401,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+Mobility Radeon HD 4650,Mobile,401,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon HD 6550D,Desktop,400,desktop,consumer,unknown,,,,column
+Radeon HD 8610G,Unknown,399,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8650D,Unknown,396,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 620,Desktop,393,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce GT 330,Unknown,392,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,model
+GeForce GT 420M,Mobile,392,laptop,consumer,unknown,,,,rule
+IncrediblE HD,Unknown,389,unclassified,invalid,unknown,,,,unclassified
+GeForce 7900 GTX,Desktop,388,desktop,consumer,unknown,,,,column
+Radeon HD 5550,Desktop,384,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce 8800M GTS,Mobile,382,laptop,consumer,unknown,,,,rule
+GeForce GTX 260M,Mobile,382,laptop,consumer,unknown,,,,rule
+GeForce 9800M GT,Mobile,381,laptop,consumer,unknown,,,,rule
+GeForce GT 130,Desktop,381,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+GeForce GTS 350M,Mobile,381,laptop,consumer,unknown,,,,rule
+Radeon HD 4670,Desktop,381,desktop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,column
+GeForce GT 625,Desktop,379,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon HD 6490M,Mobile,378,laptop,consumer,unknown,,,,rule
+Radeon HD 8470D,Unknown,375,unclassified,consumer,unknown,,,,unclassified
+PHDGD Ivy 4,Unknown,374,desktop,invalid,unknown,,,,model
+Radeon HD 8510G,Unknown,373,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 610M / GT 620M / GT 710M / GT 720M / GT,Mobile,369,laptop,consumer,unknown,,,,rule
+GeForce GT 705,Desktop,369,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Matrox Millennium P690 PCIe x16,Unknown,367,unclassified,invalid,unknown,,,,unclassified
+Mobility Radeon HD 3850,Mobile,366,laptop,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,rule
+Radeon HD4670,Unknown,366,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 335M,Mobile,366,laptop,consumer,unknown,,,,rule
+Radeon Vega 3 Athlon Gold 3150C,Desktop,366,integrated,consumer,n/a,Vega,2017,1,rule
+Intel UHD Graphics 605,Unknown,365,integrated,consumer,n/a,Intel UHD,2017,1,rule
+Intel HD 505,Unknown,361,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon HD 7620G,Unknown,357,unclassified,consumer,unknown,,,,unclassified
+GeForce 9800M GTS,Mobile,357,laptop,consumer,unknown,,,,rule
+Radeon 3015e,Unknown,354,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6480M,Mobile,353,laptop,consumer,unknown,,,,rule
+Mobility Radeon HD 565v,Mobile,353,laptop,consumer,unknown,,,,rule
+Radeon HD 7580D,Unknown,351,unclassified,consumer,unknown,,,,unclassified
+Radeon R4,Unknown,347,unclassified,consumer,unknown,,,,unclassified
+ZX C-1190,Desktop,347,desktop,invalid,unknown,,,,column
+GeForce 7950 GT,Desktop,345,desktop,consumer,unknown,,,,column
+Intel HD 4000,Unknown,343,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+FireGL V5600,Workstation,341,desktop,invalid,unknown,,,,model
+Radeon HD 6620G,Mobile,341,laptop,consumer,unknown,,,,rule
+Radeon HD 8310E,Unknown,341,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6530D,Desktop,337,desktop,consumer,unknown,,,,column
+Radeon R5 235,Desktop,336,desktop,consumer,aging,Radeon GCN,2016,1,column
+NVS 315,Workstation,336,unclassified,invalid,legacy_secondhand,NVS,2010,1,unclassified
+Radeon HD 7600G,Unknown,335,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8450G,Unknown,335,unclassified,consumer,unknown,,,,unclassified
+GeForce GT 610,Desktop,335,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon R5 310,Unknown,332,unclassified,consumer,aging,Radeon GCN,2016,1,unclassified
+GeForce 605,Unknown,331,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7540D,Desktop,331,desktop,consumer,unknown,,,,column
+Radeon HD 7450M,Mobile,330,laptop,consumer,unknown,,,,rule
+GeForce 8800 GS,Desktop,330,desktop,consumer,unknown,,,,column
+GeForce 9600 GSO 512,Desktop,330,desktop,consumer,unknown,,,,column
+GeForce 9700M GT,Mobile,327,laptop,consumer,unknown,,,,rule
+GeForce GT 120 / 9500 GT,Unknown,325,unclassified,consumer,legacy_secondhand,Legacy GeForce,2014,1,unclassified
+GeForce GT 520,Desktop,325,desktop,consumer,legacy_secondhand,Legacy GeForce,2014,1,column
+Radeon E6460,Unknown,324,unclassified,consumer,unknown,,,,unclassified
+GeForce 9600 GSO,Desktop,323,desktop,consumer,unknown,,,,column
+GeForce GT 230,Unknown,323,unclassified,consumer,legacy_secondhand,Legacy GeForce,2014,1,unclassified
+GeForce 240M GT,Mobile,320,laptop,consumer,unknown,,,,rule
+RADEON HD6370D,Unknown,320,unclassified,consumer,unknown,,,,unclassified
+Mobility Radeon HD 560v,Mobile,318,laptop,consumer,unknown,,,,rule
+Radeon HD 7420G,Unknown,316,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7500G,Unknown,316,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 7520G,Unknown,316,unclassified,consumer,unknown,,,,unclassified
+Radeon R3,Unknown,315,unclassified,consumer,unknown,,,,unclassified
+Radeon R5E,Unknown,315,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 8370D,Unknown,314,unclassified,consumer,unknown,,,,unclassified
+GeForce 9700M GTS,Mobile,312,laptop,consumer,unknown,,,,rule
+Intel UHD Graphics 600,Unknown,311,integrated,consumer,n/a,Intel UHD,2017,1,rule
+NVS 4200M,Workstation,311,laptop,invalid,legacy_secondhand,NVS,2010,1,rule
+Intel 3rd Generation IvyBridge HD 4000,Unknown,303,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Intel HD 500,Unknown,302,unclassified,consumer,legacy_secondhand,Intel HD / Radeon HD,2012,1,unclassified
+Radeon R1E,Unknown,301,unclassified,consumer,unknown,,,,unclassified
+Radeon HD 6520G,Mobile,300,laptop,consumer,unknown,,,,rule

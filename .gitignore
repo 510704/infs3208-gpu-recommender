@@ -16,6 +16,10 @@ __pycache__/
 Individual Project_2026.pdf
 Marking Criteria_2026.pdf
 
+# Spark checksum files and the unused classifier pipeline
+*.crc
+data/curated/gpu_classifier/
+
 # Local GCS emulator data and build outputs
 data/gcs/
 *.zip

@@ -1,0 +1,299 @@
+{
+  "chosen_k": {
+    "k": 8,
+    "rule": "lowest GMM BIC (3 seeds per k, k=3..10)",
+    "gmm_bic": -1356350.0
+  },
+  "k_table": [
+    {
+      "k": 3,
+      "km_silhouette": 0.6234,
+      "km_min_cluster": 2604,
+      "gm_log_likelihood": 45799.1,
+      "gm_bic": -90291.5
+    },
+    {
+      "k": 4,
+      "km_silhouette": 0.5886,
+      "km_min_cluster": 691,
+      "gm_log_likelihood": 308531.7,
+      "gm_bic": -615317.6
+    },
+    {
+      "k": 5,
+      "km_silhouette": 0.5809,
+      "km_min_cluster": 991,
+      "gm_log_likelihood": 473695.8,
+      "gm_bic": -945207.0
+    },
+    {
+      "k": 6,
+      "km_silhouette": 0.5302,
+      "km_min_cluster": 635,
+      "gm_log_likelihood": 506938.1,
+      "gm_bic": -1011252.8
+    },
+    {
+      "k": 7,
+      "km_silhouette": 0.4189,
+      "km_min_cluster": 635,
+      "gm_log_likelihood": 463019.4,
+      "gm_bic": -922976.6
+    },
+    {
+      "k": 8,
+      "km_silhouette": 0.56,
+      "km_min_cluster": 634,
+      "gm_log_likelihood": 679925.5,
+      "gm_bic": -1356350.0
+    },
+    {
+      "k": 9,
+      "km_silhouette": 0.5707,
+      "km_min_cluster": 211,
+      "gm_log_likelihood": 573886.7,
+      "gm_bic": -1143833.4
+    },
+    {
+      "k": 10,
+      "km_silhouette": 0.588,
+      "km_min_cluster": 327,
+      "gm_log_likelihood": 546183.6,
+      "gm_bic": -1087988.4
+    }
+  ],
+  "ari_kmeans_vs_gmm": 0.5827,
+  "features": [
+    "req_log",
+    "igpu_playable",
+    "is_capped",
+    "ram_log",
+    "ram_missing",
+    "ghz",
+    "ghz_missing",
+    "game_age"
+  ],
+  "vram_states": {
+    "known": 5783,
+    "shared_igpu": 1142,
+    "missing": 10269
+  },
+  "impute_medians": {
+    "ram_gb": 2.0,
+    "ghz": 2.0
+  },
+  "labels": {
+    "3": "Level 1",
+    "2": "Level 2",
+    "5": "Level 3",
+    "6": "Level 4",
+    "0": "Level 5",
+    "7": "Level 6",
+    "4": "Level 7",
+    "1": "Level 8"
+  },
+  "clusters": [
+    {
+      "cluster": 3,
+      "label": "Level 1",
+      "n": 956,
+      "mean_score": 2610.0,
+      "igpu_ok": 1.0,
+      "capped": 1.0,
+      "mean_ram": 1.5,
+      "mean_vram": 0.27,
+      "vram_parsed": 0.4,
+      "vram_shared": 0.045,
+      "vram_missing": 0.555,
+      "mean_clock": 2.21,
+      "mean_age": 18.1
+    },
+    {
+      "cluster": 2,
+      "label": "Level 2",
+      "n": 1475,
+      "mean_score": 2636.0,
+      "igpu_ok": 0.995,
+      "capped": 1.0,
+      "mean_ram": 1.7,
+      "mean_vram": 0.2,
+      "vram_parsed": 0.279,
+      "vram_shared": 0.042,
+      "vram_missing": 0.679,
+      "mean_clock": 0.78,
+      "mean_age": 24.6
+    },
+    {
+      "cluster": 5,
+      "label": "Level 3",
+      "n": 987,
+      "mean_score": 3912.0,
+      "igpu_ok": 0.705,
+      "capped": 0.996,
+      "mean_ram": 0.0,
+      "mean_vram": 0.37,
+      "vram_parsed": 0.128,
+      "vram_shared": 0.023,
+      "vram_missing": 0.849,
+      "mean_clock": 0.52,
+      "mean_age": 21.7
+    },
+    {
+      "cluster": 6,
+      "label": "Level 4",
+      "n": 3676,
+      "mean_score": 6911.0,
+      "igpu_ok": 0.0,
+      "capped": 0.995,
+      "mean_ram": 1.6,
+      "mean_vram": 0.43,
+      "vram_parsed": 0.379,
+      "vram_shared": 0.077,
+      "vram_missing": 0.544,
+      "mean_clock": 1.7,
+      "mean_age": 9.7
+    },
+    {
+      "cluster": 0,
+      "label": "Level 5",
+      "n": 3071,
+      "mean_score": 7129.0,
+      "igpu_ok": 0.0,
+      "capped": 1.0,
+      "mean_ram": 4.2,
+      "mean_vram": 1.19,
+      "vram_parsed": 0.431,
+      "vram_shared": 0.085,
+      "vram_missing": 0.485,
+      "mean_clock": 2.61,
+      "mean_age": 8.4
+    },
+    {
+      "cluster": 7,
+      "label": "Level 6",
+      "n": 4435,
+      "mean_score": 7196.0,
+      "igpu_ok": 0.0,
+      "capped": 1.0,
+      "mean_ram": 4.0,
+      "mean_vram": 1.33,
+      "vram_parsed": 0.277,
+      "vram_shared": 0.093,
+      "vram_missing": 0.63,
+      "mean_clock": 0.0,
+      "mean_age": 7.6
+    },
+    {
+      "cluster": 4,
+      "label": "Level 7",
+      "n": 634,
+      "mean_score": 15498.0,
+      "igpu_ok": 0.0,
+      "capped": 0.0,
+      "mean_ram": 7.1,
+      "mean_vram": 3.01,
+      "vram_parsed": 0.465,
+      "vram_shared": 0.033,
+      "vram_missing": 0.502,
+      "mean_clock": 2.97,
+      "mean_age": 5.7
+    },
+    {
+      "cluster": 1,
+      "label": "Level 8",
+      "n": 1960,
+      "mean_score": 16526.0,
+      "igpu_ok": 0.0,
+      "capped": 0.0,
+      "mean_ram": 8.6,
+      "mean_vram": 4.18,
+      "vram_parsed": 0.317,
+      "vram_shared": 0.019,
+      "vram_missing": 0.664,
+      "mean_clock": 0.01,
+      "mean_age": 5.1
+    }
+  ],
+  "samples": {
+    "Level 1": [
+      "Pound of Ground",
+      "Ion Assault",
+      "Fallout 3: Point Lookout",
+      "The Misadventures of P.B. Winterbottom",
+      "Sacraboar",
+      "Age of Booty",
+      "Treasure Adventure Game",
+      "Command & Conquer 3: Kane's Wrath"
+    ],
+    "Level 2": [
+      "Re-Bounder",
+      "Pong",
+      "Breakout",
+      "The Oregon Trail",
+      "Alien",
+      "Pirate Adventure",
+      "Ghost House",
+      "Haunted House"
+    ],
+    "Level 3": [
+      "Commandos 3: Destination Berlin",
+      "Infinite Inside",
+      "Jumpman",
+      "F-16 Multirole Fighter",
+      "Flock!",
+      "Journey to the Savage Planet: Hot Garbage",
+      "Assassin's Creed: Director's Cut Edition",
+      "Perish"
+    ],
+    "Level 4": [
+      "Funbag Fantasy",
+      "Chip",
+      "Guild Wars: Eye of the North",
+      "Nancy Drew: Secret of the Old Clock",
+      "Mystery House",
+      "Kao the Kangaroo",
+      "Star Rangers",
+      "Afterlife"
+    ],
+    "Level 5": [
+      "State of Decay 2",
+      "Final Fantasy XV",
+      "Dying Light",
+      "MotoGP 15",
+      "Mickey Storm and the Cursed Mask",
+      "The Crew 2",
+      "Drizzlepath: Genie",
+      "Bus Simulator 18"
+    ],
+    "Level 6": [
+      "Red Solstice 2: Survivors",
+      "Misc. A Tiny Tale",
+      "Yu-Gi-Oh! Duel Links",
+      "Cataclismo",
+      "Onimusha 2: Samurai's Destiny",
+      "eFootball PES 2020",
+      "Hangover",
+      "Atelier Resleriana: Forgotten Alchemy and the Polar Night Liberator"
+    ],
+    "Level 7": [
+      "Screamer",
+      "Monster Jam Showdown",
+      "Steredenn",
+      "Steredenn: Binary Stars",
+      "Rushing Beat X: Return of Brawl Brothers",
+      "Devil May Cry 4: Special Edition",
+      "Liminal Point",
+      "Protodroid Delta"
+    ],
+    "Level 8": [
+      "High on Life 2",
+      "Last Hope - Tower Defense",
+      "Escape from Tarkov",
+      "Immortals of Aveum",
+      "Saints Row",
+      "Portal with RTX",
+      "Cities: Skylines II",
+      "Blades of Fire"
+    ]
+  }
+}

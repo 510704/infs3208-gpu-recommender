@@ -1,5 +1,10 @@
 # Google Kubernetes Engine overlay.
 #
+# NOTE: the project id, bucket and service-account emails below are the author's
+# example environment. To deploy to your own project, use
+#   PROJECT=<id> BUCKET=<bucket> bash scripts/deploy_gcp.sh
+# which copies this tree and rewrites those values before applying it.
+#
 # Differences from the local overlay are configuration only:
 #   - real Cloud Storage (no STORAGE_EMULATOR_HOST) + Workload Identity
 #   - images pulled from Artifact Registry

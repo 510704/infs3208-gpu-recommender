@@ -1,0 +1,192 @@
+{
+  "selected_model": "rf",
+  "features": [
+    "game_age",
+    "min_ram_gb",
+    "min_vram_gb",
+    "min_ghz",
+    "is_capped"
+  ],
+  "metrics": {
+    "rf": {
+      "rmse": 1372.0205613053076,
+      "mae": 605.4514077177517,
+      "r2": 0.8947955982441804
+    },
+    "gbt": {
+      "rmse": 1406.0,
+      "mae": 634.2,
+      "r2": 0.889
+    },
+    "ridge": {
+      "rmse": 1743.0,
+      "mae": 1220.3,
+      "r2": 0.829
+    },
+    "nn": {
+      "rmse": 1735.8,
+      "mae": 573.1,
+      "r2": 0.831,
+      "tier_accuracy": 0.858
+    }
+  },
+  "mean_baseline_rmse": 4231.012800021171,
+  "fps_curve": {
+    "prior_a": -2.438777426104825,
+    "prior_b": 0.7755822964063075,
+    "clip": 360.0,
+    "games_total": 17316,
+    "games_fitted": 17265,
+    "logo_mae_fps": 14.643156604006123,
+    "logo": {
+      "iris_xe": {
+        "n": 17338,
+        "mae": 6.814735089870836,
+        "rmse": 7.375669642481265
+      },
+      "radeon_780m": {
+        "n": 17288,
+        "mae": 1.9118967337363744,
+        "rmse": 3.3840774435597005
+      },
+      "gtx_1650": {
+        "n": 17287,
+        "mae": 3.390904198236811,
+        "rmse": 4.617047609854864
+      },
+      "gtx_1660_super": {
+        "n": 17271,
+        "mae": 11.672641698041241,
+        "rmse": 12.650474781294285
+      },
+      "rtx_3060": {
+        "n": 16736,
+        "mae": 14.424732858851607,
+        "rmse": 15.624655190294186
+      },
+      "rx_7600": {
+        "n": 16736,
+        "mae": 15.283736738381018,
+        "rmse": 17.327714840306385
+      },
+      "rtx_4060": {
+        "n": 14126,
+        "mae": 13.26856459269137,
+        "rmse": 15.043222532464505
+      },
+      "rtx_5060": {
+        "n": 14119,
+        "mae": 19.68182280931096,
+        "rmse": 25.946818634783533
+      },
+      "rtx_4070": {
+        "n": 7563,
+        "mae": 38.74469030624676,
+        "rmse": 44.29397562069059
+      },
+      "rx_7800_xt": {
+        "n": 7940,
+        "mae": 21.323229164806964,
+        "rmse": 26.80101372974961
+      },
+      "rtx_5070": {
+        "n": 5603,
+        "mae": 42.48775814713341,
+        "rmse": 47.789456216117024
+      },
+      "rtx_4090": {
+        "n": 2639,
+        "mae": 72.06150235199732,
+        "rmse": 74.47649296088692
+      }
+    },
+    "rf_holdout": {
+      "cards": [
+        "iris_xe",
+        "rtx_3060",
+        "rtx_4090"
+      ],
+      "mae": 48.67113153362231,
+      "rmse": 57.41935303398952
+    },
+    "curve_holdout_mae": 13.293852811084365
+  },
+  "gpu_catalog": {
+    "holdout_accuracy": 0.66875,
+    "rows": 1381,
+    "distributions": {
+      "form_factor": {
+        "laptop": 363,
+        "unclassified": 229,
+        "desktop": 437,
+        "integrated": 352
+      },
+      "market": {
+        "mining": 1,
+        "consumer": 1210,
+        "workstation": 78,
+        "invalid": 81,
+        "sample": 11
+      },
+      "availability": {
+        "legacy_secondhand": 178,
+        "aging": 174,
+        "unknown": 461,
+        "current": 216,
+        "n/a": 352
+      },
+      "ff_source": {
+        "column": 381,
+        "model": 71,
+        "unclassified": 229,
+        "rule": 700
+      }
+    },
+    "generations": {
+      "RTX Ada workstation": 24,
+      "RTX 20 (Turing)": 17,
+      "Intel HD / Radeon HD": 94,
+      "Radeon AI Pro": 1,
+      "NVS": 6,
+      "RX 9000 (RDNA 4)": 6,
+      "RX 5000 (RDNA)": 13,
+      "Arc Pro": 8,
+      "Data-center": 16,
+      "Radeon Pro (GCN)": 17,
+      "null": 630,
+      "Legacy GeForce": 73,
+      "GTX 16 (Turing)": 12,
+      "Quadro (Kepler-Pascal)": 2,
+      "Iris Xe": 3,
+      "Iris Plus": 5,
+      "RX 7000 (RDNA 3)": 17,
+      "RX 6000 (RDNA 2)": 32,
+      "Display adapter": 4,
+      "Radeon VII": 1,
+      "RTX Pro": 16,
+      "Radeon Pro (RDNA)": 8,
+      "Instinct": 1,
+      "GeForce MX": 11,
+      "RTX 40 (Ada)": 18,
+      "RTX 30 (Ampere)": 25,
+      "GTX 10 (Pascal)": 19,
+      "Radeon iGPU": 104,
+      "Intel Arc": 15,
+      "RTX 50 (Blackwell)": 16,
+      "Titan": 10,
+      "Vega": 76,
+      "Radeon GCN": 56,
+      "T-series workstation": 11,
+      "Intel UHD": 14
+    }
+  },
+  "feature_importances": {
+    "rf": {
+      "game_age": 0.16597,
+      "min_ram_gb": 0.15979,
+      "min_vram_gb": 0.01883,
+      "min_ghz": 0.00935,
+      "is_capped": 0.64606
+    }
+  }
+}

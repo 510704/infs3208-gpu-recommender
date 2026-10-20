@@ -1,0 +1,58 @@
+[
+  {
+    "name": "08_fps_to_score.png",
+    "title": "FPS vs score",
+    "caption": "Target FPS to required score across 17,265 games (1080p High); the band is the middle 80% and the dotted line is the best card available. 1440p/4K scale the requirement by 1.54x/2.83x.",
+    "span": 2,
+    "explanation": "How much benchmark score each frame-rate target needs. Every faint line is one game; the band holds the middle 80% of them. Read up from your FPS target to see the score a GPU must beat."
+  },
+  {
+    "name": "03_fps_curve.png",
+    "title": "FPS curve",
+    "caption": "Error per left-out card and error on unseen cards; the curve beats the random forest 13.3 vs 49.0 fps.",
+    "span": 1,
+    "explanation": "How well the FPS model generalises: each bar hides one reference GPU from the fit and predicts it back. The right panel compares the curve with a random forest on cards neither has seen."
+  },
+  {
+    "name": "05_clusters.png",
+    "title": "Demand levels",
+    "caption": "Number of levels chosen by BIC (3 seeds per k) and how the level mix shifts over time.",
+    "span": 2,
+    "explanation": "Games grouped by hardware demand. Panel 1 shows how the number of groups was chosen, panel 2 the groups themselves, panel 3 how the mix of groups changes with release era."
+  },
+  {
+    "name": "07_demand_trend.png",
+    "title": "Demand trend",
+    "caption": "Median minimum and recommended GPU score per period, plus the shift in game mix.",
+    "span": 1,
+    "explanation": "How hardware demand grew: median minimum and recommended GPU score per 5-year era, and the share of games an integrated GPU can run, that hit the frame cap, or that need a high-tier card."
+  },
+  {
+    "name": "02_models.png",
+    "title": "Tier models",
+    "caption": "Random forest is selected (R2 0.89, RMSE 1,372) against a mean baseline of 4,219.",
+    "span": 2,
+    "explanation": "Which model predicts the required score best. The random forest (selected) is compared with three alternatives on error, fit quality and the features it relies on."
+  },
+  {
+    "name": "01_data_quality_and_demand.png",
+    "title": "Data quality and demand",
+    "caption": "Column coverage and games by score range (n=17,194).",
+    "span": 1,
+    "explanation": "What the source data actually contains: how much of each column is missing, and how the games spread across performance needs."
+  },
+  {
+    "name": "04_gpu_catalog.png",
+    "title": "GPU catalog",
+    "caption": "Benchmark spread for desktop, laptop and integrated GPUs; classifier accuracy 0.67.",
+    "span": 1,
+    "explanation": "The GPU catalogue the recommender picks from: benchmark score spread for desktop, laptop and integrated cards."
+  },
+  {
+    "name": "06_rules.png",
+    "title": "Association rules",
+    "caption": "Top rules by lift with confidence; lift 16 means the specs make the tier 16x more likely than chance.",
+    "span": 1,
+    "explanation": "Which hardware requirements travel together. Each bar is a rule such as \"6-8 GB VRAM, no frame cap, recent release -> high tier\", ranked by how much better than chance it predicts."
+  }
+]

@@ -1,0 +1,540 @@
+{
+  "params": {
+    "minSupport": 0.01,
+    "minConfidence": 0.6,
+    "min_antecedent": 2,
+    "consequent": "Tier *"
+  },
+  "frequent_itemsets": 1787,
+  "rules_total": 3904,
+  "top_rules": [
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Cap off",
+        "Age 0-5",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0106,
+      "confidence": 0.7379,
+      "lift": 16.06
+    },
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Cap off",
+        "Age 0-5"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0106,
+      "confidence": 0.7379,
+      "lift": 16.06
+    },
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Age 0-5",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0106,
+      "confidence": 0.732,
+      "lift": 15.932
+    },
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Age 0-5"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0106,
+      "confidence": 0.732,
+      "lift": 15.932
+    },
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Cap off",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0114,
+      "confidence": 0.7259,
+      "lift": 15.799
+    },
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Cap off"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0114,
+      "confidence": 0.7259,
+      "lift": 15.799
+    },
+    {
+      "antecedent": [
+        "VRAM 6-8",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0114,
+      "confidence": 0.7179,
+      "lift": 15.626
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Age 0-5",
+        "Clock unknown",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0142,
+      "confidence": 0.7135,
+      "lift": 15.528
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Age 0-5",
+        "Clock unknown"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0142,
+      "confidence": 0.7135,
+      "lift": 15.528
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Age 0-5",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0159,
+      "confidence": 0.6982,
+      "lift": 15.196
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Age 0-5"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0159,
+      "confidence": 0.6982,
+      "lift": 15.196
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Age 0-5",
+        "Clock unknown"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0142,
+      "confidence": 0.6893,
+      "lift": 15.002
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Age 0-5",
+        "Clock unknown",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0142,
+      "confidence": 0.6893,
+      "lift": 15.002
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Clock unknown"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0162,
+      "confidence": 0.6805,
+      "lift": 14.811
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Clock unknown",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0162,
+      "confidence": 0.6805,
+      "lift": 14.811
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.018,
+      "confidence": 0.6681,
+      "lift": 14.541
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Cap off",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.018,
+      "confidence": 0.6681,
+      "lift": 14.541
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Age 0-5"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0159,
+      "confidence": 0.6659,
+      "lift": 14.492
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Age 0-5",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0159,
+      "confidence": 0.6659,
+      "lift": 14.492
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Clock unknown",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0162,
+      "confidence": 0.6384,
+      "lift": 13.895
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Clock unknown"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.0162,
+      "confidence": 0.6341,
+      "lift": 13.801
+    },
+    {
+      "antecedent": [
+        "RAM 9-16",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier high"
+      ],
+      "support": 0.018,
+      "confidence": 0.6188,
+      "lift": 13.467
+    },
+    {
+      "antecedent": [
+        "Cap off",
+        "RAM 5-8",
+        "VRAM 0-2",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier mid"
+      ],
+      "support": 0.0128,
+      "confidence": 0.9362,
+      "lift": 6.04
+    },
+    {
+      "antecedent": [
+        "Cap off",
+        "RAM 5-8",
+        "VRAM 0-2"
+      ],
+      "consequent": [
+        "Tier mid"
+      ],
+      "support": 0.0128,
+      "confidence": 0.9362,
+      "lift": 6.04
+    },
+    {
+      "antecedent": [
+        "Cap off",
+        "VRAM 0-2",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier mid"
+      ],
+      "support": 0.0188,
+      "confidence": 0.9231,
+      "lift": 5.955
+    },
+    {
+      "antecedent": [
+        "Cap off",
+        "VRAM 0-2"
+      ],
+      "consequent": [
+        "Tier mid"
+      ],
+      "support": 0.0188,
+      "confidence": 0.9231,
+      "lift": 5.955
+    },
+    {
+      "antecedent": [
+        "Cap off",
+        "Age 6-10",
+        "RAM 0-4",
+        "Integrated slow"
+      ],
+      "consequent": [
+        "Tier mid"
+      ],
+      "support": 0.0119,
+      "confidence": 0.8952,
+      "lift": 5.776
+    },
+    {
+      "antecedent": [
+        "Cap off",
+        "Age 6-10",
+        "RAM 0-4"
+      ],
+      "consequent": [
+        "Tier mid"
+      ],
+      "support": 0.0119,
+      "confidence": 0.8952,
+      "lift": 5.776
+    },
+    {
+      "antecedent": [
+        "Age 21+",
+        "Integrated ok",
+        "VRAM unknown"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0785,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "Clock unknown",
+        "VRAM unknown",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0334,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "VRAM 0-2"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0505,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "Clock <2.5",
+        "VRAM unknown",
+        "RAM 0-4",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0629,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "RAM unknown",
+        "Integrated ok",
+        "Clock <2.5",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0277,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Age 21+",
+        "Integrated ok",
+        "VRAM 0-2",
+        "RAM 0-4",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0136,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "Age 11-20",
+        "Clock unknown"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0141,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "RAM unknown",
+        "Integrated ok",
+        "Clock <2.5",
+        "VRAM unknown"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0263,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "RAM 0-4",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.1376,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "Age 11-20",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0854,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "Clock <2.5",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.1265,
+      "confidence": 1.0,
+      "lift": 5.513
+    },
+    {
+      "antecedent": [
+        "Integrated ok",
+        "Clock <2.5",
+        "VRAM unknown",
+        "Cap on"
+      ],
+      "consequent": [
+        "Tier light"
+      ],
+      "support": 0.0894,
+      "confidence": 1.0,
+      "lift": 5.513
+    }
+  ]
+}
