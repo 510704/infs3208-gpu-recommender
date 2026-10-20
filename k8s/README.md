@@ -52,6 +52,25 @@ cloud). Tear down with:
 PROJECT=<your-project> BUCKET=<your-bucket> bash scripts/teardown_gcp.sh
 ```
 
+### Troubleshooting: cannot push to the registry
+
+A failure such as
+`Head "https://<region>-docker.pkg.dev/v2/.../blobs/sha256:..." ... connection refused`
+means this host cannot reach Artifact Registry (blocked egress, VPN or a flaky
+link). The script already retries the push five times and prints the fix; two
+reliable options:
+
+1. **Build inside Google Cloud** (nothing is pushed from your machine):
+   ```bash
+   BUILD_MODE=cloudbuild bash scripts/deploy_gcp.sh
+   ```
+   `gcloud builds submit` uploads the build context, builds in Cloud Build and
+   pushes to Artifact Registry from inside GCP. The script grants the Cloud Build
+   service account `roles/artifactregistry.writer` first.
+2. **Run from Cloud Shell**, which has unrestricted access to the registry:
+   clone the repo (or restore it from `gs://…/release/`) and run the normal
+   `bash scripts/deploy_gcp.sh`.
+
 Expected cost for the default shape is ≈ A$134/month
 (`docs/cloud-usage-and-cost.md`); tear it down when finished.
 

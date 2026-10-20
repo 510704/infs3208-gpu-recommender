@@ -30,11 +30,33 @@ CLUSTER="${CLUSTER:-${GKE_CLUSTER:-gpu-recsys}}"
 REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
 MACHINE_TYPE="${MACHINE_TYPE:-${GKE_MACHINE_TYPE:-e2-standard-2}}"
 DISK_SIZE="${DISK_SIZE:-${GKE_DISK_SIZE:-30}}"
+BUILD_MODE="${BUILD_MODE:-local}"          # local (docker push) | cloudbuild
+WITH_TRAINING="${WITH_TRAINING:-0}"
 NS=gpu-recsys
 AR="${REGION}-docker.pkg.dev/${PROJECT}/${REPO}"
 
 [[ -n "$PROJECT" ]] || { echo "set GCP_PROJECT in .env (or PROJECT=...)"; exit 1; }
 [[ -n "$BUCKET" ]] || { echo "set GCP_BUCKET in .env (or BUCKET=...)"; exit 1; }
+
+# The Artifact Registry endpoint, used for the preflight below.
+registry_ok() {
+  local code
+  code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 10 "https://${REGION}-docker.pkg.dev/v2/" 2>/dev/null || true)"
+  [[ "$code" == "200" || "$code" == "401" || "$code" == "403" ]]
+}
+
+push_image() {
+  local ref="$1" attempt
+  for attempt in 1 2 3 4 5; do
+    if docker push "$ref"; then return 0; fi
+    echo "  push failed (attempt ${attempt}/5): $ref"
+    sleep $((attempt * 5))
+  done
+  echo "ERROR: could not push $ref (registry unreachable from this host)."
+  echo "Fix: run in Cloud Shell, or build inside Google Cloud instead:"
+  echo "     BUILD_MODE=cloudbuild bash scripts/deploy_gcp.sh"
+  exit 1
+}
 
 render() {
   local root="$1"
@@ -70,14 +92,33 @@ gcloud storage buckets describe "gs://$BUCKET" >/dev/null 2>&1 \
   || gcloud storage buckets create "gs://$BUCKET" --location "$REGION" --uniform-bucket-level-access
 
 echo "== images =="
-gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
-docker build -t "$AR/serving:v1" serving
-docker build -t "$AR/frontend:v1" frontend
-docker push "$AR/serving:v1"
-docker push "$AR/frontend:v1"
-if [[ "${WITH_TRAINING:-0}" == "1" ]]; then
-  docker build -f training/Dockerfile -t "$AR/training:v1" .
-  docker push "$AR/training:v1"
+if [[ "$BUILD_MODE" == "cloudbuild" ]]; then
+  # Build inside Google Cloud: nothing is pushed from this machine, so a blocked
+  # or flaky connection to the registry does not matter.
+  gcloud services enable cloudbuild.googleapis.com
+  NUM="$(gcloud projects describe "$PROJECT" --format='value(projectNumber)')"
+  gcloud projects add-iam-policy-binding "$PROJECT" \
+    --member="serviceAccount:${NUM}@cloudbuild.gserviceaccount.com" \
+    --role=roles/artifactregistry.writer --quiet >/dev/null || true
+  gcloud builds submit --tag "$AR/serving:v1" serving
+  gcloud builds submit --tag "$AR/frontend:v1" frontend
+  [[ "$WITH_TRAINING" == "1" ]] && gcloud builds submit --tag "$AR/training:v1" -f training/Dockerfile .
+else
+  gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
+  if registry_ok; then
+    echo "registry ${REGION}-docker.pkg.dev reachable"
+  else
+    echo "WARN: ${REGION}-docker.pkg.dev is not answering from this host."
+    echo "      If the push fails, use BUILD_MODE=cloudbuild (no local push)."
+  fi
+  docker build -t "$AR/serving:v1" serving
+  docker build -t "$AR/frontend:v1" frontend
+  push_image "$AR/serving:v1"
+  push_image "$AR/frontend:v1"
+  if [[ "$WITH_TRAINING" == "1" ]]; then
+    docker build -f training/Dockerfile -t "$AR/training:v1" .
+    push_image "$AR/training:v1"
+  fi
 fi
 
 echo "== artifacts =="
