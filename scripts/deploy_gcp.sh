@@ -36,8 +36,17 @@ WITH_TRAINING="${WITH_TRAINING:-0}"
 NS=gpu-recsys
 AR="${REGION}-docker.pkg.dev/${PROJECT}/${REPO}"
 
+# A fresh clone has no .env (it is gitignored), so fall back to the active
+# gcloud project before giving up.
+if [[ -z "$PROJECT" ]]; then
+  PROJECT="$(gcloud config get-value project 2>/dev/null | tr -d '\r')"
+  [[ -n "$PROJECT" && "$PROJECT" != "(unset)" ]] && echo "using the active gcloud project: $PROJECT"
+  NS=gpu-recsys
+  AR="${REGION}-docker.pkg.dev/${PROJECT}/${REPO}"
+fi
+
 [[ -n "$PROJECT" ]] || { echo "set GCP_PROJECT in .env (or PROJECT=...)"; exit 1; }
-[[ -n "$BUCKET" ]] || { echo "set GCP_BUCKET in .env (or BUCKET=...)"; exit 1; }
+[[ -n "$BUCKET" ]] || { echo "set GCP_BUCKET in .env, or: PROJECT=$PROJECT BUCKET=<bucket> bash scripts/deploy_gcp.sh"; exit 1; }
 
 # The Artifact Registry endpoint, used for the preflight below.
 registry_ok() {

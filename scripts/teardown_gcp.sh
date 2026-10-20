@@ -22,8 +22,23 @@ ZONE="${ZONE:-${GCP_ZONE:-${REGION}-a}}"
 CLUSTER="${CLUSTER:-${GKE_CLUSTER:-gpu-recsys}}"
 REPO="${REPO:-${GCP_AR_REPO:-gpu-recsys}}"
 
-[[ -n "$PROJECT" ]] || { echo "set GCP_PROJECT in .env (or PROJECT=...)"; exit 1; }
-[[ -n "$BUCKET" ]] || { echo "set GCP_BUCKET in .env (or BUCKET=...)"; exit 1; }
+# No .env (a fresh clone has none - it is gitignored): fall back to the active
+# gcloud project, and help find the bucket instead of just failing.
+if [[ -z "$PROJECT" ]]; then
+  PROJECT="$(gcloud config get-value project 2>/dev/null | tr -d '\r')"
+  [[ -n "$PROJECT" && "$PROJECT" != "(unset)" ]] && echo "using the active gcloud project: $PROJECT"
+fi
+if [[ -z "$PROJECT" ]]; then
+  echo "set GCP_PROJECT in .env, or run: PROJECT=<id> BUCKET=<bucket> bash scripts/teardown_gcp.sh"
+  exit 1
+fi
+if [[ -z "$BUCKET" ]]; then
+  echo "BUCKET is not set. Buckets in ${PROJECT}:"
+  gcloud storage buckets list --project "$PROJECT" --format="value(name)" 2>/dev/null | sed 's/^/  /'
+  echo
+  echo "then run: PROJECT=${PROJECT} BUCKET=<bucket> bash scripts/teardown_gcp.sh"
+  exit 1
+fi
 
 gcloud config set project "$PROJECT"
 
