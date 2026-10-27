@@ -7,8 +7,12 @@ FROM apache/spark:3.5.1
 USER root
 # Pinned to the last releases that ship cp38 wheels: the base image's Python is
 # 3.8, so unpinned pandas/numpy can resolve to versions with no wheel for it.
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
- && pip install --no-cache-dir \
+# `python3 -m pip` (not bare `pip`) is deliberate: the base's system pip has an
+# old vendored `packaging` that crashes on legacy PyPI versions (e.g. pytz
+# '2004d', pulled in by pandas). Upgrading pip and then calling it via
+# `python3 -m pip` makes the resolution use a modern pip that skips those.
+RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel \
+ && python3 -m pip install --no-cache-dir \
         "numpy<1.25" \
         "pandas<2.0" \
         nbconvert \

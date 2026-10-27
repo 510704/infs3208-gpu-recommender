@@ -1,0 +1,20 @@
+# Cloud Build config for the training image.
+#
+# The build context is the repository root (training/Dockerfile copies notebooks/
+# and spark/jobs/ from there), and the Dockerfile is named explicitly - which is
+# exactly what `gcloud builds submit --tag ... -f` cannot express.
+#
+# Used by scripts/deploy_gcp.sh with:
+#   gcloud builds submit . --config=training/cloudbuild.yaml \
+#     --substitutions=_IMAGE=<registry>/training:v1
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'training/Dockerfile', '-t', '${_IMAGE}', '.']
+
+# Listing the image here makes Cloud Build push it to Artifact Registry.
+images:
+  - '${_IMAGE}'
+
+# Pulling the apache/spark base + pip-installing numpy/pandas/nbconvert can be
+# slow; 20 minutes is generous.
+timeout: 1200s

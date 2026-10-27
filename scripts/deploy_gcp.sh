@@ -117,7 +117,11 @@ if [[ "$BUILD_MODE" == "cloudbuild" ]]; then
   for image in serving frontend; do
     gcloud builds submit --tag "$AR/$image:v1" "$image"
   done
-  [[ "$WITH_TRAINING" == "1" ]] && gcloud builds submit --tag "$AR/training:v1" -f training/Dockerfile .
+  # The training image needs the repo root as its build context (its Dockerfile
+  # copies notebooks/ and spark/jobs/), so it goes through a Cloud Build config
+  # rather than `--tag` - gcloud builds submit has no `-f` flag.
+  [[ "$WITH_TRAINING" == "1" ]] && gcloud builds submit . \
+    --config=training/cloudbuild.yaml --substitutions=_IMAGE="$AR/training:v1"
 else
   # Local path: build with Docker and push, warning up front if the registry
   # does not answer.
