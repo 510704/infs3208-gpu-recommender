@@ -1,4 +1,5 @@
 """Small artifact writers shared by notebooks 03, 04 and 05."""
+from __future__ import annotations
 
 import csv
 import json

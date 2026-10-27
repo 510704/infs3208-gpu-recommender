@@ -15,6 +15,7 @@ RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel \
  && python3 -m pip install --no-cache-dir \
         "numpy<1.25" \
         "pandas<2.0" \
+        "matplotlib<3.8" \
         nbconvert \
         jupyter_client \
         ipykernel \

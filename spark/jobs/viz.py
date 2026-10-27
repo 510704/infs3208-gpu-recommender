@@ -1,4 +1,5 @@
 """Presentation constants for notebook 06 (matplotlib only)."""
+from __future__ import annotations
 
 from pathlib import Path
 

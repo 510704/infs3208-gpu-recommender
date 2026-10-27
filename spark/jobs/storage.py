@@ -3,6 +3,7 @@
 The emulator in docker-compose and real Cloud Storage behave the same way, so
 the notebooks only need the bucket name (``MODEL_BUCKET``).
 """
+from __future__ import annotations
 
 import json
 import os

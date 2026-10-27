@@ -4,6 +4,7 @@
 order is significant - the first matching pattern wins. ``TIER_BOUNDS`` are the
 demand-tier boundaries used when discretising ``required_g3d`` for rule mining.
 """
+from __future__ import annotations
 
 TIER_BOUNDS = (2610, 6866, 17008, 26918)
 

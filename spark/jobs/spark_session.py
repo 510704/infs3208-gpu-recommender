@@ -4,6 +4,7 @@ The environment knobs (master, driver host, shuffle partitions) are the same in
 all six notebooks; keeping them here means one place to change when the cluster
 topology moves (local -> Spark standalone -> Dataproc).
 """
+from __future__ import annotations
 
 import os
 

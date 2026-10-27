@@ -3,6 +3,7 @@
 The model is ``ln(fps) = a + b * ln(g3d)``; the recommender inverts it, and the
 figures re-use the same formula so the chart and the API can never drift.
 """
+from __future__ import annotations
 
 import math
 

@@ -8,6 +8,7 @@ run between them.
 Types mirror what Spark's inference produced for this dataset (name/url text,
 counts and FPS as integers, empties -> null in PERMISSIVE mode).
 """
+from __future__ import annotations
 
 from pyspark.sql import types as T
 
