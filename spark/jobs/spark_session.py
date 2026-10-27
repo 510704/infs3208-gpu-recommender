@@ -17,7 +17,11 @@ def get_spark(app_name: str) -> SparkSession:
         SparkSession.builder
         .appName(app_name)
         .master(os.environ.get('SPARK_MASTER', 'local[*]'))
-        .config('spark.driver.host', os.environ.get('SPARK_DRIVER_HOST', 'jupyter'))
+        # docker-compose sets SPARK_DRIVER_HOST=jupyter explicitly (the driver
+        # runs in that container). Anywhere else - a local shell, Cloud Shell -
+        # that name does not resolve and Spark fails with a Py4JJavaError, so
+        # the fallback is localhost rather than "jupyter".
+        .config('spark.driver.host', os.environ.get('SPARK_DRIVER_HOST', 'localhost'))
         .config('spark.hadoop.fs.permissions.umask-mode', '000')
         .config('spark.sql.shuffle.partitions', '8')
         .getOrCreate()
